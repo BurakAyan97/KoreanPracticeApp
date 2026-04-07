@@ -1,0 +1,22 @@
+[
+  { "id": "pos-1", "korean": "위", "turkish": "Üstünde", "pronunciation": "wi", "type": "position" },
+  { "id": "pos-2", "korean": "아래", "turkish": "Altında", "pronunciation": "arae", "type": "position" },
+  { "id": "pos-3", "korean": "밑", "turkish": "Altında (daha altta, yüzeye temas etmeyen)", "pronunciation": "mit", "type": "position" },
+  { "id": "pos-4", "korean": "앞", "turkish": "Önünde", "pronunciation": "ap", "type": "position" },
+  { "id": "pos-5", "korean": "뒤", "turkish": "Arkasında", "pronunciation": "dwi", "type": "position" },
+  { "id": "pos-6", "korean": "옆", "turkish": "Yanında", "pronunciation": "yeop", "type": "position" },
+  { "id": "pos-7", "korean": "안", "turkish": "İçinde", "pronunciation": "an", "type": "position" },
+  { "id": "pos-8", "korean": "밖", "turkish": "Dışında", "pronunciation": "bak", "type": "position" },
+  { "id": "pos-9", "korean": "사이", "turkish": "Arasında", "pronunciation": "sai", "type": "position" },
+  { "id": "pos-10", "korean": "가운데", "turkish": "Ortasında", "pronunciation": "gaunde", "type": "position" },
+  { "id": "pos-11", "korean": "왼쪽", "turkish": "Sol tarafında", "pronunciation": "oenjjok", "type": "position" },
+  { "id": "pos-12", "korean": "오른쪽", "turkish": "Sağ tarafında", "pronunciation": "oreunjjok", "type": "position" },
+  { "id": "pos-13", "korean": "너머", "turkish": "Ötesinde / Karşısında", "pronunciation": "neomeo", "type": "position" },
+  { "id": "pos-14", "korean": "근처", "turkish": "Yakınında / Civarında", "pronunciation": "geuncheo", "type": "position" },
+  { "id": "pos-15", "korean": "멀리", "turkish": "Uzağında", "pronunciation": "meolli", "type": "position" },
+  { "id": "pos-16", "korean": "저기", "turkish": "Şurada (uzakta)", "pronunciation": "jeogi", "type": "position" },
+  { "id": "pos-17", "korean": "여기", "turkish": "Burada", "pronunciation": "yeogi", "type": "position" },
+  { "id": "pos-18", "korean": "거기", "turkish": "Orada", "pronunciation": "geogi", "type": "position" },
+  { "id": "pos-19", "korean": "어디", "turkish": "Nerede", "pronunciation": "eodi", "type": "position" },
+  { "id": "pos-20", "korean": "쪽", "turkish": "Yön / Taraf", "pronunciation": "jjok", "type": "position" }
+]

@@ -1,0 +1,208 @@
+[
+  {
+    "id": "a2-want-to",
+    "title": "İstemek: -고 싶다",
+    "description": "Fiil köküne eklenerek o eylemi yapmayı isteme anlamı katar. Sessiz/sesli harf fark etmez.",
+    "rules": [
+      { "condition": "Fiil kökünün sonuna eklenir (Da/다 atılır)", "suffix": "고 싶다 / 고 싶어요" }
+    ],
+    "examples": [
+      {
+        "koreanParts": [
+          { "text": "자", "type": "root" }, { "text": "고 싶어", "type": "ending" }, { "text": "요", "type": "base" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Uyumak istiyorum."
+      },
+      {
+        "koreanParts": [
+          { "text": "먹", "type": "root" }, { "text": "고 싶어", "type": "ending" }, { "text": "요", "type": "base" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Yemek istiyorum."
+      },
+      {
+        "koreanParts": [
+          { "text": "한국에 가", "type": "root" }, { "text": "고 싶어", "type": "ending" }, { "text": "요", "type": "base" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Kore'ye gitmek istiyorum."
+      },
+      {
+        "koreanParts": [
+          { "text": "영화 볼랭? 아니, 책을 읽", "type": "root" }, { "text": "고 싶어", "type": "ending" }, { "text": "요", "type": "base" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Film izleyelim mi? Hayır, kitap okumak istiyorum."
+      },
+      {
+        "koreanParts": [
+          { "text": "쉬", "type": "root" }, { "text": "고 싶어", "type": "ending" }, { "text": "요", "type": "base" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Dinlenmek istiyorum."
+      }
+    ]
+  },
+  {
+    "id": "a2-because",
+    "title": "Sebep Sonuç: -아/어서",
+    "description": "Fiil veya sıfat köklerine eklenerek 'için, yüzünden, çünkü' anlamı verir.",
+    "rules": [
+      { "condition": "Kökün son seslisi ㅏ veya ㅗ ise", "suffix": "아서" },
+      { "condition": "Kökün son seslisi diğerleriyse", "suffix": "어서" },
+      { "condition": "하다 ile bitenler", "suffix": "해서" }
+    ],
+    "examples": [
+      {
+        "koreanParts": [
+          { "text": "비가 와", "type": "root" }, { "text": "서", "type": "particle" }, { "text": " 집에 있어요.", "type": "base" }
+        ],
+        "turkish": "Yağmur yağdığı için evdeyim."
+      },
+      {
+        "koreanParts": [
+          { "text": "바빠", "type": "root" }, { "text": "서", "type": "particle" }, { "text": " 못 가요.", "type": "base" }
+        ],
+        "turkish": "Meşgul olduğum için gidemem."
+      },
+      {
+        "koreanParts": [
+          { "text": "피곤해", "type": "root" }, { "text": "서", "type": "particle" }, { "text": " 일찍 잤어요.", "type": "base" }
+        ],
+        "turkish": "Yorgun olduğum için erken uyudum."
+      },
+      {
+        "koreanParts": [
+          { "text": "배울 수 있단 건 좋아", "type": "root" }, { "text": "서", "type": "particle" }, { "text": " 기뻐요.", "type": "base" }
+        ],
+        "turkish": "Öğrenebildiğim için mutluyum."
+      },
+      {
+        "koreanParts": [
+          { "text": "늦어", "type": "root" }, { "text": "서", "type": "particle" }, { "text": " 죄송합니다.", "type": "base" }
+        ],
+        "turkish": "Geciktiğim için özür dilerim."
+      }
+    ]
+  },
+  {
+    "id": "a2-can-cannot",
+    "title": "Ebilmek/Abalmak: -(으)ㄹ 수 있다/없다",
+    "description": "Yetenek, olasılık veya bir şeyi yapabilme/yoksun kalma durumunu belirtir.",
+    "rules": [
+      { "condition": "Kelime sessiz harfle bitiyorsa", "suffix": "을 수 있다 (yapabilirim)" },
+      { "condition": "Kelime sesli harfle bitiyorsa", "suffix": "ㄹ 수 없다 (yapamam)" }
+    ],
+    "examples": [
+      {
+        "koreanParts": [
+          { "text": "수영을 하", "type": "root" }, { "text": "ㄹ 수 있어", "type": "ending" }, { "text": "요.", "type": "base" }
+        ],
+        "turkish": "Yüzebilirim."
+      },
+      {
+        "koreanParts": [
+          { "text": "매운 음식을 먹", "type": "root" }, { "text": "을 수 없어", "type": "ending" }, { "text": "요.", "type": "base" }
+        ],
+        "turkish": "Acı yemek yiyemem."
+      },
+      {
+        "koreanParts": [
+          { "text": "한국어를 말하", "type": "root" }, { "text": "ㄹ 수 있어", "type": "ending" }, { "text": "요?", "type": "base" }
+        ],
+        "turkish": "Korece konuşabilir misin?"
+      },
+      {
+        "koreanParts": [
+          { "text": "피아노를 치", "type": "root" }, { "text": "ㄹ 수 없어", "type": "ending" }, { "text": "요.", "type": "base" }
+        ],
+        "turkish": "Piyano çalamam."
+      },
+      {
+        "koreanParts": [
+          { "text": "내일 만날", "type": "root" }, { "text": " 수 있어", "type": "ending" }, { "text": "요.", "type": "base" }
+        ],
+        "turkish": "Yarın buluşabiliriz."
+      }
+    ]
+  },
+  {
+    "id": "a2-if",
+    "title": "Eğer: -(으)면",
+    "description": "Koşul ve şart cümleleri oluşturur (Eğer şöyle olursa...)",
+    "rules": [
+      { "condition": "Kelime sessiz harfle bitiyorsa", "suffix": "으면" },
+      { "condition": "Kelime sesli harfle veya 'ㄹ' ile bitiyorsa", "suffix": "면" }
+    ],
+    "examples": [
+      {
+        "koreanParts": [
+          { "text": "비가 오", "type": "root" }, { "text": "면", "type": "ending" }, { "text": " 집에 있을 거예요.", "type": "base" }
+        ],
+        "turkish": "Eğer yağmur yağarsa evde olacağım."
+      },
+      {
+        "koreanParts": [
+          { "text": "시간이 있으", "type": "root" }, { "text": "면", "type": "ending" }, { "text": " 만나요.", "type": "base" }
+        ],
+        "turkish": "Eğer vaktin varsa buluşalım."
+      },
+      {
+        "koreanParts": [
+          { "text": "돈이 많으", "type": "root" }, { "text": "면", "type": "ending" }, { "text": " 차를 살 거예요.", "type": "base" }
+        ],
+        "turkish": "Eğer çok param olursa araba alacağım."
+      },
+      {
+        "koreanParts": [
+          { "text": "배가 고프", "type": "root" }, { "text": "면", "type": "ending" }, { "text": " 밥을 먹어요.", "type": "base" }
+        ],
+        "turkish": "Eğer acıkırsan yemek ye."
+      },
+      {
+        "koreanParts": [
+          { "text": "피곤하", "type": "root" }, { "text": "면", "type": "ending" }, { "text": " 쉬세요.", "type": "base" }
+        ],
+        "turkish": "Eğer yorgunsan dinlen."
+      }
+    ]
+  },
+  {
+    "id": "a2-before-after",
+    "title": "Önce/Sonra: -기 전에 / -(으)ㄴ 후에",
+    "description": "Bir eylemden önce veya sonra ne yapıldığını anlatır.",
+    "rules": [
+      { "condition": "Önce (Fiil köküne eklenir)", "suffix": "기 전에" },
+      { "condition": "Sonra (Sesli harf / ㄹ)", "suffix": "ㄴ 후에" },
+      { "condition": "Sonra (Sessiz harf)", "suffix": "은 후에" }
+    ],
+    "examples": [
+      {
+        "koreanParts": [
+          { "text": "자", "type": "root" }, { "text": "기 전에", "type": "particle" }, { "text": " 책을 읽어요.", "type": "base" }
+        ],
+        "turkish": "Uyumadan önce kitap okurum."
+      },
+      {
+        "koreanParts": [
+          { "text": "밥을 먹", "type": "root" }, { "text": "은 후에", "type": "particle" }, { "text": " 약을 드세요.", "type": "base" }
+        ],
+        "turkish": "Yemek yedikten sonra ilacı içiniz."
+      },
+      {
+        "koreanParts": [
+          { "text": "한국에 가", "type": "root" }, { "text": "기 전에", "type": "particle" }, { "text": " 한국어를 공부했어요.", "type": "base" }
+        ],
+        "turkish": "Kore'ye gitmeden önce Korece çalıştım."
+      },
+      {
+        "koreanParts": [
+          { "text": "수업이 끝난", "type": "root" }, { "text": " 후에", "type": "particle" }, { "text": " 만납시다.", "type": "base" }
+        ],
+        "turkish": "Ders bittikten sonra buluşalım."
+      },
+      {
+        "koreanParts": [
+          { "text": "수영하", "type": "root" }, { "text": "기 전에", "type": "particle" }, { "text": " 준비운동을 하세요.", "type": "base" }
+        ],
+        "turkish": "Yüzmeden önce ısınma hareketleri yapınız."
+      }
+    ]
+  }
+]

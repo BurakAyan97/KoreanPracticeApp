@@ -1,0 +1,22 @@
+[
+  { "id": "family-1", "korean": "어머니", "turkish": "Anne", "pronunciation": "eomeoni", "type": "noun_human" },
+  { "id": "family-2", "korean": "아버지", "turkish": "Baba", "pronunciation": "abeoji", "type": "noun_human" },
+  { "id": "family-3", "korean": "형", "turkish": "Abi (Erkek söyler)", "pronunciation": "hyeong", "type": "noun_human" },
+  { "id": "family-4", "korean": "오빠", "turkish": "Abi (Kadın söyler)", "pronunciation": "oppa", "type": "noun_human" },
+  { "id": "family-5", "korean": "누나", "turkish": "Abla (Erkek söyler)", "pronunciation": "nuna", "type": "noun_human" },
+  { "id": "family-6", "korean": "언니", "turkish": "Abla (Kadın söyler)", "pronunciation": "eonni", "type": "noun_human" },
+  { "id": "family-7", "korean": "동생", "turkish": "Küçük kardeş", "pronunciation": "dongsaeng", "type": "noun_human" },
+  { "id": "family-8", "korean": "남동생", "turkish": "Erkek kardeş", "pronunciation": "namdongsaeng", "type": "noun_human" },
+  { "id": "family-9", "korean": "여동생", "turkish": "Kız kardeş", "pronunciation": "yeodongsaeng", "type": "noun_human" },
+  { "id": "family-10", "korean": "할머니", "turkish": "Büyükanne/Babaanne", "pronunciation": "halmeoni", "type": "noun_human" },
+  { "id": "family-11", "korean": "할아버지", "turkish": "Büyükbaba/Dede", "pronunciation": "harabeoji", "type": "noun_human" },
+  { "id": "family-12", "korean": "아들", "turkish": "Erkek çocuk", "pronunciation": "adeul", "type": "noun_human" },
+  { "id": "family-13", "korean": "딸", "turkish": "Kız çocuk", "pronunciation": "ttal", "type": "noun_human" },
+  { "id": "family-14", "korean": "아내", "turkish": "Eş (Kadın)", "pronunciation": "anae", "type": "noun_human" },
+  { "id": "family-15", "korean": "남편", "turkish": "Eş (Erkek)", "pronunciation": "nampyeon", "type": "noun_human" },
+  { "id": "family-16", "korean": "삼촌", "turkish": "Amca", "pronunciation": "samchon", "type": "noun_human" },
+  { "id": "family-17", "korean": "이모", "turkish": "Teyze", "pronunciation": "imo", "type": "noun_human" },
+  { "id": "family-18", "korean": "고모", "turkish": "Hala", "pronunciation": "gomo", "type": "noun_human" },
+  { "id": "family-19", "korean": "조카", "turkish": "Yeğen", "pronunciation": "joka", "type": "noun_human" },
+  { "id": "family-20", "korean": "가족", "turkish": "Aile", "pronunciation": "gajok", "type": "noun_human" }
+]

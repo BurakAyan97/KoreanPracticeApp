@@ -1,0 +1,37 @@
+[
+  {
+    "id": "num-sino-1",
+    "korean": "일",
+    "turkish": "Bir (1)",
+    "pronunciation": "il",
+    "type": "number_sino"
+  },
+  {
+    "id": "num-native-1",
+    "korean": "하나",
+    "turkish": "Bir (1, Nesne sayarken)",
+    "pronunciation": "hana",
+    "type": "number_native"
+  },
+  {
+    "id": "noun-apple",
+    "korean": "사과",
+    "turkish": "Elma",
+    "pronunciation": "sagwa",
+    "type": "noun"
+  },
+  {
+    "id": "noun-student",
+    "korean": "학생",
+    "turkish": "Öğrenci",
+    "pronunciation": "haksaeng",
+    "type": "noun"
+  },
+  {
+    "id": "verb-to-go",
+    "korean": "가다",
+    "turkish": "Gitmek",
+    "pronunciation": "gada",
+    "type": "verb"
+  }
+]

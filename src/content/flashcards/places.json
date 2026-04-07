@@ -1,0 +1,22 @@
+[
+  { "id": "p-1", "korean": "집", "turkish": "Ev", "pronunciation": "jip", "type": "noun_place" },
+  { "id": "p-2", "korean": "학교", "turkish": "Okul", "pronunciation": "hakgyo", "type": "noun_place" },
+  { "id": "p-3", "korean": "병원", "turkish": "Hastane", "pronunciation": "byeongwon", "type": "noun_place" },
+  { "id": "p-4", "korean": "약국", "turkish": "Eczane", "pronunciation": "yakguk", "type": "noun_place" },
+  { "id": "p-5", "korean": "은행", "turkish": "Banka", "pronunciation": "eunhaeng", "type": "noun_place" },
+  { "id": "p-6", "korean": "우체국", "turkish": "Postane", "pronunciation": "ucheguk", "type": "noun_place" },
+  { "id": "p-7", "korean": "식당", "turkish": "Restoran", "pronunciation": "sikdang", "type": "noun_place" },
+  { "id": "p-8", "korean": "카페", "turkish": "Kafe", "pronunciation": "kape", "type": "noun_place" },
+  { "id": "p-9", "korean": "도서관", "turkish": "Kütüphane", "pronunciation": "doseogwan", "type": "noun_place" },
+  { "id": "p-10", "korean": "공원", "turkish": "Park", "pronunciation": "gongwon", "type": "noun_place" },
+  { "id": "p-11", "korean": "영화관", "turkish": "Sinema", "pronunciation": "yeonghwagwan", "type": "noun_place" },
+  { "id": "p-12", "korean": "가게", "turkish": "Dükkan", "pronunciation": "gage", "type": "noun_place" },
+  { "id": "p-13", "korean": "시장", "turkish": "Pazar", "pronunciation": "sijang", "type": "noun_place" },
+  { "id": "p-14", "korean": "백화점", "turkish": "Büyük mağaza (AVM)", "pronunciation": "baekhwajeom", "type": "noun_place" },
+  { "id": "p-15", "korean": "지하철역", "turkish": "Metro İstasyonu", "pronunciation": "jihacheollyeok", "type": "noun_place" },
+  { "id": "p-16", "korean": "공항", "turkish": "Havalimanı", "pronunciation": "gonghang", "type": "noun_place" },
+  { "id": "p-17", "korean": "회사", "turkish": "Şirket", "pronunciation": "hwesa", "type": "noun_place" },
+  { "id": "p-18", "korean": "미용실", "turkish": "Kuaför / Berber", "pronunciation": "miyongsil", "type": "noun_place" },
+  { "id": "p-19", "korean": "경찰서", "turkish": "Karakol", "pronunciation": "gyeongchalseo", "type": "noun_place" },
+  { "id": "p-20", "korean": "박물관", "turkish": "Müze", "pronunciation": "bangmulgwan", "type": "noun_place" }
+]

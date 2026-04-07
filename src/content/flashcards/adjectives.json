@@ -1,0 +1,22 @@
+[
+  { "id": "adj-1", "korean": "크다", "turkish": "Büyük", "pronunciation": "keuda", "type": "adjective" },
+  { "id": "adj-2", "korean": "작다", "turkish": "Küçük", "pronunciation": "jakda", "type": "adjective" },
+  { "id": "adj-3", "korean": "많다", "turkish": "Çok (Miktar)", "pronunciation": "manta", "type": "adjective" },
+  { "id": "adj-4", "korean": "적다", "turkish": "Az", "pronunciation": "jeokda", "type": "adjective" },
+  { "id": "adj-5", "korean": "좋다", "turkish": "İyi", "pronunciation": "jota", "type": "adjective" },
+  { "id": "adj-6", "korean": "나쁘다", "turkish": "Kötü", "pronunciation": "nappeuda", "type": "adjective" },
+  { "id": "adj-7", "korean": "예쁘다", "turkish": "Güzel", "pronunciation": "yeppeuda", "type": "adjective" },
+  { "id": "adj-8", "korean": "아름답다", "turkish": "Güzel (Manzara vb.)", "pronunciation": "areumdapda", "type": "adjective" },
+  { "id": "adj-9", "korean": "맛있다", "turkish": "Lezzetli", "pronunciation": "masitda", "type": "adjective" },
+  { "id": "adj-10", "korean": "덥다", "turkish": "Sıcak (Hava)", "pronunciation": "deopda", "type": "adjective" },
+  { "id": "adj-11", "korean": "춥다", "turkish": "Soğuk", "pronunciation": "chupda", "type": "adjective" },
+  { "id": "adj-12", "korean": "따뜻하다", "turkish": "Ilık", "pronunciation": "ttatteutada", "type": "adjective" },
+  { "id": "adj-13", "korean": "시원하다", "turkish": "Serin / Ferah", "pronunciation": "siwonhada", "type": "adjective" },
+  { "id": "adj-14", "korean": "무겁다", "turkish": "Ağır", "pronunciation": "mugeopda", "type": "adjective" },
+  { "id": "adj-15", "korean": "가볍다", "turkish": "Hafif", "pronunciation": "gabyeopda", "type": "adjective" },
+  { "id": "adj-16", "korean": "빠르다", "turkish": "Hızlı", "pronunciation": "bbareuda", "type": "adjective" },
+  { "id": "adj-17", "korean": "느리다", "turkish": "Yavaş", "pronunciation": "neurida", "type": "adjective" },
+  { "id": "adj-18", "korean": "비싸다", "turkish": "Pahalı", "pronunciation": "bissada", "type": "adjective" },
+  { "id": "adj-19", "korean": "싸다", "turkish": "Ucuz", "pronunciation": "ssada", "type": "adjective" },
+  { "id": "adj-20", "korean": "어렵다", "turkish": "Zor", "pronunciation": "eoryeopda", "type": "adjective" }
+]

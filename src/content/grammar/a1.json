@@ -1,0 +1,207 @@
+[
+  {
+    "id": "a1-topic-particle",
+    "title": "Konu Bildirme Eki: 은/는 (eun/neun)",
+    "description": "Cümlenin konusunu belirtmek ve vurgu yapmak için kullanılır. İsme eklenir.",
+    "rules": [
+      { "condition": "Kelime sessiz harfle bitiyorsa (Batchim varsa)", "suffix": "은" },
+      { "condition": "Kelime sesli harfle bitiyorsa (Batchim yoksa)", "suffix": "는" }
+    ],
+    "examples": [
+      {
+        "koreanParts": [
+          { "text": "저", "type": "root" }, { "text": "는", "type": "particle" }, { "text": " 학생이에", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Ben öğrenciyim (Vurgu bende)."
+      },
+      {
+        "koreanParts": [
+          { "text": "선생님", "type": "root" }, { "text": "은", "type": "particle" }, { "text": " 한국 사람이에", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Öğretmen Korelidir."
+      },
+      {
+        "koreanParts": [
+          { "text": "사과", "type": "root" }, { "text": "는", "type": "particle" }, { "text": " 맛있어", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Elma (konumuz elma), lezzetlidir."
+      },
+      {
+        "koreanParts": [
+          { "text": "오늘", "type": "root" }, { "text": "은", "type": "particle" }, { "text": " 날씨가 좋아", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Bugün hava güzel."
+      },
+      {
+        "koreanParts": [
+          { "text": "어머니", "type": "root" }, { "text": "는", "type": "particle" }, { "text": " 집에 계세", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Annem evdedir."
+      }
+    ]
+  },
+  {
+    "id": "a1-subject-particle",
+    "title": "Özne Eki: 이/가 (i/ga)",
+    "description": "Cümlenin doğrudan öznesini belirtir. Eylemi veya durumu yapan kişiyi/nesneyi netleştirir.",
+    "rules": [
+      { "condition": "Kelime sessiz harfle bitiyorsa (Batchim varsa)", "suffix": "이" },
+      { "condition": "Kelime sesli harfle bitiyorsa (Batchim yoksa)", "suffix": "가" }
+    ],
+    "examples": [
+      {
+        "koreanParts": [
+          { "text": "비", "type": "root" }, { "text": "가", "type": "particle" }, { "text": " 와", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Yağmur yağıyor."
+      },
+      {
+        "koreanParts": [
+          { "text": "가방", "type": "root" }, { "text": "이", "type": "particle" }, { "text": " 무거워", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Çanta ağırdır."
+      },
+      {
+        "koreanParts": [
+          { "text": "친구", "type": "root" }, { "text": "가", "type": "particle" }, { "text": " 와", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Arkadaş geliyor."
+      },
+      {
+        "koreanParts": [
+          { "text": "동생", "type": "root" }, { "text": "이", "type": "particle" }, { "text": " 자", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Kardeşim uyuyor."
+      },
+      {
+        "koreanParts": [
+          { "text": "날씨", "type": "root" }, { "text": "가", "type": "particle" }, { "text": " 추워", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Hava soğuktur."
+      }
+    ]
+  },
+  {
+    "id": "a1-object-particle",
+    "title": "Nesne Eki: 을/를 (eul/reul)",
+    "description": "Eylemden etkilenen nesneyi belirtir. Türkçedeki '-i' halinin (belirtili nesne) karşılığıdır.",
+    "rules": [
+      { "condition": "Kelime sessiz harfle bitiyorsa (Batchim varsa)", "suffix": "을" },
+      { "condition": "Kelime sesli harfle bitiyorsa (Batchim yoksa)", "suffix": "를" }
+    ],
+    "examples": [
+      {
+        "koreanParts": [
+          { "text": "사과", "type": "root" }, { "text": "를", "type": "particle" }, { "text": " 먹어", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Elmayı yorum."
+      },
+      {
+        "koreanParts": [
+          { "text": "책", "type": "root" }, { "text": "을", "type": "particle" }, { "text": " 읽어", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Kitabı okuyorum."
+      },
+      {
+        "koreanParts": [
+          { "text": "영화", "type": "root" }, { "text": "를", "type": "particle" }, { "text": " 봐", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Filmi izliyorum."
+      },
+      {
+        "koreanParts": [
+          { "text": "물", "type": "root" }, { "text": "을", "type": "particle" }, { "text": " 마셔", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Suyu içiyorum."
+      },
+      {
+        "koreanParts": [
+          { "text": "한국어", "type": "root" }, { "text": "를", "type": "particle" }, { "text": " 공부해", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Koreceyi çalışıyorum."
+      }
+    ]
+  },
+  {
+    "id": "a1-to-be-present",
+    "title": "Olmak Fiili (Geniş/Şimdiki Zaman): 이에요 / 예요",
+    "description": "İsim cümlelerinde 'dır/dir' veya 'yım/yim' anlamı katar. İsimlere doğrudan bitişik yazılır.",
+    "rules": [
+      { "condition": "Kelime sessiz harfle bitiyorsa", "suffix": "이에요" },
+      { "condition": "Kelime sesli harfle bitiyorsa", "suffix": "예요" }
+    ],
+    "examples": [
+      {
+        "koreanParts": [
+          { "text": "학생", "type": "root" }, { "text": "이에요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Öğrenciyim."
+      },
+      {
+        "koreanParts": [
+          { "text": "의사", "type": "root" }, { "text": "예요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Doktorum."
+      },
+      {
+        "koreanParts": [
+          { "text": "책", "type": "root" }, { "text": "이에요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Kitaptır."
+      },
+      {
+        "koreanParts": [
+          { "text": "사과", "type": "root" }, { "text": "예요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Elmadır."
+      },
+      {
+        "koreanParts": [
+          { "text": "한국 사람", "type": "root" }, { "text": "이에요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Koreliyim / Korelidir."
+      }
+    ]
+  },
+  {
+    "id": "a1-location",
+    "title": "Yer Belirtme Ekleri: 에 / 에서",
+    "description": "Zaman veya varış/bulunma yönü için 에 kullanılır. Eylemin gerçekleştiği yer için 에서 kullanılır.",
+    "rules": [
+      { "condition": "Varış yönü, zaman veya sadece bulunma hissi", "suffix": "에" },
+      { "condition": "Bir mekanın içinde bir eylem gerçekleşiyorsa", "suffix": "에서" }
+    ],
+    "examples": [
+      {
+        "koreanParts": [
+          { "text": "학교", "type": "root" }, { "text": "에", "type": "particle" }, { "text": " 가", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Okula gidiyorum."
+      },
+      {
+        "koreanParts": [
+          { "text": "집", "type": "root" }, { "text": "에", "type": "particle" }, { "text": " 있어", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Evde bulunuyorum."
+      },
+      {
+        "koreanParts": [
+          { "text": "식당", "type": "root" }, { "text": "에서", "type": "particle" }, { "text": " 밥을 먹어", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Restoranda yemek yiyorum."
+      },
+      {
+        "koreanParts": [
+          { "text": "한국", "type": "root" }, { "text": "에서", "type": "particle" }, { "text": " 한국어를 공부해", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Kore'de Korece çalışıyorum."
+      },
+      {
+        "koreanParts": [
+          { "text": "도서관", "type": "root" }, { "text": "에", "type": "particle" }, { "text": " 와", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
+        ],
+        "turkish": "Kütüphaneye geliyorum."
+      }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  { "id": "fruit-1", "korean": "사과", "turkish": "Elma", "pronunciation": "sagwa", "type": "noun" },
+  { "id": "fruit-2", "korean": "바나나", "turkish": "Muz", "pronunciation": "banana", "type": "noun" },
+  { "id": "fruit-3", "korean": "포도", "turkish": "Üzüm", "pronunciation": "podo", "type": "noun" },
+  { "id": "fruit-4", "korean": "수박", "turkish": "Karpuz", "pronunciation": "subak", "type": "noun" },
+  { "id": "fruit-5", "korean": "딸기", "turkish": "Çilek", "pronunciation": "ttalgi", "type": "noun" },
+  { "id": "fruit-6", "korean": "오렌지", "turkish": "Portakal", "pronunciation": "orenji", "type": "noun" },
+  { "id": "fruit-7", "korean": "귤", "turkish": "Mandalina", "pronunciation": "gyul", "type": "noun" },
+  { "id": "fruit-8", "korean": "복숭아", "turkish": "Şeftali", "pronunciation": "boksunga", "type": "noun" },
+  { "id": "fruit-9", "korean": "파인애플", "turkish": "Ananas", "pronunciation": "painaepeul", "type": "noun" },
+  { "id": "fruit-10", "korean": "레몬", "turkish": "Limon", "pronunciation": "remon", "type": "noun" },
+  { "id": "fruit-11", "korean": "체리", "turkish": "Kiraz", "pronunciation": "cheri", "type": "noun" },
+  { "id": "fruit-12", "korean": "배", "turkish": "Armut", "pronunciation": "bae", "type": "noun" },
+  { "id": "fruit-13", "korean": "키위", "turkish": "Kivi", "pronunciation": "kiwi", "type": "noun" },
+  { "id": "fruit-14", "korean": "망고", "turkish": "Mango", "pronunciation": "manggo", "type": "noun" },
+  { "id": "fruit-15", "korean": "메론", "turkish": "Kavun", "pronunciation": "meron", "type": "noun" },
+  { "id": "fruit-16", "korean": "자두", "turkish": "Erik", "pronunciation": "jadu", "type": "noun" },
+  { "id": "fruit-17", "korean": "무화과", "turkish": "İncir", "pronunciation": "muhwagwa", "type": "noun" },
+  { "id": "fruit-18", "korean": "석류", "turkish": "Nar", "pronunciation": "seongnyu", "type": "noun" },
+  { "id": "fruit-19", "korean": "블루베리", "turkish": "Yaban Mersini", "pronunciation": "beulluberi", "type": "noun" },
+  { "id": "fruit-20", "korean": "코코넛", "turkish": "Hindistan Cevizi", "pronunciation": "kokoneot", "type": "noun" }
+]
