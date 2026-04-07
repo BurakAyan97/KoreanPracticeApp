@@ -17,14 +17,14 @@ export interface LessonV2 {
   title: string;
   description: string;
   teacherExplanation: string;
-  exampleMode: string;
+  exampleMode?: string;
   rules: {
     name: string;
     explanation: string;
     pattern?: string;
   }[];
   examples: GrammarExampleV2[];
-  checkpoints: string[];
+  checkpoints?: string[];
 }
 
 export interface GrammarExampleV2 {
