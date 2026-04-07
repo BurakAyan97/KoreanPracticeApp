@@ -1,0 +1,22 @@
+[
+  { "id": "gc-1", "korean": "안녕하세요", "turkish": "Merhaba", "pronunciation": "annyeonghaseyo", "type": "greeting" },
+  { "id": "gc-2", "korean": "안녕", "turkish": "Selam", "pronunciation": "annyeong", "type": "greeting" },
+  { "id": "gc-3", "korean": "감사합니다", "turkish": "Teşekkür ederim", "pronunciation": "gamsahamnida", "type": "greeting" },
+  { "id": "gc-4", "korean": "죄송합니다", "turkish": "Özür dilerim", "pronunciation": "joesonghamnida", "type": "greeting" },
+  { "id": "gc-5", "korean": "네", "turkish": "Evet", "pronunciation": "ne", "type": "particle" },
+  { "id": "gc-6", "korean": "아니요", "turkish": "Hayır", "pronunciation": "aniyo", "type": "particle" },
+  { "id": "gc-7", "korean": "선생님", "text": "Öğretmen", "turkish": "Öğretmen", "pronunciation": "seonsaengnim", "type": "noun_human" },
+  { "id": "gc-8", "korean": "학생", "turkish": "Öğrenci", "pronunciation": "haksaeng", "type": "noun_human" },
+  { "id": "gc-9", "korean": "이름", "turkish": "İsim", "pronunciation": "ireum", "type": "noun" },
+  { "id": "gc-10", "korean": "친구", "turkish": "Arkadaş", "pronunciation": "chingu", "type": "noun_human" },
+  { "id": "gc-11", "korean": "누구", "turkish": "Kim", "pronunciation": "nugu", "type": "pronoun" },
+  { "id": "gc-12", "korean": "어디", "turkish": "Nerede", "pronunciation": "eodi", "type": "pronoun" },
+  { "id": "gc-13", "korean": "언제", "turkish": "Ne zaman", "pronunciation": "eonje", "type": "pronoun" },
+  { "id": "gc-14", "korean": "무엇", "turkish": "Ne", "pronunciation": "mueot", "type": "pronoun" },
+  { "id": "gc-15", "korean": "다시", "turkish": "Tekrar", "pronunciation": "dasi", "type": "adverb" },
+  { "id": "gc-16", "korean": "천천히", "turkish": "Yavaşça", "pronunciation": "cheoncheonhi", "type": "adverb" },
+  { "id": "gc-17", "korean": "알겠습니다", "turkish": "Anladım / Tamam", "pronunciation": "algetseumnida", "type": "phrase" },
+  { "id": "gc-18", "korean": "모르겠습니다", "turkish": "Bilmiyorum", "pronunciation": "moreugetseumnida", "type": "phrase" },
+  { "id": "gc-19", "korean": "맞아요", "turkish": "Doğru", "pronunciation": "majayo", "type": "phrase" },
+  { "id": "gc-20", "korean": "괜찮아요", "turkish": "Sorun değil / İyiyim", "pronunciation": "gwaenchanayo", "type": "phrase" }
+]

@@ -1,0 +1,22 @@
+[
+  { "id": "hl-1", "korean": "운동", "turkish": "Egzersiz / Spor", "pronunciation": "undong", "type": "hobby" },
+  { "id": "hl-2", "korean": "산책", "turkish": "Yürüyüş", "pronunciation": "sanchaek", "type": "hobby" },
+  { "id": "hl-3", "korean": "독서", "turkish": "Kitap okuma", "pronunciation": "dokseo", "type": "hobby" },
+  { "id": "hl-4", "korean": "영화", "turkish": "Film", "pronunciation": "yeonghwa", "type": "hobby" },
+  { "id": "hl-5", "korean": "음악", "turkish": "Müzik", "pronunciation": "eumak", "type": "hobby" },
+  { "id": "hl-6", "korean": "노래", "turkish": "Şarkı", "pronunciation": "norae", "type": "hobby" },
+  { "id": "hl-7", "korean": "춤", "turkish": "Dans", "pronunciation": "chum", "type": "hobby" },
+  { "id": "hl-8", "korean": "사진", "turkish": "Fotoğraf", "pronunciation": "sajin", "type": "hobby" },
+  { "id": "hl-9", "korean": "여행", "turkish": "Seyahat", "pronunciation": "yeohaeng", "type": "hobby" },
+  { "id": "hl-10", "korean": "게임", "turkish": "Oyun", "pronunciation": "geim", "type": "hobby" },
+  { "id": "hl-11", "korean": "수영", "turkish": "Yüzme", "pronunciation": "suyeong", "type": "hobby" },
+  { "id": "hl-12", "korean": "축구", "turkish": "Futbol", "pronunciation": "chukgu", "type": "hobby" },
+  { "id": "hl-13", "korean": "농구", "turkish": "Basketbol", "pronunciation": "nonggu", "type": "hobby" },
+  { "id": "hl-14", "korean": "요리", "turkish": "Yemek yapma", "pronunciation": "yori", "type": "hobby" },
+  { "id": "hl-15", "korean": "그림", "turkish": "Resim / Çizim", "pronunciation": "geurim", "type": "hobby" },
+  { "id": "hl-16", "korean": "쇼핑", "turkish": "Alışveriş", "pronunciation": "syoping", "type": "hobby" },
+  { "id": "hl-17", "korean": "공부", "turkish": "Çalışma / Ders", "pronunciation": "gongbu", "type": "hobby" },
+  { "id": "hl-18", "korean": "쉬다", "turkish": "Dinlenmek", "pronunciation": "swida", "type": "verb" },
+  { "id": "hl-19", "korean": "만나다", "turkish": "Buluşmak", "pronunciation": "mannada", "type": "verb" },
+  { "id": "hl-20", "korean": "보다", "turkish": "İzlemek / Görmek", "pronunciation": "boda", "type": "verb" }
+]

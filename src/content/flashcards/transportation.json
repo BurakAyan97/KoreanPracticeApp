@@ -1,0 +1,22 @@
+[
+  { "id": "tr-1", "korean": "버스", "turkish": "Otobüs", "pronunciation": "beoseu", "type": "transport" },
+  { "id": "tr-2", "korean": "지하철", "turkish": "Metro", "pronunciation": "jihacheol", "type": "transport" },
+  { "id": "tr-3", "korean": "택시", "turkish": "Taksi", "pronunciation": "taeksi", "type": "transport" },
+  { "id": "tr-4", "korean": "기차", "turkish": "Tren", "pronunciation": "gicha", "type": "transport" },
+  { "id": "tr-5", "korean": "비행기", "turkish": "Uçak", "pronunciation": "bihaenggi", "type": "transport" },
+  { "id": "tr-6", "korean": "정류장", "turkish": "Durak", "pronunciation": "jeongnyujang", "type": "place" },
+  { "id": "tr-7", "korean": "역", "turkish": "İstasyon", "pronunciation": "yeok", "type": "place" },
+  { "id": "tr-8", "korean": "길", "turkish": "Yol", "pronunciation": "gil", "type": "place" },
+  { "id": "tr-9", "korean": "왼쪽", "turkish": "Sol", "pronunciation": "oenjjok", "type": "direction" },
+  { "id": "tr-10", "korean": "오른쪽", "turkish": "Sağ", "pronunciation": "oreunjjok", "type": "direction" },
+  { "id": "tr-11", "korean": "앞", "turkish": "Ön", "pronunciation": "ap", "type": "direction" },
+  { "id": "tr-12", "korean": "뒤", "turkish": "Arka", "pronunciation": "dwi", "type": "direction" },
+  { "id": "tr-13", "korean": "곧장", "turkish": "Dümdüz", "pronunciation": "gotjang", "type": "direction" },
+  { "id": "tr-14", "korean": "건너편", "turkish": "Karşı taraf", "pronunciation": "geonneopyeon", "type": "direction" },
+  { "id": "tr-15", "korean": "사거리", "turkish": "Kavşak", "pronunciation": "sageori", "type": "place" },
+  { "id": "tr-16", "korean": "출구", "turkish": "Çıkış", "pronunciation": "chulgu", "type": "noun" },
+  { "id": "tr-17", "korean": "입구", "turkish": "Giriş", "pronunciation": "ipgu", "type": "noun" },
+  { "id": "tr-18", "korean": "타다", "turkish": "Binmek", "pronunciation": "tada", "type": "verb" },
+  { "id": "tr-19", "korean": "내리다", "turkish": "İnmek", "pronunciation": "naerida", "type": "verb" },
+  { "id": "tr-20", "korean": "걸리다", "turkish": "Sürmek (zaman)", "pronunciation": "geollida", "type": "verb" }
+]

@@ -1,0 +1,22 @@
+[
+  { "id": "co-1", "korean": "빨간색", "turkish": "Kırmızı", "pronunciation": "ppalgansaek", "type": "color" },
+  { "id": "co-2", "korean": "파란색", "turkish": "Mavi", "pronunciation": "paransaek", "type": "color" },
+  { "id": "co-3", "korean": "노란색", "turkish": "Sarı", "pronunciation": "noransaek", "type": "color" },
+  { "id": "co-4", "korean": "초록색", "turkish": "Yeşil", "pronunciation": "choroksaek", "type": "color" },
+  { "id": "co-5", "korean": "검은색", "turkish": "Siyah", "pronunciation": "geomeunsaek", "type": "color" },
+  { "id": "co-6", "korean": "흰색", "turkish": "Beyaz", "pronunciation": "huinsaek", "type": "color" },
+  { "id": "co-7", "korean": "회색", "turkish": "Gri", "pronunciation": "hoesaek", "type": "color" },
+  { "id": "co-8", "korean": "분홍색", "turkish": "Pembe", "pronunciation": "bunhongsaek", "type": "color" },
+  { "id": "co-9", "korean": "보라색", "turkish": "Mor", "pronunciation": "borasaek", "type": "color" },
+  { "id": "co-10", "korean": "갈색", "turkish": "Kahverengi", "pronunciation": "galsaek", "type": "color" },
+  { "id": "co-11", "korean": "주황색", "turkish": "Turuncu", "pronunciation": "juhwangsaek", "type": "color" },
+  { "id": "co-12", "korean": "하늘색", "turkish": "Açık mavi", "pronunciation": "haneulsaek", "type": "color" },
+  { "id": "co-13", "korean": "남색", "turkish": "Lacivert", "pronunciation": "namsaek", "type": "color" },
+  { "id": "co-14", "korean": "베이지색", "turkish": "Bej", "pronunciation": "beijisaek", "type": "color" },
+  { "id": "co-15", "korean": "금색", "turkish": "Altın rengi", "pronunciation": "geumsaek", "type": "color" },
+  { "id": "co-16", "korean": "은색", "turkish": "Gümüş rengi", "pronunciation": "eunsaek", "type": "color" },
+  { "id": "co-17", "korean": "연두색", "turkish": "Açık yeşil", "pronunciation": "yeondusaek", "type": "color" },
+  { "id": "co-18", "korean": "청록색", "turkish": "Turkuaz", "pronunciation": "cheongnoksaek", "type": "color" },
+  { "id": "co-19", "korean": "진하다", "turkish": "Koyu olmak", "pronunciation": "jinhada", "type": "adjective" },
+  { "id": "co-20", "korean": "연하다", "turkish": "Açık / Soluk olmak", "pronunciation": "yeonhada", "type": "adjective" }
+]

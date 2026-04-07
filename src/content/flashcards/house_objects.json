@@ -1,0 +1,22 @@
+[
+  { "id": "ho-1", "korean": "집", "turkish": "Ev", "pronunciation": "jip", "type": "noun" },
+  { "id": "ho-2", "korean": "방", "turkish": "Oda", "pronunciation": "bang", "type": "noun" },
+  { "id": "ho-3", "korean": "문", "turkish": "Kapı", "pronunciation": "mun", "type": "noun" },
+  { "id": "ho-4", "korean": "창문", "turkish": "Pencere", "pronunciation": "changmun", "type": "noun" },
+  { "id": "ho-5", "korean": "침대", "turkish": "Yatak", "pronunciation": "chimdae", "type": "noun" },
+  { "id": "ho-6", "korean": "책상", "turkish": "Masa", "pronunciation": "chaeksang", "type": "noun" },
+  { "id": "ho-7", "korean": "의자", "turkish": "Sandalye", "pronunciation": "uija", "type": "noun" },
+  { "id": "ho-8", "korean": "소파", "turkish": "Koltuk", "pronunciation": "sopa", "type": "noun" },
+  { "id": "ho-9", "korean": "냉장고", "turkish": "Buzdolabı", "pronunciation": "naengjanggo", "type": "noun" },
+  { "id": "ho-10", "korean": "텔레비전", "turkish": "Televizyon", "pronunciation": "tellebijeon", "type": "noun" },
+  { "id": "ho-11", "korean": "컴퓨터", "turkish": "Bilgisayar", "pronunciation": "keompyuteo", "type": "noun" },
+  { "id": "ho-12", "korean": "휴대폰", "turkish": "Cep telefonu", "pronunciation": "hyudaepon", "type": "noun" },
+  { "id": "ho-13", "korean": "시계", "turkish": "Saat", "pronunciation": "sigye", "type": "noun" },
+  { "id": "ho-14", "korean": "거울", "turkish": "Ayna", "pronunciation": "geoul", "type": "noun" },
+  { "id": "ho-15", "korean": "옷장", "turkish": "Gardırop", "pronunciation": "otjang", "type": "noun" },
+  { "id": "ho-16", "korean": "세탁기", "turkish": "Çamaşır makinesi", "pronunciation": "setakgi", "type": "noun" },
+  { "id": "ho-17", "korean": "전자레인지", "turkish": "Mikrodalga", "pronunciation": "jeonjareinji", "type": "noun" },
+  { "id": "ho-18", "korean": "에어컨", "turkish": "Klima", "pronunciation": "eeokeon", "type": "noun" },
+  { "id": "ho-19", "korean": "조명", "turkish": "Işık / Aydınlatma", "pronunciation": "jomyeong", "type": "noun" },
+  { "id": "ho-20", "korean": "식탁", "turkish": "Yemek masası", "pronunciation": "siktak", "type": "noun" }
+]

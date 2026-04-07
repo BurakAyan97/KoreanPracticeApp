@@ -1,0 +1,22 @@
+[
+  { "id": "sc-1", "korean": "가게", "turkish": "Dükkân", "pronunciation": "gage", "type": "place" },
+  { "id": "sc-2", "korean": "시장", "turkish": "Pazar / Market", "pronunciation": "sijang", "type": "place" },
+  { "id": "sc-3", "korean": "백화점", "turkish": "AVM / Mağaza", "pronunciation": "baekhwajeom", "type": "place" },
+  { "id": "sc-4", "korean": "가격", "turkish": "Fiyat", "pronunciation": "gagyeok", "type": "noun" },
+  { "id": "sc-5", "korean": "할인", "turkish": "İndirim", "pronunciation": "harin", "type": "noun" },
+  { "id": "sc-6", "korean": "현금", "turkish": "Nakit", "pronunciation": "hyeongeum", "type": "noun" },
+  { "id": "sc-7", "korean": "카드", "turkish": "Kart", "pronunciation": "kadeu", "type": "noun" },
+  { "id": "sc-8", "korean": "영수증", "turkish": "Fiş / Makbuz", "pronunciation": "yeongsujeung", "type": "noun" },
+  { "id": "sc-9", "korean": "사이즈", "turkish": "Beden / Boyut", "pronunciation": "saijeu", "type": "noun" },
+  { "id": "sc-10", "korean": "색깔", "turkish": "Renk", "pronunciation": "saekkkal", "type": "noun" },
+  { "id": "sc-11", "korean": "옷", "turkish": "Kıyafet", "pronunciation": "ot", "type": "clothing" },
+  { "id": "sc-12", "korean": "셔츠", "turkish": "Gömlek", "pronunciation": "syocheu", "type": "clothing" },
+  { "id": "sc-13", "korean": "바지", "turkish": "Pantolon", "pronunciation": "baji", "type": "clothing" },
+  { "id": "sc-14", "korean": "치마", "turkish": "Etek", "pronunciation": "chima", "type": "clothing" },
+  { "id": "sc-15", "korean": "신발", "turkish": "Ayakkabı", "pronunciation": "sinbal", "type": "clothing" },
+  { "id": "sc-16", "korean": "가방", "turkish": "Çanta", "pronunciation": "gabang", "type": "clothing" },
+  { "id": "sc-17", "korean": "모자", "turkish": "Şapka", "pronunciation": "moja", "type": "clothing" },
+  { "id": "sc-18", "korean": "코트", "turkish": "Kaban / Palto", "pronunciation": "koteu", "type": "clothing" },
+  { "id": "sc-19", "korean": "입어 보다", "turkish": "Denemek (giysi)", "pronunciation": "ibeo boda", "type": "verb" },
+  { "id": "sc-20", "korean": "팔다", "turkish": "Satmak", "pronunciation": "palda", "type": "verb" }
+]

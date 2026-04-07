@@ -1,0 +1,20 @@
+[
+  { "id": "td-1", "korean": "오늘", "turkish": "Bugün", "pronunciation": "oneul", "type": "time" },
+  { "id": "td-2", "korean": "어제", "turkish": "Dün", "pronunciation": "eoje", "type": "time" },
+  { "id": "td-3", "korean": "내일", "turkish": "Yarın", "pronunciation": "naeil", "type": "time" },
+  { "id": "td-4", "korean": "지금", "turkish": "Şimdi", "pronunciation": "jigeum", "type": "time" },
+  { "id": "td-5", "korean": "아침", "turkish": "Sabah", "pronunciation": "achim", "type": "time" },
+  { "id": "td-6", "korean": "점심", "turkish": "Öğle / Öğle yemeği", "pronunciation": "jeomsim", "type": "food_time" },
+  { "id": "td-7", "korean": "저녁", "turkish": "Akşam / Akşam yemeği", "pronunciation": "jeonyeok", "type": "food_time" },
+  { "id": "td-8", "korean": "밤", "turkish": "Gece", "pronunciation": "bam", "type": "time" },
+  { "id": "td-9", "korean": "시", "turkish": "Saat (birim)", "pronunciation": "si", "type": "time_unit" },
+  { "id": "td-10", "korean": "분", "turkish": "Dakika", "pronunciation": "bun", "type": "time_unit" },
+  { "id": "td-11", "korean": "주말", "turkish": "Hafta sonu", "pronunciation": "jumal", "type": "time" },
+  { "id": "td-12", "korean": "월요일", "turkish": "Pazartesi", "pronunciation": "weoryoil", "type": "day" },
+  { "id": "td-13", "korean": "화요일", "turkish": "Salı", "pronunciation": "hwayoil", "type": "day" },
+  { "id": "td-14", "korean": "수요일", "turkish": "Çarşamba", "pronunciation": "suyoil", "type": "day" },
+  { "id": "td-15", "korean": "목요일", "turkish": "Perşembe", "pronunciation": "mogyoil", "type": "day" },
+  { "id": "td-16", "korean": "금요일", "turkish": "Cuma", "pronunciation": "geumyoil", "type": "day" },
+  { "id": "td-17", "korean": "토요일", "turkish": "Cumartesi", "pronunciation": "toyoil", "type": "day" },
+  { "id": "td-18", "korean": "일요일", "turkish": "Pazar", "pronunciation": "iryoil", "type": "day" }
+]

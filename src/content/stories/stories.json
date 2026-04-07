@@ -1,0 +1,215 @@
+[
+  {
+    "id": "story-a1-1",
+    "level": "A1",
+    "title": {
+      "korean": "나의 하루",
+      "turkish": "Benim Günüm"
+    },
+    "sentences": [
+      {
+        "koreanSentence": "저는 매일 아침 일곱 시에 일어나요.",
+        "romanizedSentence": "jeoneun maeil achim ilgop sie ireonayo.",
+        "turkishSentence": "Ben her gün sabah yedi saatinde uyanırım.",
+        "words": [
+          { "korean": "저는", "romanized": "jeoneun", "turkish": "ben" },
+          { "korean": "매일", "romanized": "maeil", "turkish": "her gün" },
+          { "korean": "아침", "romanized": "achim", "turkish": "sabah" },
+          { "korean": "일곱 시에", "romanized": "ilgop sie", "turkish": "yedi saatinde" },
+          { "korean": "일어나요.", "romanized": "ireonayo.", "turkish": "uyanırım." }
+        ]
+      },
+      {
+        "koreanSentence": "그리고 아침을 먹어요.",
+        "romanizedSentence": "geurigo achim-eul meogeoyo.",
+        "turkishSentence": "Ve kahvaltı yerim.",
+        "words": [
+          { "korean": "그리고", "romanized": "geurigo", "turkish": "ve" },
+          { "korean": "아침을", "romanized": "achim-eul", "turkish": "kahvaltı (sabah yemeğini)" },
+          { "korean": "먹어요.", "romanized": "meogeoyo.", "turkish": "yerim." }
+        ]
+      },
+      {
+        "koreanSentence": "저는 커피를 아주 좋아해요.",
+        "romanizedSentence": "jeoneun keopi-reul aju joahaeyo.",
+        "turkishSentence": "Ben kahveyi çok seviyorum.",
+        "words": [
+          { "korean": "저는", "romanized": "jeoneun", "turkish": "ben" },
+          { "korean": "커피를", "romanized": "keopi-reul", "turkish": "kahveyi" },
+          { "korean": "아주", "romanized": "aju", "turkish": "çok" },
+          { "korean": "좋아해요.", "romanized": "joahaeyo.", "turkish": "seviyorum." }
+        ]
+      },
+      {
+        "koreanSentence": "여덟 시에 학교에 가요.",
+        "romanizedSentence": "yeodeol sie hakgyo-e gayo.",
+        "turkishSentence": "Sekiz saatinde okula giderim.",
+        "words": [
+          { "korean": "여덟 시에", "romanized": "yeodeol sie", "turkish": "sekiz saatinde" },
+          { "korean": "학교에", "romanized": "hakgyo-e", "turkish": "okula" },
+          { "korean": "가요.", "romanized": "gayo.", "turkish": "giderim." }
+        ]
+      },
+      {
+        "koreanSentence": "학교에서 한국어를 공부해요.",
+        "romanizedSentence": "hakgyo-eseo hangugeo-reul gongbuhaeyo.",
+        "turkishSentence": "Okulda Koreceyi çalışırım.",
+        "words": [
+          { "korean": "학교에서", "romanized": "hakgyo-eseo", "turkish": "okulda" },
+          { "korean": "한국어를", "romanized": "hangugeo-reul", "turkish": "Koreceyi" },
+          { "korean": "공부해요.", "romanized": "gongbuhaeyo.", "turkish": "çalışırım." }
+        ]
+      },
+      {
+        "koreanSentence": "한국어 선생님은 좋은 사람이에요.",
+        "romanizedSentence": "hangugeo seonsaengnim-eun joeun saram-ieyo.",
+        "turkishSentence": "Korece öğretmeni iyi bir insandır.",
+        "words": [
+          { "korean": "한국어", "romanized": "hangugeo", "turkish": "Korece" },
+          { "korean": "선생님은", "romanized": "seonsaengnim-eun", "turkish": "öğretmeni" },
+          { "korean": "좋은", "romanized": "joeun", "turkish": "iyi" },
+          { "korean": "사람이에요.", "romanized": "saram-ieyo.", "turkish": "insandır." }
+        ]
+      },
+      {
+        "koreanSentence": "오후에 도서관에서 책을 읽어요.",
+        "romanizedSentence": "ohu-e doseogwan-eseo chaeg-eul ilgeoyo.",
+        "turkishSentence": "Öğleden sonra kütüphanede kitabı okurum.",
+        "words": [
+          { "korean": "오후에", "romanized": "ohu-e", "turkish": "öğleden sonra" },
+          { "korean": "도서관에서", "romanized": "doseogwan-eseo", "turkish": "kütüphanede" },
+          { "korean": "책을", "romanized": "chaeg-eul", "turkish": "kitabı" },
+          { "korean": "읽어요.", "romanized": "ilgeoyo.", "turkish": "okurum." }
+        ]
+      },
+      {
+        "koreanSentence": "저녁에 친구를 만나요.",
+        "romanizedSentence": "jeonyeog-e chingu-reul mannayo.",
+        "turkishSentence": "Akşam arkadaşı(mı) bulurum (buluşurum).",
+        "words": [
+          { "korean": "저녁에", "romanized": "jeonyeog-e", "turkish": "akşam(leyin)" },
+          { "korean": "친구를", "romanized": "chingu-reul", "turkish": "arkadaşımı" },
+          { "korean": "만나요.", "romanized": "mannayo.", "turkish": "bulurum." }
+        ]
+      },
+      {
+        "koreanSentence": "우리는 보통 식당에서 밥을 먹어요.",
+        "romanizedSentence": "uri-neun botong sikdang-eseo bab-eul meogeoyo.",
+        "turkishSentence": "Biz genelde restoranda yemek (pilav) yeriz.",
+        "words": [
+          { "korean": "우리는", "romanized": "uri-neun", "turkish": "biz" },
+          { "korean": "보통", "romanized": "botong", "turkish": "genelde" },
+          { "korean": "식당에서", "romanized": "sikdang-eseo", "turkish": "restoranda" },
+          { "korean": "밥을", "romanized": "bab-eul", "turkish": "yemek (pilav)" },
+          { "korean": "먹어요.", "romanized": "meogeoyo.", "turkish": "yeriz." }
+        ]
+      },
+      {
+        "koreanSentence": "매일 바쁘지만 아주 재미있어요.",
+        "romanizedSentence": "maeil bappeujiman aju jaemi-isseoyo.",
+        "turkishSentence": "Her gün meşgulüm ama çok eğlenceli.",
+        "words": [
+          { "korean": "매일", "romanized": "maeil", "turkish": "her gün" },
+          { "korean": "바쁘지만", "romanized": "bappeujiman", "turkish": "meşgul(üm) ama" },
+          { "korean": "아주", "romanized": "aju", "turkish": "çok" },
+          { "korean": "재미있어요.", "romanized": "jaemi-isseoyo.", "turkish": "eğlenceli." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "story-a2-1",
+    "level": "A2",
+    "title": {
+      "korean": "기차 여행",
+      "turkish": "Tren Seyahati"
+    },
+    "sentences": [
+      {
+        "koreanSentence": "지난 주말에 친구들과 함께 부산에 여행을 갔습니다.",
+        "romanizedSentence": "jinan jumal-e chingudeul-gwa hamkke busan-e yeohaeng-eul gasseumnida.",
+        "turkishSentence": "Geçen hafta sonu arkadaşlarla birlikte Busan'a seyahate gittik.",
+        "words": [
+          { "korean": "지난 주말에", "romanized": "jinan jumal-e", "turkish": "geçen hafta sonu" },
+          { "korean": "친구들과", "romanized": "chingudeul-gwa", "turkish": "arkadaşlarla" },
+          { "korean": "함께", "romanized": "hamkke", "turkish": "birlikte" },
+          { "korean": "부산에", "romanized": "busan-e", "turkish": "Busan'a" },
+          { "korean": "여행을", "romanized": "yeohaeng-eul", "turkish": "seyahate" },
+          { "korean": "갔습니다.", "romanized": "gasseumnida.", "turkish": "gittik." }
+        ]
+      },
+      {
+        "koreanSentence": "우리는 아침 일찍 서울역에서 기차를 탔어요.",
+        "romanizedSentence": "uri-neun achim iljjik seoul-yeog-eseo gicha-reul tasseoyo.",
+        "turkishSentence": "Biz sabah erken Seul İstasyonu'ndan trene bindik.",
+        "words": [
+          { "korean": "우리는", "romanized": "uri-neun", "turkish": "biz" },
+          { "korean": "아침 일찍", "romanized": "achim iljjik", "turkish": "sabah erken" },
+          { "korean": "서울역에서", "romanized": "seoul-yeog-eseo", "turkish": "Seul İstasyonu'ndan" },
+          { "korean": "기차를", "romanized": "gicha-reul", "turkish": "trene" },
+          { "korean": "탔어요.", "romanized": "tasseoyo.", "turkish": "bindik." }
+        ]
+      },
+      {
+        "koreanSentence": "기차 안에서 사진을 찍고 음악도 들었습니다.",
+        "romanizedSentence": "gicha an-eseo sajin-eul jjikgo eumag-do deureosseum-nida.",
+        "turkishSentence": "Tren içinde fotoğrafı çekip müzik de dinledik.",
+        "words": [
+          { "korean": "기차 안에서", "romanized": "gicha an-eseo", "turkish": "trenin içinde" },
+          { "korean": "사진을", "romanized": "sajin-eul", "turkish": "fotoğrafı" },
+          { "korean": "찍고", "romanized": "jjikgo", "turkish": "çekip" },
+          { "korean": "음악도", "romanized": "eumag-do", "turkish": "müzik de" },
+          { "korean": "들었습니다.", "romanized": "deureosseum-nida.", "turkish": "dinledik." }
+        ]
+      },
+      {
+        "koreanSentence": "부산은 바다가 아름답고 음식이 정말 맛있기로 유명해요.",
+        "romanizedSentence": "busan-eun bada-ga areumdapgo eumsigi jeongmal masitgi-ro yumyeonghaeyo.",
+        "turkishSentence": "Busan, denizi güzel olup yemeği gerçekten lezzetli olmasıyla ünlüdür.",
+        "words": [
+          { "korean": "부산은", "romanized": "busan-eun", "turkish": "Busan," },
+          { "korean": "바다가", "romanized": "bada-ga", "turkish": "denizi" },
+          { "korean": "아름답고", "romanized": "areumdapgo", "turkish": "güzel (olup)" },
+          { "korean": "음식이", "romanized": "eumsigi", "turkish": "yemeği" },
+          { "korean": "정말", "romanized": "jeongmal", "turkish": "gerçekten" },
+          { "korean": "맛있기로 유명해요.", "romanized": "masitgi-ro yumyeonghaeyo.", "turkish": "lezzetli olmasıyla ünlüdür." }
+        ]
+      },
+      {
+        "koreanSentence": "우리는 해운대 근처 식당에서 해산물을 먹었는데, 배가 너무 불렀어요.",
+        "romanizedSentence": "urineun haeundae geuncheo sikdangeseo haesanmureul meogeonneunde, baega neomu bulleosseoyo.",
+        "turkishSentence": "Biz Haeundae civarı restoranda deniz ürünlerini yedik fakat/ki karmınız aşırı doydu.",
+        "words": [
+          { "korean": "우리는", "romanized": "urineun", "turkish": "biz" },
+          { "korean": "해운대 근처", "romanized": "haeundae geuncheo", "turkish": "Haeundae civarı" },
+          { "korean": "식당에서", "romanized": "sikdangeseo", "turkish": "restoranda" },
+          { "korean": "해산물을", "romanized": "haesanmureul", "turkish": "deniz ürünlerini" },
+          { "korean": "먹었는데,", "romanized": "meogeonneunde,", "turkish": "yedik fakat" },
+          { "korean": "배가 너무 불렀어요.", "romanized": "baega neomu bulleosseoyo.", "turkish": "karnımız tok oldu." }
+        ]
+      },
+      {
+        "koreanSentence": "날씨가 조금 추웠지만 여행은 완벽했어요.",
+        "romanizedSentence": "nalssiga jogeum chuwotjiman yeohaengeun wanbyeokhaesseoyo.",
+        "turkishSentence": "Hava biraz soğuktu ama seyahat mükemmeldi.",
+        "words": [
+          { "korean": "날씨가", "romanized": "nalssiga", "turkish": "hava" },
+          { "korean": "조금 추웠지만", "romanized": "jogeum chuwotjiman", "turkish": "biraz soğuktu ama" },
+          { "korean": "여행은", "romanized": "yeohaengeun", "turkish": "seyahat" },
+          { "korean": "완벽했어요.", "romanized": "wanbyeokhaesseoyo.", "turkish": "mükemmeldi." }
+        ]
+      },
+      {
+        "koreanSentence": "다음 휴가 때는 비행기를 타고 제주도에 가고 싶습니다.",
+        "romanizedSentence": "daeum hyuga ttaeneun bihaenggireul tago jejudo-e gago sipseumnida.",
+        "turkishSentence": "Sonraki tatil dönemi uçak binip Jeju Adası'na gitmek istiyorum.",
+        "words": [
+          { "korean": "다음 휴가 때는", "romanized": "daeum hyuga ttaeneun", "turkish": "sonraki tatil zamamında" },
+          { "korean": "비행기를 타고", "romanized": "bihaenggireul tago", "turkish": "uçağa binerek" },
+          { "korean": "제주도에", "romanized": "jejudo-e", "turkish": "Jeju Adasına" },
+          { "korean": "가고 싶습니다.", "romanized": "gago sipseumnida.", "turkish": "gitmek istiyorum." }
+        ]
+      }
+    ]
+  }
+]

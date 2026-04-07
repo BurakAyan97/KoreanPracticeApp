@@ -1,67 +1,62 @@
 import { useState, useEffect } from 'react';
-import { Sparkles, RefreshCw } from 'lucide-react';
-import { generateStory, type GeneratedStory } from '../utils/storyEngine';
-import type { Flashcard, StoryTemplate } from '../utils/types';
+import { BookOpen } from 'lucide-react';
+import type { GeneratedStory } from '../utils/types';
+import { BilingualSentence } from '../components/typography/BilingualSentence';
 
 const StoryBuilder = () => {
-  const [flashcards, setFlashcards] = useState<Flashcard[]>([]);
-  const [templates, setTemplates] = useState<StoryTemplate[]>([]);
-  const [currentStory, setCurrentStory] = useState<GeneratedStory | null>(null);
-  const [showTranslation, setShowTranslation] = useState(false);
+  const [stories, setStories] = useState<GeneratedStory[]>([]);
   const [level, setLevel] = useState<'A1' | 'A2'>('A1');
+  const [selectedStory, setSelectedStory] = useState<GeneratedStory | null>(null);
 
   useEffect(() => {
-    // Load all data dynamically
-    const loadAssets = async () => {
-      try {
-        const [
-          fruits, numbers, family, positions, verbs, adjectives, places, base, templatesModule
-        ] = await Promise.all([
-          import('../content/flashcards/fruits.json'),
-          import('../content/flashcards/numbers.json'),
-          import('../content/flashcards/family.json'),
-          import('../content/flashcards/positions.json'),
-          import('../content/flashcards/verbs.json'),
-          import('../content/flashcards/adjectives.json'),
-          import('../content/flashcards/places.json'),
-          import('../content/flashcards/base.json'),
-          import('../content/story-templates/templates.json')
-        ]);
-        
-        const allFlashcards = [
-          ...(fruits.default as Flashcard[]),
-          ...(numbers.default as Flashcard[]),
-          ...(family.default as Flashcard[]),
-          ...(positions.default as Flashcard[]),
-          ...(verbs.default as Flashcard[]),
-          ...(adjectives.default as Flashcard[]),
-          ...(places.default as Flashcard[]),
-          ...(base.default as Flashcard[])
-        ];
-
-        setFlashcards(allFlashcards);
-        setTemplates(templatesModule.default as StoryTemplate[]);
-      } catch (err) {
-        console.error("Could not load story generation assets", err);
-      }
-    };
-    
-    loadAssets();
+    // Load pre-generated high-quality stories
+    import('../content/stories/stories.json')
+      .then(res => {
+        setStories(res.default as GeneratedStory[]);
+      })
+      .catch(err => console.error("Could not load stories", err));
   }, []);
 
-  const handleGenerate = () => {
-    if (flashcards.length === 0 || templates.length === 0) return;
-    const story = generateStory(level, templates, flashcards);
-    setCurrentStory(story);
-    setShowTranslation(false);
-  };
+  const currentLevelStories = stories.filter(s => s.level === level);
+
+  if (selectedStory) {
+    return (
+      <div className="page-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <button 
+          className="btn mb-4" 
+          onClick={() => setSelectedStory(null)}
+          style={{ marginBottom: '2rem', background: 'var(--bg-surface)' }}
+        >
+          ← Hikayelere Dön
+        </button>
+        
+        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <h2 className="korean-text" style={{ fontSize: '2.5rem', color: 'var(--primary-dark)', marginBottom: '0.5rem' }}>
+            {selectedStory.title.korean}
+          </h2>
+          <h3 style={{ fontSize: '1.2rem', color: 'var(--text-muted)' }}>
+            {selectedStory.title.turkish}
+          </h3>
+        </div>
+
+        <div>
+          {selectedStory.sentences.map((sentence, idx) => (
+            <BilingualSentence key={idx} sentence={sentence} />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="page-container" style={{ maxWidth: '700px', margin: '0 auto' }}>
+    <div className="page-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
       <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-        <Sparkles size={48} style={{ color: 'var(--primary)', marginBottom: '1rem' }} />
-        <h1>Okuma & Hikaye</h1>
-        <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>Öğrendiğin kelimelerle rastgele oluşturulmuş kısa hikayeler oku.</p>
+        <BookOpen size={48} style={{ color: 'var(--primary)', marginBottom: '1rem' }} />
+        <h1>Okuma Pratikleri</h1>
+        <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>
+          Gerçek hayattan kısa hikayeler ve diyaloglar okuyarak çeviri pratiği yapın. 
+          Kelimelerin üzerindeki okunuşları ve Türkçe karşılıklarını inceleyebilirsiniz.
+        </p>
 
         <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '2rem' }}>
           <button 
@@ -81,55 +76,32 @@ const StoryBuilder = () => {
         </div>
       </div>
 
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <button 
-          className="btn primary-btn" 
-          onClick={handleGenerate}
-          disabled={flashcards.length === 0}
-        >
-          <RefreshCw size={18} />
-          {currentStory ? "Yeni Hikaye Oluştur" : "Hikaye Oluştur"}
-        </button>
+      <div className="deck-grid" style={{ display: 'grid', gap: '1.5rem', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
+        {currentLevelStories.map(story => (
+          <div 
+            key={story.id}
+            className="deck-card"
+            onClick={() => setSelectedStory(story)}
+            style={{
+              background: 'var(--bg-surface)', padding: '2rem', borderRadius: 'var(--radius-md)',
+              boxShadow: 'var(--shadow-sm)', cursor: 'pointer', transition: 'transform 0.2s, box-shadow 0.2s',
+              border: '1px solid rgba(0,0,0,0.05)', textAlign: 'center'
+            }}
+            onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = 'var(--shadow-md)'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'var(--shadow-sm)'; }}
+          >
+            <h3 className="korean-text" style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--primary-dark)' }}>
+              {story.title.korean}
+            </h3>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1rem' }}>
+              {story.title.turkish}
+            </p>
+          </div>
+        ))}
+        {currentLevelStories.length === 0 && (
+          <p style={{ textAlign: 'center', color: 'var(--text-muted)', gridColumn: '1 / -1' }}>Bu seviye için henüz hikaye bulunmuyor.</p>
+        )}
       </div>
-
-      {currentStory && (
-        <div style={{ 
-          background: 'var(--bg-surface)', 
-          padding: '3rem 2rem', 
-          borderRadius: 'var(--radius-lg)', 
-          boxShadow: 'var(--shadow-md)',
-          border: '1px solid var(--primary-light)',
-          animation: 'fadeIn 0.5s ease'
-        }}>
-          <div className="korean-text" style={{ fontSize: '1.8rem', lineHeight: '1.8', marginBottom: '2rem', textAlign: 'center', color: 'var(--primary-dark)' }}>
-            {currentStory.koreanText}
-          </div>
-          
-          <div style={{ textAlign: 'center' }}>
-            {!showTranslation ? (
-              <button 
-                className="btn" 
-                style={{ background: 'rgba(0,0,0,0.05)', color: 'var(--text-muted)' }}
-                onClick={() => setShowTranslation(true)}
-              >
-                Çeviriyi Göster
-              </button>
-            ) : (
-              <div style={{ 
-                marginTop: '1.5rem', 
-                padding: '1.5rem', 
-                background: 'var(--bg-surface-hover)', 
-                borderRadius: 'var(--radius-sm)',
-                fontSize: '1.1rem',
-                color: 'var(--text-main)',
-                borderLeft: '4px solid var(--primary)'
-              }}>
-                <span dangerouslySetInnerHTML={{ __html: currentStory.turkishText }} />
-              </div>
-            )}
-          </div>
-        </div>
-      )}
     </div>
   );
 };

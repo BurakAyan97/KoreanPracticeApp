@@ -1,207 +1,1751 @@
-[
-  {
-    "id": "a1-topic-particle",
-    "title": "Konu Bildirme Eki: 은/는 (eun/neun)",
-    "description": "Cümlenin konusunu belirtmek ve vurgu yapmak için kullanılır. İsme eklenir.",
-    "rules": [
-      { "condition": "Kelime sessiz harfle bitiyorsa (Batchim varsa)", "suffix": "은" },
-      { "condition": "Kelime sesli harfle bitiyorsa (Batchim yoksa)", "suffix": "는" }
-    ],
-    "examples": [
-      {
-        "koreanParts": [
-          { "text": "저", "type": "root" }, { "text": "는", "type": "particle" }, { "text": " 학생이에", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Ben öğrenciyim (Vurgu bende)."
-      },
-      {
-        "koreanParts": [
-          { "text": "선생님", "type": "root" }, { "text": "은", "type": "particle" }, { "text": " 한국 사람이에", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Öğretmen Korelidir."
-      },
-      {
-        "koreanParts": [
-          { "text": "사과", "type": "root" }, { "text": "는", "type": "particle" }, { "text": " 맛있어", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Elma (konumuz elma), lezzetlidir."
-      },
-      {
-        "koreanParts": [
-          { "text": "오늘", "type": "root" }, { "text": "은", "type": "particle" }, { "text": " 날씨가 좋아", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Bugün hava güzel."
-      },
-      {
-        "koreanParts": [
-          { "text": "어머니", "type": "root" }, { "text": "는", "type": "particle" }, { "text": " 집에 계세", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Annem evdedir."
-      }
-    ]
+{
+  "version": 2,
+  "level": "A1",
+  "title": "Korece A1 Dilbilgisi",
+  "uiGuide": {
+    "sameKeySameColor": true,
+    "wordColorMode": "example-local",
+    "suffixPalette": {
+      "topic": "purple",
+      "subject": "blue",
+      "object": "red",
+      "location": "green",
+      "actionPlace": "teal",
+      "copula": "orange",
+      "present": "cyan",
+      "past": "amber",
+      "future": "pink"
+    },
+    "renderRule": "Aynı key değerine sahip Korean/Turkish parçalar aynı renkle, suffix tipindeki parçalar ise suffixPalette ile boyanır."
   },
-  {
-    "id": "a1-subject-particle",
-    "title": "Özne Eki: 이/가 (i/ga)",
-    "description": "Cümlenin doğrudan öznesini belirtir. Eylemi veya durumu yapan kişiyi/nesneyi netleştirir.",
-    "rules": [
-      { "condition": "Kelime sessiz harfle bitiyorsa (Batchim varsa)", "suffix": "이" },
-      { "condition": "Kelime sesli harfle bitiyorsa (Batchim yoksa)", "suffix": "가" }
-    ],
-    "examples": [
-      {
-        "koreanParts": [
-          { "text": "비", "type": "root" }, { "text": "가", "type": "particle" }, { "text": " 와", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Yağmur yağıyor."
-      },
-      {
-        "koreanParts": [
-          { "text": "가방", "type": "root" }, { "text": "이", "type": "particle" }, { "text": " 무거워", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Çanta ağırdır."
-      },
-      {
-        "koreanParts": [
-          { "text": "친구", "type": "root" }, { "text": "가", "type": "particle" }, { "text": " 와", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Arkadaş geliyor."
-      },
-      {
-        "koreanParts": [
-          { "text": "동생", "type": "root" }, { "text": "이", "type": "particle" }, { "text": " 자", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Kardeşim uyuyor."
-      },
-      {
-        "koreanParts": [
-          { "text": "날씨", "type": "root" }, { "text": "가", "type": "particle" }, { "text": " 추워", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Hava soğuktur."
-      }
-    ]
-  },
-  {
-    "id": "a1-object-particle",
-    "title": "Nesne Eki: 을/를 (eul/reul)",
-    "description": "Eylemden etkilenen nesneyi belirtir. Türkçedeki '-i' halinin (belirtili nesne) karşılığıdır.",
-    "rules": [
-      { "condition": "Kelime sessiz harfle bitiyorsa (Batchim varsa)", "suffix": "을" },
-      { "condition": "Kelime sesli harfle bitiyorsa (Batchim yoksa)", "suffix": "를" }
-    ],
-    "examples": [
-      {
-        "koreanParts": [
-          { "text": "사과", "type": "root" }, { "text": "를", "type": "particle" }, { "text": " 먹어", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Elmayı yorum."
-      },
-      {
-        "koreanParts": [
-          { "text": "책", "type": "root" }, { "text": "을", "type": "particle" }, { "text": " 읽어", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Kitabı okuyorum."
-      },
-      {
-        "koreanParts": [
-          { "text": "영화", "type": "root" }, { "text": "를", "type": "particle" }, { "text": " 봐", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Filmi izliyorum."
-      },
-      {
-        "koreanParts": [
-          { "text": "물", "type": "root" }, { "text": "을", "type": "particle" }, { "text": " 마셔", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Suyu içiyorum."
-      },
-      {
-        "koreanParts": [
-          { "text": "한국어", "type": "root" }, { "text": "를", "type": "particle" }, { "text": " 공부해", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Koreceyi çalışıyorum."
-      }
-    ]
-  },
-  {
-    "id": "a1-to-be-present",
-    "title": "Olmak Fiili (Geniş/Şimdiki Zaman): 이에요 / 예요",
-    "description": "İsim cümlelerinde 'dır/dir' veya 'yım/yim' anlamı katar. İsimlere doğrudan bitişik yazılır.",
-    "rules": [
-      { "condition": "Kelime sessiz harfle bitiyorsa", "suffix": "이에요" },
-      { "condition": "Kelime sesli harfle bitiyorsa", "suffix": "예요" }
-    ],
-    "examples": [
-      {
-        "koreanParts": [
-          { "text": "학생", "type": "root" }, { "text": "이에요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Öğrenciyim."
-      },
-      {
-        "koreanParts": [
-          { "text": "의사", "type": "root" }, { "text": "예요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Doktorum."
-      },
-      {
-        "koreanParts": [
-          { "text": "책", "type": "root" }, { "text": "이에요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Kitaptır."
-      },
-      {
-        "koreanParts": [
-          { "text": "사과", "type": "root" }, { "text": "예요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Elmadır."
-      },
-      {
-        "koreanParts": [
-          { "text": "한국 사람", "type": "root" }, { "text": "이에요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Koreliyim / Korelidir."
-      }
-    ]
-  },
-  {
-    "id": "a1-location",
-    "title": "Yer Belirtme Ekleri: 에 / 에서",
-    "description": "Zaman veya varış/bulunma yönü için 에 kullanılır. Eylemin gerçekleştiği yer için 에서 kullanılır.",
-    "rules": [
-      { "condition": "Varış yönü, zaman veya sadece bulunma hissi", "suffix": "에" },
-      { "condition": "Bir mekanın içinde bir eylem gerçekleşiyorsa", "suffix": "에서" }
-    ],
-    "examples": [
-      {
-        "koreanParts": [
-          { "text": "학교", "type": "root" }, { "text": "에", "type": "particle" }, { "text": " 가", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Okula gidiyorum."
-      },
-      {
-        "koreanParts": [
-          { "text": "집", "type": "root" }, { "text": "에", "type": "particle" }, { "text": " 있어", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Evde bulunuyorum."
-      },
-      {
-        "koreanParts": [
-          { "text": "식당", "type": "root" }, { "text": "에서", "type": "particle" }, { "text": " 밥을 먹어", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Restoranda yemek yiyorum."
-      },
-      {
-        "koreanParts": [
-          { "text": "한국", "type": "root" }, { "text": "에서", "type": "particle" }, { "text": " 한국어를 공부해", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Kore'de Korece çalışıyorum."
-      },
-      {
-        "koreanParts": [
-          { "text": "도서관", "type": "root" }, { "text": "에", "type": "particle" }, { "text": " 와", "type": "root" }, { "text": "요", "type": "ending" }, { "text": ".", "type": "base" }
-        ],
-        "turkish": "Kütüphaneye geliyorum."
-      }
-    ]
-  }
-]
+  "lessons": [
+    {
+      "id": "a1-l01",
+      "order": 1,
+      "title": "L1: Hangul - Ünlüler ve Ünsüzler",
+      "description": "Bu derste Kore alfabesinin temel harflerini öğreniyoruz. Korece, Latin harfleriyle değil Hangul ile yazılır. Önce harfleri tek tek tanırız. Sonra bu harfleri birleştirip hece oluştururuz. Bu ilk adımda amaç konuşmak değil; doğru görmek, doğru okumak ve sesleri ayırt etmektir.",
+      "teacherExplanation": "Hangul'da harfler tek başına yan yana dizilmez; kutu gibi heceler oluşturur. Bir hecede genelde en az bir ünsüz ve bir ünlü bulunur. Bu yüzden ilk hedefin şudur: harfi tanı, sesi tanı, sonra heceyi oku. Bu dersi acele geçersen sonraki bütün derslerde zorlanırsın.",
+      "exampleMode": "reading",
+      "rules": [
+        {
+          "name": "Temel ünlüler",
+          "explanation": "ㅏ, ㅓ, ㅗ, ㅜ, ㅡ, ㅣ en temel sesli harflerdir."
+        },
+        {
+          "name": "Temel ünsüzler",
+          "explanation": "ㄱ, ㄴ, ㄷ, ㄹ, ㅁ, ㅂ, ㅅ, ㅇ temel sessiz harflerdir."
+        },
+        {
+          "name": "Hece mantığı",
+          "explanation": "Korece'de harfler birleşip tek bir hece bloğu oluşturur."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "가",
+          "trText": "ga",
+          "pairs": [
+            {
+              "ko": "ㄱ",
+              "tr": "g",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "ㅏ",
+              "tr": "a",
+              "key": "w2",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "나",
+          "trText": "na",
+          "pairs": [
+            {
+              "ko": "ㄴ",
+              "tr": "n",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "ㅏ",
+              "tr": "a",
+              "key": "w2",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "머",
+          "trText": "meo",
+          "pairs": [
+            {
+              "ko": "ㅁ",
+              "tr": "m",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "ㅓ",
+              "tr": "eo",
+              "key": "w2",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "부",
+          "trText": "bu",
+          "pairs": [
+            {
+              "ko": "ㅂ",
+              "tr": "b",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "ㅜ",
+              "tr": "u",
+              "key": "w2",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "소",
+          "trText": "so",
+          "pairs": [
+            {
+              "ko": "ㅅ",
+              "tr": "s",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "ㅗ",
+              "tr": "o",
+              "key": "w2",
+              "type": "word"
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "Temel ünlüleri tanıyabiliyorum.",
+        "Temel ünsüzleri tanıyabiliyorum.",
+        "Basit açık heceleri okuyabiliyorum."
+      ]
+    },
+    {
+      "id": "a1-l02",
+      "order": 2,
+      "title": "L2: Hece Kurma ve Batchim",
+      "description": "Bu derste harfleri birleştirip gerçek heceler ve kelimeler okumaya başlıyoruz. Ayrıca hecenin sonundaki sessiz harf yani batchim mantığını görüyoruz.",
+      "teacherExplanation": "Bir önceki derste harfleri tanıdın. Şimdi bunları kutu gibi birleştirip okuyacaksın. Korece'de bir hece bazen sadece ünsüz + ünlü olur, bazen sonuna bir sessiz daha gelir. O son sessize batchim denir. Batchim telaffuzu sonraki derslerde daha ayrıntılı gelir; burada önce görsel mantığı oturtuyoruz.",
+      "exampleMode": "reading",
+      "rules": [
+        {
+          "name": "Açık hece",
+          "explanation": "Sessiz + sesli biçimidir. Örnek: 가, 나, 머"
+        },
+        {
+          "name": "Kapalı hece",
+          "explanation": "Sessiz + sesli + sessiz biçimidir. Son sessiz batchim olur. Örnek: 밥, 문"
+        }
+      ],
+      "examples": [
+        {
+          "koText": "밥",
+          "trText": "bap",
+          "pairs": [
+            {
+              "ko": "ㅂ",
+              "tr": "b",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "ㅏ",
+              "tr": "a",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "ㅂ",
+              "tr": "p/batchim",
+              "key": "w3",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "문",
+          "trText": "mun",
+          "pairs": [
+            {
+              "ko": "ㅁ",
+              "tr": "m",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "ㅜ",
+              "tr": "u",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "ㄴ",
+              "tr": "n/batchim",
+              "key": "w3",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "집",
+          "trText": "jip",
+          "pairs": [
+            {
+              "ko": "ㅈ",
+              "tr": "j",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "ㅣ",
+              "tr": "i",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "ㅂ",
+              "tr": "p/batchim",
+              "key": "w3",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "책",
+          "trText": "chaek",
+          "pairs": [
+            {
+              "ko": "ㅊ",
+              "tr": "ch",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "ㅐ",
+              "tr": "ae",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "ㄱ",
+              "tr": "k/batchim",
+              "key": "w3",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "한국",
+          "trText": "hanguk",
+          "pairs": [
+            {
+              "ko": "한",
+              "tr": "han",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "국",
+              "tr": "guk",
+              "key": "w2",
+              "type": "word"
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "Batchim'in ne olduğunu biliyorum.",
+        "Kapalı hece okuyabiliyorum.",
+        "Kısa kelimeleri hecelere bölüp okuyabiliyorum."
+      ]
+    },
+    {
+      "id": "a1-l03",
+      "order": 3,
+      "title": "L3: Konu Eki 은/는 ve 이에요/예요",
+      "description": "Bu derste isim cümlesi kurmayı öğreniyoruz. Yani 'Ben öğrenciyim.', 'Ben Türküm.' gibi cümleleri kuracağız. Bu, A1'in gerçek başlangıcıdır.",
+      "teacherExplanation": "Korece'de 'ben öğrenciyim' demek için doğrudan kelimeleri yan yana koymayız. Önce konuyu belirtiriz, sonra 'olmak' yapısını ekleriz. Konu eki isimden sonra gelir: sessizle biten isimden sonra 은, sesliyle biten isimden sonra 는 gelir. Aynı şekilde 이에요/예요 da isme göre değişir.",
+      "rules": [
+        {
+          "name": "Konu eki",
+          "pattern": "isim + 은/는",
+          "explanation": "Sessizle biten isimden sonra 은, sesliyle biten isimden sonra 는 gelir."
+        },
+        {
+          "name": "Olmak",
+          "pattern": "isim + 이에요/예요",
+          "explanation": "Sessizle biten isimden sonra 이에요, sesliyle biten isimden sonra 예요 gelir."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "저는 학생이에요.",
+          "trText": "Ben öğrenciyim.",
+          "pairs": [
+            {
+              "ko": "저",
+              "tr": "ben",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "는",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "학생",
+              "tr": "öğrenci",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "이에요",
+              "tr": "-im / olmak",
+              "key": "copula",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "저는 터키 사람이에요.",
+          "trText": "Ben Türküm.",
+          "pairs": [
+            {
+              "ko": "저",
+              "tr": "ben",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "는",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "터키 사람",
+              "tr": "Türk / Türkiye insanı",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "이에요",
+              "tr": "-im / olmak",
+              "key": "copula",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "저는 민수예요.",
+          "trText": "Ben Minsu'yum.",
+          "pairs": [
+            {
+              "ko": "저",
+              "tr": "ben",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "는",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "민수",
+              "tr": "Minsu",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "예요",
+              "tr": "-yum / olmak",
+              "key": "copula",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "이분은 선생님이에요.",
+          "trText": "Bu kişi öğretmendir.",
+          "pairs": [
+            {
+              "ko": "이분",
+              "tr": "bu kişi",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "은",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "선생님",
+              "tr": "öğretmen",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "이에요",
+              "tr": "-dir / olmak",
+              "key": "copula",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "저는 회사원이에요.",
+          "trText": "Ben ofis çalışanıyım.",
+          "pairs": [
+            {
+              "ko": "저",
+              "tr": "ben",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "는",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "회사원",
+              "tr": "ofis çalışanı",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "이에요",
+              "tr": "-yım / olmak",
+              "key": "copula",
+              "type": "suffix"
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "은/는 farkını biliyorum.",
+        "이에요/예요 farkını biliyorum.",
+        "Basit isim cümlesi kurabiliyorum."
+      ]
+    },
+    {
+      "id": "a1-l04",
+      "order": 4,
+      "title": "L4: Saygılı ve Yarı Saygılı Konuşma",
+      "description": "Bu derste Korece'deki temel nezaket farkını öğreniyoruz. A1'de en çok kullanacağın iki yapı 해요체 ve 합니다체'dir.",
+      "teacherExplanation": "Korece'de sadece ne söylediğin değil, nasıl söylediğin de önemlidir. Günlük hayatta yabancılarla ve yeni tanıştığın kişilerle çoğunlukla 해요체 kullanılır. Daha resmî, daha ciddi ve daha mesafeli durumlarda 합니다체 kullanılır. Bu derste amaç hepsini ezberlemek değil; iki tonu fark etmek.",
+      "rules": [
+        {
+          "name": "Yarı saygılı yapı",
+          "pattern": "해요체",
+          "explanation": "Günlük ama kibar konuşmadır. A1'de en çok bunu kullanırsın."
+        },
+        {
+          "name": "Daha resmî yapı",
+          "pattern": "합니다체",
+          "explanation": "Sunum, iş ortamı, resmî tanışma gibi yerlerde daha uygundur."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "안녕하세요.",
+          "trText": "Merhaba.",
+          "pairs": [
+            {
+              "ko": "안녕하세요",
+              "tr": "merhaba",
+              "key": "w1",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "감사합니다.",
+          "trText": "Teşekkür ederim.",
+          "pairs": [
+            {
+              "ko": "감사합니다",
+              "tr": "teşekkür ederim",
+              "key": "w1",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "네, 알겠습니다.",
+          "trText": "Evet, anladım / tamam.",
+          "pairs": [
+            {
+              "ko": "네",
+              "tr": "evet",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "알겠습니다",
+              "tr": "anladım / tamam",
+              "key": "w2",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "다시 말씀해 주세요.",
+          "trText": "Lütfen tekrar söyleyin.",
+          "pairs": [
+            {
+              "ko": "다시",
+              "tr": "tekrar",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "말씀해 주세요",
+              "tr": "lütfen söyleyin",
+              "key": "w2",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "저는 학생입니다.",
+          "trText": "Ben öğrenciyim.",
+          "pairs": [
+            {
+              "ko": "저",
+              "tr": "ben",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "는",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "학생",
+              "tr": "öğrenci",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "입니다",
+              "tr": "-im / olmak (resmî)",
+              "key": "copula",
+              "type": "suffix"
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "해요체 ile 합니다체'nin farkını biliyorum.",
+        "Temel sınıf ifadelerini kullanabiliyorum.",
+        "Resmî ve günlük tonda temel cümle kurabiliyorum."
+      ]
+    },
+    {
+      "id": "a1-l05",
+      "order": 5,
+      "title": "L5: Bu / Şu / O ve Basit Nesne Cümleleri",
+      "description": "Bu derste nesneleri göstermeyi öğreniyoruz. Yani 'bu kitap', 'şu çanta', 'o sandalye' gibi yapılar kuracağız.",
+      "teacherExplanation": "Yeni başlayan biri için en önemli adımlardan biri çevredeki nesneleri adlandırabilmektir. Korece'de yakındaki şey için 이, dinleyene yakın şey için 그, ikisinden de uzak şey için 저 kullanılır. Bunlar tek başına da kullanılabilir, isimle birlikte de kullanılabilir.",
+      "rules": [
+        {
+          "name": "Yakındaki nesne",
+          "pattern": "이",
+          "explanation": "Konuşana yakın şeylerde kullanılır."
+        },
+        {
+          "name": "Dinleyene yakın / bağlamdaki nesne",
+          "pattern": "그",
+          "explanation": "Daha önce sözü geçen veya dinleyene yakın şeylerde kullanılır."
+        },
+        {
+          "name": "Uzak nesne",
+          "pattern": "저",
+          "explanation": "İki kişiden de uzaktaki şeylerde kullanılır."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "이거는 책이에요.",
+          "trText": "Bu kitaptır.",
+          "pairs": [
+            {
+              "ko": "이거",
+              "tr": "bu",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "는",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "책",
+              "tr": "kitap",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "이에요",
+              "tr": "-tır / olmak",
+              "key": "copula",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "그거는 가방이에요.",
+          "trText": "Şu / o çantadır.",
+          "pairs": [
+            {
+              "ko": "그거",
+              "tr": "şu / o",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "는",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "가방",
+              "tr": "çanta",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "이에요",
+              "tr": "-dır / olmak",
+              "key": "copula",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "저거는 의자예요.",
+          "trText": "O sandalye.",
+          "pairs": [
+            {
+              "ko": "저거",
+              "tr": "o",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "는",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "의자",
+              "tr": "sandalye",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "예요",
+              "tr": "-dır / olmak",
+              "key": "copula",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "이거는 제 연필이에요.",
+          "trText": "Bu benim kalemimdir.",
+          "pairs": [
+            {
+              "ko": "이거",
+              "tr": "bu",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "는",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "제",
+              "tr": "benim",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "연필",
+              "tr": "kalem",
+              "key": "w3",
+              "type": "word"
+            },
+            {
+              "ko": "이에요",
+              "tr": "-imdir / olmak",
+              "key": "copula",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "이것은 뭐예요?",
+          "trText": "Bu nedir?",
+          "pairs": [
+            {
+              "ko": "이것",
+              "tr": "bu şey",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "은",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "뭐",
+              "tr": "ne",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "예요",
+              "tr": "-dir?",
+              "key": "copula",
+              "type": "suffix"
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "이/그/저 farkını biliyorum.",
+        "Nesneleri gösterebiliyorum.",
+        "Bu nedir? diye sorabiliyorum."
+      ]
+    },
+    {
+      "id": "a1-l06",
+      "order": 6,
+      "title": "L6: 있다 / 없다 ve Yer Bildirme",
+      "description": "Bu derste bir şeyin varlığını, yokluğunu ve yerini söyleyeceğiz. 'Kitap var.', 'Okulda öğretmen var.', 'Çanta sandalyenin yanında.' gibi.",
+      "teacherExplanation": "Korece'de 'var' demek için 있다, 'yok' demek için 없다 kullanılır. Ayrıca bir şeyin nerede olduğunu söylerken yer ifadesi + 에 yapısını kullanırız. Burada 이/가 özne işlevinde sık görünür, çünkü artık cümlede neyin var olduğunu net söylememiz gerekir.",
+      "rules": [
+        {
+          "name": "Özne eki",
+          "pattern": "이/가",
+          "explanation": "Sessizden sonra 이, sesliden sonra 가 gelir."
+        },
+        {
+          "name": "Yer eki",
+          "pattern": "에",
+          "explanation": "Bulunulan yer veya varlık yeri için kullanılır."
+        },
+        {
+          "name": "Var / yok",
+          "pattern": "있어요 / 없어요",
+          "explanation": "Bir şeyin varlığını ya da yokluğunu söyler."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "책이 있어요.",
+          "trText": "Kitap var.",
+          "pairs": [
+            {
+              "ko": "책",
+              "tr": "kitap",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "이",
+              "tr": "(özne eki)",
+              "key": "subject",
+              "type": "suffix"
+            },
+            {
+              "ko": "있어요",
+              "tr": "var",
+              "key": "w2",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "연필이 없어요.",
+          "trText": "Kalem yok.",
+          "pairs": [
+            {
+              "ko": "연필",
+              "tr": "kalem",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "이",
+              "tr": "(özne eki)",
+              "key": "subject",
+              "type": "suffix"
+            },
+            {
+              "ko": "없어요",
+              "tr": "yok",
+              "key": "w2",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "학교에 학생이 있어요.",
+          "trText": "Okulda öğrenci var.",
+          "pairs": [
+            {
+              "ko": "학교",
+              "tr": "okul",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "에",
+              "tr": "-de",
+              "key": "location",
+              "type": "suffix"
+            },
+            {
+              "ko": "학생",
+              "tr": "öğrenci",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "이",
+              "tr": "(özne eki)",
+              "key": "subject",
+              "type": "suffix"
+            },
+            {
+              "ko": "있어요",
+              "tr": "var",
+              "key": "w3",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "가방이 의자 옆에 있어요.",
+          "trText": "Çanta sandalyenin yanında.",
+          "pairs": [
+            {
+              "ko": "가방",
+              "tr": "çanta",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "이",
+              "tr": "(özne eki)",
+              "key": "subject",
+              "type": "suffix"
+            },
+            {
+              "ko": "의자",
+              "tr": "sandalye",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "옆에",
+              "tr": "yanında",
+              "key": "w3",
+              "type": "word"
+            },
+            {
+              "ko": "있어요",
+              "tr": "bulunuyor / var",
+              "key": "w4",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "교실에 선생님이 없어요.",
+          "trText": "Sınıfta öğretmen yok.",
+          "pairs": [
+            {
+              "ko": "교실",
+              "tr": "sınıf",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "에",
+              "tr": "-de",
+              "key": "location",
+              "type": "suffix"
+            },
+            {
+              "ko": "선생님",
+              "tr": "öğretmen",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "이",
+              "tr": "(özne eki)",
+              "key": "subject",
+              "type": "suffix"
+            },
+            {
+              "ko": "없어요",
+              "tr": "yok",
+              "key": "w3",
+              "type": "word"
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "있어요 / 없어요 kullanabiliyorum.",
+        "에 ekini yer için kullanabiliyorum.",
+        "Bir nesnenin veya kişinin yerini söyleyebiliyorum."
+      ]
+    },
+    {
+      "id": "a1-l07",
+      "order": 7,
+      "title": "L7: Fiiller, 을/를 ve 에서",
+      "description": "Bu derste artık gerçek fiil cümleleri kuruyoruz. Ne yapıyorum? Nerede yapıyorum? Neyi yapıyorum? sorularına cevap vereceğiz.",
+      "teacherExplanation": "Korece'de fiil cümlesi kurarken nesne varsa çoğu zaman 을/를 kullanırız. Eylemin yapıldığı yer için ise 에서 kullanırız. Burada önemli olan fark şudur: 에 çoğu zaman 'bulunma/varlık yeri', 에서 ise 'eylemin gerçekleştiği yer' demektir.",
+      "rules": [
+        {
+          "name": "Nesne eki",
+          "pattern": "을/를",
+          "explanation": "Sessizle biten isimden sonra 을, sesliyle bitenden sonra 를 gelir."
+        },
+        {
+          "name": "Eylem yeri",
+          "pattern": "에서",
+          "explanation": "Eylemin yapıldığı yeri gösterir."
+        },
+        {
+          "name": "Geniş / şimdiki temel kibar çekim",
+          "pattern": "아/어요",
+          "explanation": "A1'de günlük kibar fiil çekiminin temeli budur."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "저는 한국어를 공부해요.",
+          "trText": "Ben Korece çalışıyorum.",
+          "pairs": [
+            {
+              "ko": "저",
+              "tr": "ben",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "는",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "한국어",
+              "tr": "Korece",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "를",
+              "tr": "(nesne eki)",
+              "key": "object",
+              "type": "suffix"
+            },
+            {
+              "ko": "공부해요",
+              "tr": "çalışıyorum",
+              "key": "present",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "도서관에서 책을 읽어요.",
+          "trText": "Kütüphanede kitap okuyorum.",
+          "pairs": [
+            {
+              "ko": "도서관",
+              "tr": "kütüphane",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "에서",
+              "tr": "-de (eylem yeri)",
+              "key": "actionPlace",
+              "type": "suffix"
+            },
+            {
+              "ko": "책",
+              "tr": "kitap",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "을",
+              "tr": "(nesne eki)",
+              "key": "object",
+              "type": "suffix"
+            },
+            {
+              "ko": "읽어요",
+              "tr": "okuyorum",
+              "key": "present",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "집에서 밥을 먹어요.",
+          "trText": "Evde yemek yiyorum.",
+          "pairs": [
+            {
+              "ko": "집",
+              "tr": "ev",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "에서",
+              "tr": "-de (eylem yeri)",
+              "key": "actionPlace",
+              "type": "suffix"
+            },
+            {
+              "ko": "밥",
+              "tr": "yemek / pilav",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "을",
+              "tr": "(nesne eki)",
+              "key": "object",
+              "type": "suffix"
+            },
+            {
+              "ko": "먹어요",
+              "tr": "yiyorum",
+              "key": "present",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "아침에 물을 마셔요.",
+          "trText": "Sabah su içiyorum.",
+          "pairs": [
+            {
+              "ko": "아침",
+              "tr": "sabah",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "에",
+              "tr": "-de / zaman eki",
+              "key": "location",
+              "type": "suffix"
+            },
+            {
+              "ko": "물",
+              "tr": "su",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "을",
+              "tr": "(nesne eki)",
+              "key": "object",
+              "type": "suffix"
+            },
+            {
+              "ko": "마셔요",
+              "tr": "içiyorum",
+              "key": "present",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "저는 친구를 만나요.",
+          "trText": "Ben arkadaşımla buluşuyorum / arkadaşımı görüyorum.",
+          "pairs": [
+            {
+              "ko": "저",
+              "tr": "ben",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "는",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "친구",
+              "tr": "arkadaş",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "를",
+              "tr": "(nesne eki)",
+              "key": "object",
+              "type": "suffix"
+            },
+            {
+              "ko": "만나요",
+              "tr": "buluşuyorum / görüyorum",
+              "key": "present",
+              "type": "suffix"
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "을/를 kullanabiliyorum.",
+        "에 ile 에서 farkını biliyorum.",
+        "Basit fiil cümleleri kurabiliyorum."
+      ]
+    },
+    {
+      "id": "a1-l08",
+      "order": 8,
+      "title": "L8: Sayılar, Saat ve Tarih",
+      "description": "Bu derste sayılarla iş yapacağız. Saat sormak, tarih söylemek ve basit sayma yapmak A1 için şarttır.",
+      "teacherExplanation": "Korece'de iki sayı sistemi vardır: yerli Korece sayılar ve Sino-Korece sayılar. Başlangıçta her şeyi bir anda ezberlemeye çalışma. Önce hangi durumda hangisinin kullanıldığını öğren. Saatte yerli sayı sık görülür, dakika ve tarihte Sino-Korece sayılar daha yaygındır.",
+      "rules": [
+        {
+          "name": "Saat",
+          "pattern": "몇 시예요?",
+          "explanation": "Saat sorarken kullanılır."
+        },
+        {
+          "name": "Dakika",
+          "pattern": "분",
+          "explanation": "Dakika için kullanılır."
+        },
+        {
+          "name": "Sayaçlar",
+          "pattern": "개, 명, 잔",
+          "explanation": "Nesneye göre farklı sayaçlar kullanılır."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "지금 세 시예요.",
+          "trText": "Şimdi saat üç.",
+          "pairs": [
+            {
+              "ko": "지금",
+              "tr": "şimdi",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "세",
+              "tr": "üç",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "시",
+              "tr": "saat",
+              "key": "w3",
+              "type": "word"
+            },
+            {
+              "ko": "예요",
+              "tr": "-tır",
+              "key": "copula",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "수업은 아홉 시에 시작해요.",
+          "trText": "Ders saat dokuzda başlıyor.",
+          "pairs": [
+            {
+              "ko": "수업",
+              "tr": "ders",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "은",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "아홉",
+              "tr": "dokuz",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "시",
+              "tr": "saat",
+              "key": "w3",
+              "type": "word"
+            },
+            {
+              "ko": "에",
+              "tr": "-de",
+              "key": "location",
+              "type": "suffix"
+            },
+            {
+              "ko": "시작해요",
+              "tr": "başlıyor",
+              "key": "present",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "저는 두 시에 점심을 먹어요.",
+          "trText": "Ben saat ikide öğle yemeği yiyorum.",
+          "pairs": [
+            {
+              "ko": "저",
+              "tr": "ben",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "는",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "두",
+              "tr": "iki",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "시",
+              "tr": "saat",
+              "key": "w3",
+              "type": "word"
+            },
+            {
+              "ko": "에",
+              "tr": "-de",
+              "key": "location",
+              "type": "suffix"
+            },
+            {
+              "ko": "점심",
+              "tr": "öğle yemeği",
+              "key": "w4",
+              "type": "word"
+            },
+            {
+              "ko": "을",
+              "tr": "(nesne eki)",
+              "key": "object",
+              "type": "suffix"
+            },
+            {
+              "ko": "먹어요",
+              "tr": "yiyorum",
+              "key": "present",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "오늘은 5월 3일이에요.",
+          "trText": "Bugün 3 Mayıs.",
+          "pairs": [
+            {
+              "ko": "오늘",
+              "tr": "bugün",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "은",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "5월 3일",
+              "tr": "3 Mayıs",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "이에요",
+              "tr": "-dır",
+              "key": "copula",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "사과 두 개 있어요.",
+          "trText": "İki elma var.",
+          "pairs": [
+            {
+              "ko": "사과",
+              "tr": "elma",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "두",
+              "tr": "iki",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "개",
+              "tr": "adet",
+              "key": "w3",
+              "type": "word"
+            },
+            {
+              "ko": "있어요",
+              "tr": "var",
+              "key": "w4",
+              "type": "word"
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "Saat söyleyebiliyorum.",
+        "Basit tarih söyleyebiliyorum.",
+        "Temel sayaçları kullanabiliyorum."
+      ]
+    },
+    {
+      "id": "a1-l09",
+      "order": 9,
+      "title": "L9: Aile ve İnsanları Betimleme",
+      "description": "Bu derste aileyi tanıtmayı ve insanları basit sıfatlarla anlatmayı öğreniyoruz.",
+      "teacherExplanation": "A1 seviyesinde uzun betimlemeler gerekmez. Kısa ve temiz cümleler yeterlidir: 'Babam uzun.', 'Annem nazik.', 'Kardeşim öğrenci.' Burada amaç çok kelime ezberlemek değil; önce cümle iskeletini doğru kurmaktır.",
+      "rules": [
+        {
+          "name": "Konu + sıfat",
+          "pattern": "isim + 은/는 + sıfat",
+          "explanation": "Bir kişiyi ya da nesneyi tarif etmek için kullanılır."
+        },
+        {
+          "name": "Basit niteleme",
+          "pattern": "커요, 작아요, 친절해요",
+          "explanation": "A1'de en sık kullanılan temel betimleme fiilleri/sıfatlarıdır."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "우리 가족은 네 명이에요.",
+          "trText": "Bizim ailemiz dört kişidir.",
+          "pairs": [
+            {
+              "ko": "우리 가족",
+              "tr": "bizim ailemiz",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "은",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "네 명",
+              "tr": "dört kişi",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "이에요",
+              "tr": "-dir",
+              "key": "copula",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "아버지는 키가 커요.",
+          "trText": "Babam uzundur.",
+          "pairs": [
+            {
+              "ko": "아버지",
+              "tr": "babam / baba",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "는",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "키",
+              "tr": "boy",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "가",
+              "tr": "(özne eki)",
+              "key": "subject",
+              "type": "suffix"
+            },
+            {
+              "ko": "커요",
+              "tr": "uzundur / büyük",
+              "key": "present",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "어머니는 친절해요.",
+          "trText": "Annem naziktir.",
+          "pairs": [
+            {
+              "ko": "어머니",
+              "tr": "annem / anne",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "는",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "친절해요",
+              "tr": "naziktir",
+              "key": "present",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "제 동생은 학생이에요.",
+          "trText": "Kardeşim öğrencidir.",
+          "pairs": [
+            {
+              "ko": "제",
+              "tr": "benim",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "동생",
+              "tr": "küçük kardeş",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "은",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "학생",
+              "tr": "öğrenci",
+              "key": "w3",
+              "type": "word"
+            },
+            {
+              "ko": "이에요",
+              "tr": "-dir",
+              "key": "copula",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "제 친구는 한국 사람이에요.",
+          "trText": "Arkadaşım Korelidir.",
+          "pairs": [
+            {
+              "ko": "제 친구",
+              "tr": "benim arkadaşım",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "는",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "한국 사람",
+              "tr": "Koreli",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "이에요",
+              "tr": "-dir",
+              "key": "copula",
+              "type": "suffix"
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "Ailemi tanıtabiliyorum.",
+        "İnsanları temel sıfatlarla anlatabiliyorum.",
+        "İsim cümlesi ve sıfat cümlesi farkını seziyorum."
+      ]
+    },
+    {
+      "id": "a1-l10",
+      "order": 10,
+      "title": "L10: Geçmiş ve Gelecek Planlar",
+      "description": "Bu derste dünü ve yarını anlatmaya başlıyoruz. A1 seviyesinde amaç karmaşık zaman sistemi değil; çok temel geçmiş ve gelecek cümlesi kurmaktır.",
+      "teacherExplanation": "Korece'de geçmiş zamanı çoğu zaman 았어요/었어요 ile görürsün. Gelecek plan için ise en pratik başlangıç yapısı ㄹ/을 거예요'dur. Şimdilik istisnalarla uğraşma. Önce 'dün yaptım', 'yarın yapacağım' mantığını oturt.",
+      "rules": [
+        {
+          "name": "Geçmiş zaman",
+          "pattern": "았어요/었어요",
+          "explanation": "Eylemin geçmişte tamamlandığını gösterir."
+        },
+        {
+          "name": "Gelecek plan",
+          "pattern": "ㄹ/을 거예요",
+          "explanation": "Yakın gelecek veya plan anlatmak için kullanılır."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "어제 학교에 갔어요.",
+          "trText": "Dün okula gittim.",
+          "pairs": [
+            {
+              "ko": "어제",
+              "tr": "dün",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "학교",
+              "tr": "okul",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "에",
+              "tr": "-e",
+              "key": "location",
+              "type": "suffix"
+            },
+            {
+              "ko": "갔어요",
+              "tr": "gittim",
+              "key": "past",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "어제 커피를 마셨어요.",
+          "trText": "Dün kahve içtim.",
+          "pairs": [
+            {
+              "ko": "어제",
+              "tr": "dün",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "커피",
+              "tr": "kahve",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "를",
+              "tr": "(nesne eki)",
+              "key": "object",
+              "type": "suffix"
+            },
+            {
+              "ko": "마셨어요",
+              "tr": "içtim",
+              "key": "past",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "주말에 친구를 만났어요.",
+          "trText": "Hafta sonu arkadaşımla buluştum.",
+          "pairs": [
+            {
+              "ko": "주말",
+              "tr": "hafta sonu",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "에",
+              "tr": "-de",
+              "key": "location",
+              "type": "suffix"
+            },
+            {
+              "ko": "친구",
+              "tr": "arkadaş",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "를",
+              "tr": "(nesne eki)",
+              "key": "object",
+              "type": "suffix"
+            },
+            {
+              "ko": "만났어요",
+              "tr": "buluştum",
+              "key": "past",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "내일 도서관에 갈 거예요.",
+          "trText": "Yarın kütüphaneye gideceğim.",
+          "pairs": [
+            {
+              "ko": "내일",
+              "tr": "yarın",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "도서관",
+              "tr": "kütüphane",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "에",
+              "tr": "-e",
+              "key": "location",
+              "type": "suffix"
+            },
+            {
+              "ko": "갈 거예요",
+              "tr": "gideceğim",
+              "key": "future",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "저는 한국어를 더 공부할 거예요.",
+          "trText": "Ben Koreceyi daha çok çalışacağım.",
+          "pairs": [
+            {
+              "ko": "저",
+              "tr": "ben",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "는",
+              "tr": "(konu eki)",
+              "key": "topic",
+              "type": "suffix"
+            },
+            {
+              "ko": "한국어",
+              "tr": "Korece",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "를",
+              "tr": "(nesne eki)",
+              "key": "object",
+              "type": "suffix"
+            },
+            {
+              "ko": "더",
+              "tr": "daha fazla",
+              "key": "w3",
+              "type": "word"
+            },
+            {
+              "ko": "공부할 거예요",
+              "tr": "çalışacağım",
+              "key": "future",
+              "type": "suffix"
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "Basit geçmiş cümlesi kurabiliyorum.",
+        "Basit gelecek planı kurabiliyorum.",
+        "Zaman zarflarını kullanabiliyorum."
+      ]
+    }
+  ]
+}

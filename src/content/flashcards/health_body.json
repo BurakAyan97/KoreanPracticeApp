@@ -1,0 +1,22 @@
+[
+  { "id": "hb-1", "korean": "머리", "turkish": "Baş / Kafa", "pronunciation": "meori", "type": "body_part" },
+  { "id": "hb-2", "korean": "눈", "turkish": "Göz", "pronunciation": "nun", "type": "body_part" },
+  { "id": "hb-3", "korean": "코", "turkish": "Burun", "pronunciation": "ko", "type": "body_part" },
+  { "id": "hb-4", "korean": "입", "turkish": "Ağız", "pronunciation": "ip", "type": "body_part" },
+  { "id": "hb-5", "korean": "귀", "turkish": "Kulak", "pronunciation": "gwi", "type": "body_part" },
+  { "id": "hb-6", "korean": "손", "turkish": "El", "pronunciation": "son", "type": "body_part" },
+  { "id": "hb-7", "korean": "발", "turkish": "Ayak", "pronunciation": "bal", "type": "body_part" },
+  { "id": "hb-8", "korean": "팔", "turkish": "Kol", "pronunciation": "pal", "type": "body_part" },
+  { "id": "hb-9", "korean": "다리", "turkish": "Bacak", "pronunciation": "dari", "type": "body_part" },
+  { "id": "hb-10", "korean": "배", "turkish": "Karın / Mide", "pronunciation": "bae", "type": "body_part" },
+  { "id": "hb-11", "korean": "등", "turkish": "Sırt", "pronunciation": "deung", "type": "body_part" },
+  { "id": "hb-12", "korean": "어깨", "turkish": "Omuz", "pronunciation": "eokkae", "type": "body_part" },
+  { "id": "hb-13", "korean": "목", "turkish": "Boyun / Boğaz", "pronunciation": "mok", "type": "body_part" },
+  { "id": "hb-14", "korean": "치아", "turkish": "Diş", "pronunciation": "chia", "type": "body_part" },
+  { "id": "hb-15", "korean": "감기", "turkish": "Soğuk algınlığı", "pronunciation": "gamgi", "type": "health" },
+  { "id": "hb-16", "korean": "열", "turkish": "Ateş", "pronunciation": "yeol", "type": "health" },
+  { "id": "hb-17", "korean": "기침", "turkish": "Öksürük", "pronunciation": "gichim", "type": "health" },
+  { "id": "hb-18", "korean": "아프다", "turkish": "Ağrımak / Hasta olmak", "pronunciation": "apeuda", "type": "verb" },
+  { "id": "hb-19", "korean": "병원", "turkish": "Hastane", "pronunciation": "byeongwon", "type": "place" },
+  { "id": "hb-20", "korean": "약", "turkish": "İlaç", "pronunciation": "yak", "type": "noun" }
+]

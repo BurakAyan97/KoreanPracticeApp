@@ -1,23 +1,69 @@
+export interface GrammarV2 {
+  version: number;
+  level: string;
+  title: string;
+  uiGuide: {
+    sameKeySameColor: boolean;
+    wordColorMode: string;
+    suffixPalette: Record<string, string>;
+    renderRule: string;
+  };
+  lessons: LessonV2[];
+}
+
+export interface LessonV2 {
+  id: string;
+  order: number;
+  title: string;
+  description: string;
+  teacherExplanation: string;
+  exampleMode: string;
+  rules: {
+    name: string;
+    explanation: string;
+    pattern?: string;
+  }[];
+  examples: GrammarExampleV2[];
+  checkpoints: string[];
+}
+
+export interface GrammarExampleV2 {
+  koText: string;
+  trText: string;
+  pairs: GrammarPairV2[];
+}
+
+export interface GrammarPairV2 {
+  ko: string;
+  tr: string;
+  key: string;
+  type: 'word' | 'suffix';
+}
+
+// Keeping V1 for compatibility during migration if needed
 export interface GrammarConcept {
   id: string;
-  title: string;       // e.g., "Geniş Zaman / Şimdiki Zaman (-아/어요)"
-  description: string; // Turkish explanation
+  title: string;
+  description: string;
   rules: {
-    condition: string; // e.g., "Son sesli harf ㅏ veya ㅗ ise"
-    suffix: string;    // e.g., "아요"
+    condition: string;
+    suffix: string;
     explanation?: string;
   }[];
   examples: ContextualSentence[];
 }
 
 export interface ContextualSentence {
-  koreanParts: TextPart[];   // The sentence broken down for color coding
-  turkish: string;           // "Ben elma yerim."
+  koreanSentence: string;
+  romanizedSentence: string;
+  turkishSentence: string;
+  words: TranslatedWord[];
 }
 
-export interface TextPart {
-  text: string;
-  type: 'root' | 'particle' | 'ending' | 'base'; // 'base' is default unhighlighted text
+export interface TranslatedWord {
+  korean: string;
+  romanized: string;
+  turkish: string;
 }
 
 export interface Flashcard {
@@ -25,16 +71,15 @@ export interface Flashcard {
   korean: string;
   turkish: string;
   pronunciation?: string;
-  type: 'noun' | 'noun_human' | 'position' | 'verb' | 'adjective' | 'number_sino' | 'number_native' | string;
+  type: string;
 }
 
-export interface StoryTemplate {
+export interface GeneratedStory {
   id: string;
-  level: string; // A1, A2
-  templateParts: {
-    type: 'text' | 'slot';
-    value: string; // If text, it's literal. If slot, it's the category like 'noun_person'
-    particleHint?: 'subject_eun_neun' | 'subject_i_ga' | 'object_eul_reul' | 'location_e';
-  }[];
-  turkishTranslationTemplate: string; // "Bir zamanlar [slot:noun_person] vardı..."
+  level: string;
+  title: {
+    korean: string;
+    turkish: string;
+  };
+  sentences: ContextualSentence[];
 }

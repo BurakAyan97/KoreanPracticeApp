@@ -1,0 +1,22 @@
+[
+  { "id": "jb-1", "korean": "학생", "turkish": "Öğrenci", "pronunciation": "haksaeng", "type": "job" },
+  { "id": "jb-2", "korean": "선생님", "turkish": "Öğretmen", "pronunciation": "seonsaengnim", "type": "job" },
+  { "id": "jb-3", "korean": "의사", "turkish": "Doktor", "pronunciation": "uisa", "type": "job" },
+  { "id": "jb-4", "korean": "간호사", "turkish": "Hemşire", "pronunciation": "ganhosa", "type": "job" },
+  { "id": "jb-5", "korean": "회사원", "turkish": "Ofis çalışanı", "pronunciation": "hoesawon", "type": "job" },
+  { "id": "jb-6", "korean": "경찰관", "turkish": "Polis", "pronunciation": "gyeongchalgwan", "type": "job" },
+  { "id": "jb-7", "korean": "소방관", "turkish": "İtfaiyeci", "pronunciation": "sobanggwan", "type": "job" },
+  { "id": "jb-8", "korean": "요리사", "turkish": "Aşçı", "pronunciation": "yorisa", "type": "job" },
+  { "id": "jb-9", "korean": "운전기사", "turkish": "Şoför", "pronunciation": "unjeongisa", "type": "job" },
+  { "id": "jb-10", "korean": "배우", "turkish": "Oyuncu", "pronunciation": "bae-u", "type": "job" },
+  { "id": "jb-11", "korean": "가수", "turkish": "Şarkıcı", "pronunciation": "gasu", "type": "job" },
+  { "id": "jb-12", "korean": "엔지니어", "turkish": "Mühendis", "pronunciation": "enjinieo", "type": "job" },
+  { "id": "jb-13", "korean": "프로그래머", "turkish": "Programcı", "pronunciation": "peurogeuraemeo", "type": "job" },
+  { "id": "jb-14", "korean": "디자이너", "turkish": "Tasarımcı", "pronunciation": "dijaineo", "type": "job" },
+  { "id": "jb-15", "korean": "점원", "turkish": "Mağaza görevlisi", "pronunciation": "jeomwon", "type": "job" },
+  { "id": "jb-16", "korean": "농부", "turkish": "Çiftçi", "pronunciation": "nongbu", "type": "job" },
+  { "id": "jb-17", "korean": "작가", "turkish": "Yazar", "pronunciation": "jakga", "type": "job" },
+  { "id": "jb-18", "korean": "기자", "turkish": "Gazeteci", "pronunciation": "gija", "type": "job" },
+  { "id": "jb-19", "korean": "변호사", "turkish": "Avukat", "pronunciation": "byeonhosa", "type": "job" },
+  { "id": "jb-20", "korean": "관리자", "turkish": "Yönetici", "pronunciation": "gwallija", "type": "job" }
+]

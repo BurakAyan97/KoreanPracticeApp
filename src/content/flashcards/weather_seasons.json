@@ -1,0 +1,22 @@
+[
+  { "id": "ws-1", "korean": "봄", "turkish": "İlkbahar", "pronunciation": "bom", "type": "season" },
+  { "id": "ws-2", "korean": "여름", "turkish": "Yaz", "pronunciation": "yeoreum", "type": "season" },
+  { "id": "ws-3", "korean": "가을", "turkish": "Sonbahar", "pronunciation": "gaeul", "type": "season" },
+  { "id": "ws-4", "korean": "겨울", "turkish": "Kış", "pronunciation": "gyeoul", "type": "season" },
+  { "id": "ws-5", "korean": "날씨", "turkish": "Hava", "pronunciation": "nalssi", "type": "noun" },
+  { "id": "ws-6", "korean": "비", "turkish": "Yağmur", "pronunciation": "bi", "type": "noun" },
+  { "id": "ws-7", "korean": "눈", "turkish": "Kar", "pronunciation": "nun", "type": "noun" },
+  { "id": "ws-8", "korean": "바람", "turkish": "Rüzgâr", "pronunciation": "baram", "type": "noun" },
+  { "id": "ws-9", "korean": "구름", "turkish": "Bulut", "pronunciation": "gureum", "type": "noun" },
+  { "id": "ws-10", "korean": "햇빛", "turkish": "Güneş ışığı", "pronunciation": "haetbit", "type": "noun" },
+  { "id": "ws-11", "korean": "맑다", "turkish": "Açık olmak", "pronunciation": "makda", "type": "adjective" },
+  { "id": "ws-12", "korean": "흐리다", "turkish": "Bulutlu olmak", "pronunciation": "heurida", "type": "adjective" },
+  { "id": "ws-13", "korean": "덥다", "turkish": "Sıcak olmak", "pronunciation": "deopda", "type": "adjective" },
+  { "id": "ws-14", "korean": "춥다", "turkish": "Soğuk olmak", "pronunciation": "chupda", "type": "adjective" },
+  { "id": "ws-15", "korean": "따뜻하다", "turkish": "Ilık / Sıcak olmak", "pronunciation": "ttatteutada", "type": "adjective" },
+  { "id": "ws-16", "korean": "시원하다", "turkish": "Serin olmak", "pronunciation": "siwonhada", "type": "adjective" },
+  { "id": "ws-17", "korean": "습하다", "turkish": "Nemli olmak", "pronunciation": "seuphada", "type": "adjective" },
+  { "id": "ws-18", "korean": "건조하다", "turkish": "Kuru olmak", "pronunciation": "geonjohada", "type": "adjective" },
+  { "id": "ws-19", "korean": "온도", "turkish": "Sıcaklık", "pronunciation": "ondo", "type": "noun" },
+  { "id": "ws-20", "korean": "계절", "turkish": "Mevsim", "pronunciation": "gyejeol", "type": "noun" }
+]

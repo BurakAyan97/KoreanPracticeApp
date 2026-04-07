@@ -1,0 +1,22 @@
+[
+  { "id": "fd-1", "korean": "밥", "turkish": "Pilav / Yemek", "pronunciation": "bap", "type": "food" },
+  { "id": "fd-2", "korean": "물", "turkish": "Su", "pronunciation": "mul", "type": "drink" },
+  { "id": "fd-3", "korean": "커피", "turkish": "Kahve", "pronunciation": "keopi", "type": "drink" },
+  { "id": "fd-4", "korean": "차", "turkish": "Çay", "pronunciation": "cha", "type": "drink" },
+  { "id": "fd-5", "korean": "우유", "turkish": "Süt", "pronunciation": "uyu", "type": "drink" },
+  { "id": "fd-6", "korean": "빵", "turkish": "Ekmek", "pronunciation": "ppang", "type": "food" },
+  { "id": "fd-7", "korean": "과일", "turkish": "Meyve", "pronunciation": "gwail", "type": "food" },
+  { "id": "fd-8", "korean": "채소", "turkish": "Sebze", "pronunciation": "chaeso", "type": "food" },
+  { "id": "fd-9", "korean": "고기", "turkish": "Et", "pronunciation": "gogi", "type": "food" },
+  { "id": "fd-10", "korean": "생선", "turkish": "Balık", "pronunciation": "saengseon", "type": "food" },
+  { "id": "fd-11", "korean": "달걀", "turkish": "Yumurta", "pronunciation": "dalgyal", "type": "food" },
+  { "id": "fd-12", "korean": "김치", "turkish": "Kimchi", "pronunciation": "gimchi", "type": "food" },
+  { "id": "fd-13", "korean": "국", "turkish": "Çorba", "pronunciation": "guk", "type": "food" },
+  { "id": "fd-14", "korean": "라면", "turkish": "Ramen", "pronunciation": "ramyeon", "type": "food" },
+  { "id": "fd-15", "korean": "비빔밥", "turkish": "Bibimbap", "pronunciation": "bibimbap", "type": "food" },
+  { "id": "fd-16", "korean": "불고기", "turkish": "Bulgogi", "pronunciation": "bulgogi", "type": "food" },
+  { "id": "fd-17", "korean": "사과", "turkish": "Elma", "pronunciation": "sagwa", "type": "food" },
+  { "id": "fd-18", "korean": "바나나", "turkish": "Muz", "pronunciation": "banana", "type": "food" },
+  { "id": "fd-19", "korean": "오렌지", "turkish": "Portakal", "pronunciation": "orenji", "type": "food" },
+  { "id": "fd-20", "korean": "주스", "turkish": "Meyve suyu", "pronunciation": "juseu", "type": "drink" }
+]
