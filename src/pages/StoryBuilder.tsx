@@ -26,6 +26,12 @@ const StoryBuilder = () => {
 
   // ─── STORY DETAIL VIEW ───
   if (selectedStory) {
+    // 3 cümlede bir paragraf bölme mantığı
+    const paragraphs = [];
+    for (let i = 0; i < selectedStory.sentences.length; i += 3) {
+      paragraphs.push(selectedStory.sentences.slice(i, i + 3));
+    }
+
     return (
       <div className="page-container">
         <div className="story-detail">
@@ -43,51 +49,51 @@ const StoryBuilder = () => {
             <p className="story-detail__subtitle">{selectedStory.title.turkish}</p>
           </div>
 
-          {/* Story sentences */}
-          <div className="story-sentences">
-            {selectedStory.sentences.map((sentence, idx) => (
-              <div key={idx} className="story-sentence">
-                <div className="story-sentence__number">{idx + 1}</div>
-                <div className="story-sentence__content">
-                  <p className="story-sentence__korean korean-text">
-                    {sentence.koreanSentence}
+          <div className="story-content-box">
+            {/* Korece Paragraflar */}
+            <div className="story-text-section">
+              {paragraphs.map((p, pIdx) => (
+                <p key={pIdx} className="story-paragraph korean-text">
+                  {p.map(s => s.koreanSentence).join(' ')}
+                </p>
+              ))}
+            </div>
+
+            {/* Türkçe Paragraflar */}
+            {showTranslation && (
+              <div className="story-text-section story-text-section--turkish">
+                {paragraphs.map((p, pIdx) => (
+                  <p key={pIdx} className="story-paragraph">
+                    {p.map(s => s.turkishSentence).join(' ')}
                   </p>
-                  {sentence.romanizedSentence && (
-                    <p className="story-sentence__romanized">
-                      {sentence.romanizedSentence}
-                    </p>
-                  )}
-                  {showTranslation && (
-                    <p className="story-sentence__turkish">
-                      {sentence.turkishSentence}
-                    </p>
-                  )}
-                </div>
+                ))}
               </div>
-            ))}
+            )}
           </div>
 
-          {/* Toggle translation button */}
-          <button
-            className={`btn story-btn--translate ${showTranslation ? 'story-btn--translate-active' : ''}`}
-            onClick={() => setShowTranslation(prev => !prev)}
-          >
-            {showTranslation ? (
-              <>
-                <EyeOff size={18} />
-                Türkçeyi Gizle
-              </>
-            ) : (
-              <>
-                <Eye size={18} />
-                Türkçesini Göster
-              </>
-            )}
-          </button>
+          <div className="story-actions">
+            <button
+              className={`btn story-btn--translate ${showTranslation ? 'story-btn--translate-active' : ''}`}
+              onClick={() => setShowTranslation(prev => !prev)}
+            >
+              {showTranslation ? (
+                <>
+                  <EyeOff size={18} />
+                  Türkçeyi Gizle
+                </>
+              ) : (
+                <>
+                  <Eye size={18} />
+                  Türkçesini Göster
+                </>
+              )}
+            </button>
+          </div>
         </div>
       </div>
     );
   }
+
 
   // ─── STORY LIST VIEW ───
   return (
