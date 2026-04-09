@@ -1,5 +1,5 @@
 import { Link, Outlet } from 'react-router-dom';
-import { BookOpen, Languages, Sparkles, Mail, Home } from 'lucide-react';
+import { BookOpen, Languages, Sparkles, PencilLine, Mail, Home } from 'lucide-react';
 
 export const Layout = () => {
   return (
@@ -27,6 +27,10 @@ export const Layout = () => {
           <Link to="/story" className="nav-item">
             <Sparkles size={18} />
             <span>Hikaye</span>
+          </Link>
+          <Link to="/practice" className="nav-item">
+            <PencilLine size={18} />
+            <span>Pratik</span>
           </Link>
           <Link to="/contact" className="nav-item">
             <Mail size={18} />

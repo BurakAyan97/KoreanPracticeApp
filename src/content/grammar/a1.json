@@ -1746,6 +1746,172 @@
         "Basit gelecek planı kurabiliyorum.",
         "Zaman zarflarını kullanabiliyorum."
       ]
+    },
+    {
+      "id": "a1-l11",
+      "order": 11,
+      "title": "L11: Olumsuz Cümleler - 안 ve 못",
+      "description": "Bu derste bir şeyi yapmadığımızı veya yapamadığımızı söylemeyi öğreniyoruz. 'Yapmıyorum' ve 'yapamıyorum' arasındaki farkı göreceğiz.",
+      "teacherExplanation": "Olumsuzluk günlük dilde çok sık kullanılır. 안 'istemeyerek yapmamak' ya da basitçe 'hayır' anlamında kullanılır. 못 ise 'becerememek, imkânı olmamak' demektir. Başlangıçta ikisini karıştırmaya gerek yok; 안 daha sık kullanılır.",
+      "rules": [
+        {
+          "name": "İstememe / yapmama",
+          "pattern": "안 + fiil",
+          "explanation": "Bir eylemi bilinçli olarak yapmamak veya basit olumsuzluk."
+        },
+        {
+          "name": "Yapamama",
+          "pattern": "못 + fiil",
+          "explanation": "Bir eylemi becerememek veya imkânı olmamak."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "저는 고기를 안 먹어요.",
+          "trText": "Ben et yemiyorum.",
+          "pairs": [
+            { "ko": "저", "tr": "ben", "key": "w1", "type": "word" },
+            { "ko": "는", "tr": "(konu eki)", "key": "topic", "type": "suffix" },
+            { "ko": "고기", "tr": "et", "key": "w2", "type": "word" },
+            { "ko": "를", "tr": "(nesne eki)", "key": "object", "type": "suffix" },
+            { "ko": "안 먹어요", "tr": "yemiyorum", "key": "present", "type": "suffix" }
+          ]
+        },
+        {
+          "koText": "오늘 학교에 안 갔어요.",
+          "trText": "Bugün okula gitmedim.",
+          "pairs": [
+            { "ko": "오늘", "tr": "bugün", "key": "w1", "type": "word" },
+            { "ko": "학교", "tr": "okul", "key": "w2", "type": "word" },
+            { "ko": "에", "tr": "-e", "key": "location", "type": "suffix" },
+            { "ko": "안 갔어요", "tr": "gitmedim", "key": "past", "type": "suffix" }
+          ]
+        },
+        {
+          "koText": "저는 운전을 못 해요.",
+          "trText": "Ben araba kullanamıyorum.",
+          "pairs": [
+            { "ko": "저", "tr": "ben", "key": "w1", "type": "word" },
+            { "ko": "는", "tr": "(konu eki)", "key": "topic", "type": "suffix" },
+            { "ko": "운전", "tr": "araba kullanma", "key": "w2", "type": "word" },
+            { "ko": "을", "tr": "(nesne eki)", "key": "object", "type": "suffix" },
+            { "ko": "못 해요", "tr": "yapamıyorum", "key": "present", "type": "suffix" }
+          ]
+        },
+        {
+          "koText": "매운 음식을 못 먹어요.",
+          "trText": "Acı yemek yiyemiyorum.",
+          "pairs": [
+            { "ko": "매운", "tr": "acı", "key": "w1", "type": "word" },
+            { "ko": "음식", "tr": "yemek", "key": "w2", "type": "word" },
+            { "ko": "을", "tr": "(nesne eki)", "key": "object", "type": "suffix" },
+            { "ko": "못 먹어요", "tr": "yiyemiyorum", "key": "present", "type": "suffix" }
+          ]
+        },
+        {
+          "koText": "어제 안 자서 피곤해요.",
+          "trText": "Dün uyumadım o yüzden yorgunum.",
+          "pairs": [
+            { "ko": "어제", "tr": "dün", "key": "w1", "type": "word" },
+            { "ko": "안 자서", "tr": "uyumadığım için", "key": "w2", "type": "word" },
+            { "ko": "피곤해요", "tr": "yorgunum", "key": "present", "type": "suffix" }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "안 ile basit olumsuz cümle kurabiliyorum.",
+        "못 ile yapamama ifade edebiliyorum.",
+        "안 ve 못 farkını biliyorum."
+      ]
+    },
+    {
+      "id": "a1-l12",
+      "order": 12,
+      "title": "L12: Sıfatlar, 도 ve 하고/와",
+      "description": "Bu derste sıfatlarla daha zengin cümleler kurmayı, 'da/de' anlamındaki 도 ekini ve 've/ile' anlamındaki 하고/와/과 yapılarını öğreniyoruz.",
+      "teacherExplanation": "Bu ders A1'in kapanış dersidir. Şimdiye kadar temel yapıları öğrendin. Şimdi cümlelerini daha doğal hale getirmek için ek parçalar ekliyoruz. 도 'da/de', 하고 'ile/ve' anlamındadır. Sıfatlar ise nesneleri ve kişileri betimler. Bunlarla konuşman artık düz değil, renkli olur.",
+      "rules": [
+        {
+          "name": "Da/de eki",
+          "pattern": "isim + 도",
+          "explanation": "Bir şeyin de dahil olduğunu gösterir."
+        },
+        {
+          "name": "Ve / ile",
+          "pattern": "isim + 하고 / 와 / 과",
+          "explanation": "İki şeyi birbirine bağlar. 와 sesliden, 과 sessizden sonra gelir. 하고 her zaman kullanılabilir."
+        },
+        {
+          "name": "Sıfat kullanımı",
+          "pattern": "sıfat + isim / isim + sıfat-어요",
+          "explanation": "Sıfatlar hem isimden önce hem tek başına yüklem olarak kullanılır."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "저도 한국어를 공부해요.",
+          "trText": "Ben de Korece çalışıyorum.",
+          "pairs": [
+            { "ko": "저", "tr": "ben", "key": "w1", "type": "word" },
+            { "ko": "도", "tr": "de", "key": "topic", "type": "suffix" },
+            { "ko": "한국어", "tr": "Korece", "key": "w2", "type": "word" },
+            { "ko": "를", "tr": "(nesne eki)", "key": "object", "type": "suffix" },
+            { "ko": "공부해요", "tr": "çalışıyorum", "key": "present", "type": "suffix" }
+          ]
+        },
+        {
+          "koText": "커피하고 빵을 먹어요.",
+          "trText": "Kahve ve ekmek yiyorum.",
+          "pairs": [
+            { "ko": "커피", "tr": "kahve", "key": "w1", "type": "word" },
+            { "ko": "하고", "tr": "ve", "key": "connective", "type": "suffix" },
+            { "ko": "빵", "tr": "ekmek", "key": "w2", "type": "word" },
+            { "ko": "을", "tr": "(nesne eki)", "key": "object", "type": "suffix" },
+            { "ko": "먹어요", "tr": "yiyorum", "key": "present", "type": "suffix" }
+          ]
+        },
+        {
+          "koText": "친구와 같이 영화를 봐요.",
+          "trText": "Arkadaşımla birlikte film izlerim.",
+          "pairs": [
+            { "ko": "친구", "tr": "arkadaş", "key": "w1", "type": "word" },
+            { "ko": "와", "tr": "ile", "key": "connective", "type": "suffix" },
+            { "ko": "같이", "tr": "birlikte", "key": "w2", "type": "word" },
+            { "ko": "영화", "tr": "film", "key": "w3", "type": "word" },
+            { "ko": "를", "tr": "(nesne eki)", "key": "object", "type": "suffix" },
+            { "ko": "봐요", "tr": "izlerim", "key": "present", "type": "suffix" }
+          ]
+        },
+        {
+          "koText": "이 꽃은 예뻐요.",
+          "trText": "Bu çiçek güzeldir.",
+          "pairs": [
+            { "ko": "이", "tr": "bu", "key": "w1", "type": "word" },
+            { "ko": "꽃", "tr": "çiçek", "key": "w2", "type": "word" },
+            { "ko": "은", "tr": "(konu eki)", "key": "topic", "type": "suffix" },
+            { "ko": "예뻐요", "tr": "güzeldir", "key": "present", "type": "suffix" }
+          ]
+        },
+        {
+          "koText": "오늘 날씨가 좋고 바람도 없어요.",
+          "trText": "Bugün hava güzel ve rüzgâr da yok.",
+          "pairs": [
+            { "ko": "오늘", "tr": "bugün", "key": "w1", "type": "word" },
+            { "ko": "날씨", "tr": "hava", "key": "w2", "type": "word" },
+            { "ko": "가", "tr": "(özne eki)", "key": "subject", "type": "suffix" },
+            { "ko": "좋", "tr": "güzel", "key": "w3", "type": "word" },
+            { "ko": "고", "tr": "ve", "key": "connective", "type": "suffix" },
+            { "ko": "바람", "tr": "rüzgâr", "key": "w4", "type": "word" },
+            { "ko": "도", "tr": "de/da", "key": "topic", "type": "suffix" },
+            { "ko": "없어요", "tr": "yok", "key": "present", "type": "suffix" }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "도 ekini kullanabiliyorum.",
+        "하고/와/과 ile iki şeyi bağlayabiliyorum.",
+        "Basit sıfatlarla betimleme yapabiliyorum."
+      ]
     }
   ]
 }

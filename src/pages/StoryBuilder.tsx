@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
-import { BookOpen } from 'lucide-react';
+import { BookOpen, ChevronLeft, Eye, EyeOff } from 'lucide-react';
 import type { GeneratedStory } from '../utils/types';
-import { BilingualSentence } from '../components/typography/BilingualSentence';
+import './StoryBuilder.css';
 
 const StoryBuilder = () => {
   const [stories, setStories] = useState<GeneratedStory[]>([]);
   const [level, setLevel] = useState<'A1' | 'A2'>('A1');
   const [selectedStory, setSelectedStory] = useState<GeneratedStory | null>(null);
+  const [showTranslation, setShowTranslation] = useState(false);
 
   useEffect(() => {
-    // Load pre-generated high-quality stories
     import('../content/stories/stories.json')
       .then(res => {
         setStories(res.default as GeneratedStory[]);
@@ -19,88 +19,130 @@ const StoryBuilder = () => {
 
   const currentLevelStories = stories.filter(s => s.level === level);
 
+  const handleSelectStory = (story: GeneratedStory) => {
+    setSelectedStory(story);
+    setShowTranslation(false);
+  };
+
+  // ─── STORY DETAIL VIEW ───
   if (selectedStory) {
     return (
-      <div className="page-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
-        <button 
-          className="btn mb-4" 
-          onClick={() => setSelectedStory(null)}
-          style={{ marginBottom: '2rem', background: 'var(--bg-surface)' }}
-        >
-          ← Hikayelere Dön
-        </button>
-        
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <h2 className="korean-text" style={{ fontSize: '2.5rem', color: 'var(--primary-dark)', marginBottom: '0.5rem' }}>
-            {selectedStory.title.korean}
-          </h2>
-          <h3 style={{ fontSize: '1.2rem', color: 'var(--text-muted)' }}>
-            {selectedStory.title.turkish}
-          </h3>
-        </div>
+      <div className="page-container">
+        <div className="story-detail">
+          <button
+            className="btn story-btn--back"
+            onClick={() => setSelectedStory(null)}
+          >
+            <ChevronLeft size={18} />
+            Hikayelere Dön
+          </button>
 
-        <div>
-          {selectedStory.sentences.map((sentence, idx) => (
-            <BilingualSentence key={idx} sentence={sentence} />
-          ))}
+          <div className="story-detail__header">
+            <div className="story-detail__level-badge">{selectedStory.level}</div>
+            <h2 className="story-detail__title korean-text">{selectedStory.title.korean}</h2>
+            <p className="story-detail__subtitle">{selectedStory.title.turkish}</p>
+          </div>
+
+          {/* Story sentences */}
+          <div className="story-sentences">
+            {selectedStory.sentences.map((sentence, idx) => (
+              <div key={idx} className="story-sentence">
+                <div className="story-sentence__number">{idx + 1}</div>
+                <div className="story-sentence__content">
+                  <p className="story-sentence__korean korean-text">
+                    {sentence.koreanSentence}
+                  </p>
+                  {sentence.romanizedSentence && (
+                    <p className="story-sentence__romanized">
+                      {sentence.romanizedSentence}
+                    </p>
+                  )}
+                  {showTranslation && (
+                    <p className="story-sentence__turkish">
+                      {sentence.turkishSentence}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Toggle translation button */}
+          <button
+            className={`btn story-btn--translate ${showTranslation ? 'story-btn--translate-active' : ''}`}
+            onClick={() => setShowTranslation(prev => !prev)}
+          >
+            {showTranslation ? (
+              <>
+                <EyeOff size={18} />
+                Türkçeyi Gizle
+              </>
+            ) : (
+              <>
+                <Eye size={18} />
+                Türkçesini Göster
+              </>
+            )}
+          </button>
         </div>
       </div>
     );
   }
 
+  // ─── STORY LIST VIEW ───
   return (
-    <div className="page-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
-      <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-        <BookOpen size={48} style={{ color: 'var(--primary)', marginBottom: '1rem' }} />
-        <h1>Okuma Pratikleri</h1>
-        <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>
-          Gerçek hayattan kısa hikayeler ve diyaloglar okuyarak çeviri pratiği yapın. 
-          Kelimelerin üzerindeki okunuşları ve Türkçe karşılıklarını inceleyebilirsiniz.
-        </p>
+    <div className="page-container">
+      <div className="story-list">
+        <div className="story-list__header">
+          <BookOpen size={48} style={{ color: 'var(--primary)', marginBottom: '1rem' }} />
+          <h1>Okuma Pratikleri</h1>
+          <p className="story-list__subtitle">
+            Korece hikayeler okuyarak kelime ve dilbilgisi pratiği yapın.
+            Her hikaye bir seviyeye özel konuları kapsar.
+          </p>
+        </div>
 
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '2rem' }}>
-          <button 
-            className={`btn ${level === 'A1' ? 'primary-btn' : ''}`}
+        {/* Level Tabs */}
+        <div className="story-tabs">
+          <button
+            className={`btn story-tab ${level === 'A1' ? 'story-tab--active' : ''}`}
             onClick={() => setLevel('A1')}
-            style={level !== 'A1' ? { background: 'var(--bg-surface)' } : {}}
           >
             A1 Seviye
           </button>
-          <button 
-            className={`btn ${level === 'A2' ? 'primary-btn' : ''}`}
+          <button
+            className={`btn story-tab ${level === 'A2' ? 'story-tab--active' : ''}`}
             onClick={() => setLevel('A2')}
-            style={level !== 'A2' ? { background: 'var(--bg-surface)' } : {}}
           >
             A2 Seviye
           </button>
         </div>
-      </div>
 
-      <div className="deck-grid" style={{ display: 'grid', gap: '1.5rem', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
-        {currentLevelStories.map(story => (
-          <div 
-            key={story.id}
-            className="deck-card"
-            onClick={() => setSelectedStory(story)}
-            style={{
-              background: 'var(--bg-surface)', padding: '2rem', borderRadius: 'var(--radius-md)',
-              boxShadow: 'var(--shadow-sm)', cursor: 'pointer', transition: 'transform 0.2s, box-shadow 0.2s',
-              border: '1px solid rgba(0,0,0,0.05)', textAlign: 'center'
-            }}
-            onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = 'var(--shadow-md)'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'var(--shadow-sm)'; }}
-          >
-            <h3 className="korean-text" style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--primary-dark)' }}>
-              {story.title.korean}
-            </h3>
-            <p style={{ color: 'var(--text-muted)', fontSize: '1rem' }}>
-              {story.title.turkish}
-            </p>
-          </div>
-        ))}
-        {currentLevelStories.length === 0 && (
-          <p style={{ textAlign: 'center', color: 'var(--text-muted)', gridColumn: '1 / -1' }}>Bu seviye için henüz hikaye bulunmuyor.</p>
-        )}
+        {/* Story Cards */}
+        <div className="story-grid">
+          {currentLevelStories.map((story, idx) => (
+            <div
+              key={story.id}
+              className="story-card"
+              onClick={() => handleSelectStory(story)}
+            >
+              <div className="story-card__number">{idx + 1}</div>
+              <div className="story-card__content">
+                <h3 className="story-card__title korean-text">{story.title.korean}</h3>
+                <p className="story-card__subtitle">{story.title.turkish}</p>
+              </div>
+              <div className="story-card__meta">
+                <span className="story-card__word-count">
+                  {story.sentences.length} cümle
+                </span>
+                <span className="story-card__arrow">→</span>
+              </div>
+            </div>
+          ))}
+          {currentLevelStories.length === 0 && (
+            <p className="story-list__empty">Bu seviye için henüz hikaye bulunmuyor.</p>
+          )}
+        </div>
       </div>
     </div>
   );

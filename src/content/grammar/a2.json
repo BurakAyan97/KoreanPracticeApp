@@ -2468,6 +2468,152 @@
         "Banmalın ne zaman kullanılacağını biliyorum.",
         "Kibar dil ile samimi dil arasındaki farkı ayırt edebiliyorum."
       ]
+    },
+    {
+      "id": "a2-l13",
+      "order": 13,
+      "title": "L13: İsteme ve Arzu - 고 싶다, 었으면 좋겠다",
+      "description": "Bu derste bir şeyi istediğimizi veya bir şeyin olmasını dilediğimizi anlatmayı öğreniyoruz.",
+      "teacherExplanation": "고 싶다 yapısı Korece'de en çok kullanılan dilbilgisi kalıplarından biridir. 'Bir şey yapmak istiyorum' demenin en doğal yoludur. 었으면 좋겠다 ise daha yumuşak bir dilek ifadesidir: 'keşke olsa' gibi düşünebilirsin.",
+      "rules": [
+        {
+          "name": "İstemek",
+          "pattern": "fiil kökü + 고 싶다",
+          "explanation": "Bir eylemi yapmak istemek."
+        },
+        {
+          "name": "Dilek / temenni",
+          "pattern": "fiil kökü + 었으면/았으면 좋겠다",
+          "explanation": "Keşke olsa, olursa iyi olur anlamı verir."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "저는 한국에 가고 싶어요.",
+          "trText": "Ben Kore'ye gitmek istiyorum.",
+          "pairs": [
+            { "ko": "저", "tr": "ben", "key": "w1", "type": "word" },
+            { "ko": "는", "tr": "(konu eki)", "key": "topic", "type": "suffix" },
+            { "ko": "한국", "tr": "Kore", "key": "w2", "type": "word" },
+            { "ko": "에", "tr": "-e", "key": "location", "type": "suffix" },
+            { "ko": "가고 싶어요", "tr": "gitmek istiyorum", "key": "plan", "type": "suffix" }
+          ]
+        },
+        {
+          "koText": "맛있는 음식을 먹고 싶어요.",
+          "trText": "Lezzetli yemek yemek istiyorum.",
+          "pairs": [
+            { "ko": "맛있는", "tr": "lezzetli", "key": "w1", "type": "word" },
+            { "ko": "음식", "tr": "yemek", "key": "w2", "type": "word" },
+            { "ko": "을", "tr": "(nesne eki)", "key": "object", "type": "suffix" },
+            { "ko": "먹고 싶어요", "tr": "yemek istiyorum", "key": "plan", "type": "suffix" }
+          ]
+        },
+        {
+          "koText": "주말에 쉬고 싶어요.",
+          "trText": "Hafta sonu dinlenmek istiyorum.",
+          "pairs": [
+            { "ko": "주말", "tr": "hafta sonu", "key": "w1", "type": "word" },
+            { "ko": "에", "tr": "-de", "key": "location", "type": "suffix" },
+            { "ko": "쉬고 싶어요", "tr": "dinlenmek istiyorum", "key": "plan", "type": "suffix" }
+          ]
+        },
+        {
+          "koText": "비가 안 왔으면 좋겠어요.",
+          "trText": "Keşke yağmur yağmasa.",
+          "pairs": [
+            { "ko": "비", "tr": "yağmur", "key": "w1", "type": "word" },
+            { "ko": "가", "tr": "(özne eki)", "key": "subject", "type": "suffix" },
+            { "ko": "안 왔으면 좋겠어요", "tr": "yağmasa iyi olur", "key": "plan", "type": "suffix" }
+          ]
+        },
+        {
+          "koText": "한국어를 잘했으면 좋겠어요.",
+          "trText": "Keşke Korece iyi konuşabilsem.",
+          "pairs": [
+            { "ko": "한국어", "tr": "Korece", "key": "w1", "type": "word" },
+            { "ko": "를", "tr": "(nesne eki)", "key": "object", "type": "suffix" },
+            { "ko": "잘했으면 좋겠어요", "tr": "iyi yapabilsem iyi olur", "key": "plan", "type": "suffix" }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "고 싶다 ile istek belirtebiliyorum.",
+        "었으면 좋겠다 ile dilek söyleyebiliyorum.",
+        "İsteme ve dilek cümleleri kurabiliyorum."
+      ]
+    },
+    {
+      "id": "a2-l14",
+      "order": 14,
+      "title": "L14: Deneyim ve Tecrübe - 아/어 보다, 은 적이 있다",
+      "description": "Bu derste bir şeyi denemiş olmayı veya daha önceki deneyimleri anlatmayı öğreniyoruz.",
+      "teacherExplanation": "아/어 보다 'denemek, bir kere yapmak' anlamı verir; yeni bir deneyim önerilirken çok kullanılır. 은 적이 있다/없다 ise geçmişte hiç yapıp yapmadığını söylemek içindir. Bu ikisi A2 sonunda olması gereken temel yapılardır.",
+      "rules": [
+        {
+          "name": "Denemek",
+          "pattern": "아/어 보다",
+          "explanation": "Bir şeyi denemiş olmak, tecrübe etmek."
+        },
+        {
+          "name": "Deneyim olup olmadığı",
+          "pattern": "은/ㄴ 적이 있다/없다",
+          "explanation": "Geçmişte hiç yapıp yapmadığını belirtir."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "김치를 먹어 봤어요.",
+          "trText": "Kimchi yemeyi denedim / kimchi yedim.",
+          "pairs": [
+            { "ko": "김치", "tr": "kimchi", "key": "w1", "type": "word" },
+            { "ko": "를", "tr": "(nesne eki)", "key": "object", "type": "suffix" },
+            { "ko": "먹어 봤어요", "tr": "yemeyi denedim", "key": "past", "type": "suffix" }
+          ]
+        },
+        {
+          "koText": "이 영화를 한번 봐 보세요.",
+          "trText": "Bu filmi bir kere izleyin.",
+          "pairs": [
+            { "ko": "이 영화", "tr": "bu film", "key": "w1", "type": "word" },
+            { "ko": "를", "tr": "(nesne eki)", "key": "object", "type": "suffix" },
+            { "ko": "한번", "tr": "bir kere", "key": "w2", "type": "word" },
+            { "ko": "봐 보세요", "tr": "izleyin (deneyin)", "key": "request", "type": "suffix" }
+          ]
+        },
+        {
+          "koText": "제주도에 간 적이 있어요.",
+          "trText": "Jeju Adası'na gitmiş oldum / gittim.",
+          "pairs": [
+            { "ko": "제주도", "tr": "Jeju Adası", "key": "w1", "type": "word" },
+            { "ko": "에", "tr": "-e", "key": "location", "type": "suffix" },
+            { "ko": "간 적이 있어요", "tr": "gitmiş olmam var", "key": "past", "type": "suffix" }
+          ]
+        },
+        {
+          "koText": "한복을 입은 적이 없어요.",
+          "trText": "Hanbok giymedim hiç.",
+          "pairs": [
+            { "ko": "한복", "tr": "hanbok", "key": "w1", "type": "word" },
+            { "ko": "을", "tr": "(nesne eki)", "key": "object", "type": "suffix" },
+            { "ko": "입은 적이 없어요", "tr": "giymiş değilim", "key": "past", "type": "suffix" }
+          ]
+        },
+        {
+          "koText": "한국 노래방에 가 본 적이 있어요?",
+          "trText": "Kore karaokeye gitmiş miydiniz / gittiniz mi hiç?",
+          "pairs": [
+            { "ko": "한국 노래방", "tr": "Kore karaoke", "key": "w1", "type": "word" },
+            { "ko": "에", "tr": "-e", "key": "location", "type": "suffix" },
+            { "ko": "가 본 적이 있어요", "tr": "gitmiş oldun mu", "key": "past", "type": "suffix" }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "아/어 보다 ile deneme anlatabiliyorum.",
+        "은 적이 있다/없다 ile deneyim sorabiliyorum.",
+        "Deneyim ve tecrübe cümleleri kurabiliyorum."
+      ]
     }
   ]
 }

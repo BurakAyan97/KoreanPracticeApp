@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { BookOpen, Languages, Sparkles } from 'lucide-react';
+import { BookOpen, Languages, Sparkles, PencilLine } from 'lucide-react';
 
 const Home = () => {
   return (
@@ -22,6 +22,12 @@ const Home = () => {
           <Languages className="feature-icon" size={32} />
           <h2>Kelime Kartları</h2>
           <p>Sayılar, güncel kelimeler ve kategorik setlerle kelime hazneni hızla geliştir.</p>
+        </Link>
+
+        <Link to="/practice" className="feature-card practice-card">
+          <PencilLine className="feature-icon" size={32} />
+          <h2>Pratik Yap</h2>
+          <p>Boşluk doldurma egzersizleriyle öğrendiğin gramer ve ekleri sürükle-bırak ile pekiştir.</p>
         </Link>
 
         <Link to="/story" className="feature-card story-card">
