@@ -1,8 +1,9 @@
 import { useState, useEffect, useMemo } from 'react';
-import { BookMarked, Search, Loader2, X } from 'lucide-react';
+import { BookMarked, Search, Loader2, X, Star, CalendarClock, Library} from 'lucide-react';
 import { FlashcardDeck } from '../components/flashcards/FlashcardDeck';
 import type { Flashcard } from '../utils/types';
 import { translateWord } from '../utils/translation';
+import { useUser } from '../context/UserContext';
 
 interface DeckData {
   id: string;
@@ -17,6 +18,9 @@ const FlashcardsMenu = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearching, setIsSearching] = useState(false);
   const [externalResult, setExternalResult] = useState<Flashcard | null>(null);
+  const { state } = useUser();
+  const [activeTab, setActiveTab] = useState<'all' | 'dictionary' | 'srs'>('all');
+  const [isSRSMode, setIsSRSMode] = useState(false);
 
   useEffect(() => {
     const loadDecks = async () => {
@@ -67,6 +71,19 @@ const FlashcardsMenu = () => {
     loadDecks();
   }, []);
 
+  // Compute SRS Deck
+  const srsReviewCards = useMemo(() => {
+    const today = new Date().toISOString();
+    const all = decks.flatMap(d => d.cards);
+    return all.filter(c => {
+      const srsStatus = state.srsDeck[c.id];
+      if (!srsStatus) return true; // New words are due
+      return srsStatus.nextReviewDate <= today;
+    });
+  }, [decks, state.srsDeck]);
+
+  const dictionaryCards = state.myDictionary as Flashcard[]; // Cast correctly based on properties
+
   // Filter existing cards locally
   const allCards = useMemo(() => decks.flatMap(d => d.cards), [decks]);
   
@@ -113,14 +130,15 @@ const FlashcardsMenu = () => {
       <div className="page-container">
         <button 
           className="btn mb-4" 
-          onClick={() => setActiveDeck(null)}
+          onClick={() => { setActiveDeck(null); setIsSRSMode(false); }}
           style={{ marginBottom: '2rem', background: 'var(--bg-surface)' }}
         >
           ← Setlere Dön
         </button>
         <FlashcardDeck 
           cards={activeDeck} 
-          onComplete={() => setActiveDeck(null)} 
+          isSRSMode={isSRSMode}
+          onComplete={() => { setActiveDeck(null); setIsSRSMode(false); }} 
         />
       </div>
     );
@@ -128,10 +146,35 @@ const FlashcardsMenu = () => {
 
   return (
     <div className="page-container">
-      <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
         <BookMarked size={48} style={{ color: 'var(--primary)', marginBottom: '1rem' }} />
-        <h1>Kelime Kartları</h1>
-        <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>Öğrenmek istediğin kelime setini seç veya hemen ara.</p>
+        <h1>Kelime Sistemim</h1>
+        <p style={{ color: 'var(--text-muted)' }}>Öğrenmek istediğin kelime setini seç veya hemen ara.</p>
+      </div>
+
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '3rem', flexWrap: 'wrap' }}>
+        <button 
+          className={`btn ${activeTab === 'all' ? 'primary-btn' : ''}`}
+          onClick={() => setActiveTab('all')}
+          style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', ...(activeTab !== 'all' ? { background: 'var(--bg-surface)' } : {}) }}
+        >
+          <Library size={18} /> Tüm Setler
+        </button>
+        <button 
+          className={`btn ${activeTab === 'srs' ? 'primary-btn' : ''}`}
+          onClick={() => setActiveTab('srs')}
+          style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', ...(activeTab !== 'srs' ? { background: 'var(--bg-surface)' } : {}) }}
+        >
+          <CalendarClock size={18} /> Günlük Tekrar ({srsReviewCards.length})
+        </button>
+        <button 
+          className={`btn ${activeTab === 'dictionary' ? 'primary-btn' : ''}`}
+          onClick={() => setActiveTab('dictionary')}
+          style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', ...(activeTab !== 'dictionary' ? { background: 'var(--bg-surface)' } : {}) }}
+        >
+          <Star size={18} /> Sözlüğüm ({dictionaryCards.length})
+        </button>
+      </div>
 
         {/* Search Bar */}
         <form onSubmit={handleSearch} style={{ maxWidth: '600px', margin: '0 auto', position: 'relative' }}>
@@ -157,7 +200,6 @@ const FlashcardsMenu = () => {
           </div>
           <button type="submit" style={{ display: 'none' }}>Ara</button>
         </form>
-      </div>
 
       {/* Search Results Area */}
       {searchQuery && (
@@ -205,13 +247,13 @@ const FlashcardsMenu = () => {
       )}
 
       {/* Original Decks Grid */}
-      {!searchQuery && (
+      {!searchQuery && activeTab === 'all' && (
         <div className="deck-grid" style={{ display: 'grid', gap: '1.5rem', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
           {decks.map((deck) => (
             <div 
               key={deck.id}
               className="deck-card" 
-              onClick={() => setActiveDeck(deck.cards)}
+              onClick={() => { setActiveDeck(deck.cards); setIsSRSMode(false); }}
               style={{
                 background: 'var(--bg-surface)', padding: '2rem', borderRadius: 'var(--radius-md)',
                 boxShadow: 'var(--shadow-sm)', cursor: 'pointer', transition: 'transform 0.2s, box-shadow 0.2s',
@@ -227,6 +269,48 @@ const FlashcardsMenu = () => {
               </div>
             </div>
           ))}
+        </div>
+      )}
+
+      {/* SRS Deck Grid */}
+      {!searchQuery && activeTab === 'srs' && (
+        <div style={{ textAlign: 'center', padding: '3rem', background: 'var(--bg-surface)', borderRadius: 'var(--radius-lg)' }}>
+          {srsReviewCards.length > 0 ? (
+            <>
+              <h2 style={{ marginBottom: '1rem', color: 'var(--primary-dark)' }}>Sıradaki Kartlar Bekliyor</h2>
+              <p style={{ marginBottom: '2rem', color: 'var(--text-muted)' }}>Bugün tekrar etmen gereken {srsReviewCards.length} kelime var.</p>
+              <button 
+                className="btn primary-btn" 
+                style={{ fontSize: '1.2rem', padding: '1rem 3rem' }}
+                onClick={() => { setActiveDeck(srsReviewCards); setIsSRSMode(true); }}
+              >
+                Çalışmaya Başla
+              </button>
+            </>
+          ) : (
+             <div style={{ color: 'var(--text-muted)' }}>Bugünlük tekrar edilecek kelime kalmadı! Harikasın! 🎉</div>
+          )}
+        </div>
+      )}
+
+      {/* Dictionary Deck Grid */}
+      {!searchQuery && activeTab === 'dictionary' && (
+        <div style={{ textAlign: 'center', padding: '3rem', background: 'var(--bg-surface)', borderRadius: 'var(--radius-lg)' }}>
+          {dictionaryCards.length > 0 ? (
+            <>
+              <h2 style={{ marginBottom: '1rem', color: 'var(--primary-dark)' }}>Sözlüğün Dolu</h2>
+              <p style={{ marginBottom: '2rem', color: 'var(--text-muted)' }}>Kaydettiğin {dictionaryCards.length} kelime var.</p>
+              <button 
+                className="btn primary-btn" 
+                style={{ fontSize: '1.2rem', padding: '1rem 3rem' }}
+                onClick={() => { setActiveDeck(dictionaryCards); setIsSRSMode(false); }}
+              >
+                Kelimelerimle Pratik Yap
+              </button>
+            </>
+          ) : (
+             <div style={{ color: 'var(--text-muted)' }}>Henüz hiç kelime kaydetmedin. Kartlardaki veya hikayelerdeki yıldız ikonlarına tıklayarak kelime ekleyebilirsin.</div>
+          )}
         </div>
       )}
     </div>

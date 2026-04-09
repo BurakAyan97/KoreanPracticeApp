@@ -1,17 +1,20 @@
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight, RotateCcw } from 'lucide-react';
+import { ChevronLeft, ChevronRight, RotateCcw, Star, Volume2 } from 'lucide-react';
 import type { Flashcard } from '../../utils/types';
+import { useUser, type DictionaryItem } from '../../context/UserContext';
 
 interface FlashcardDeckProps {
   cards: Flashcard[];
   onComplete: () => void;
+  isSRSMode?: boolean;
 }
 
-export const FlashcardDeck = ({ cards, onComplete }: FlashcardDeckProps) => {
+export const FlashcardDeck = ({ cards, onComplete, isSRSMode = false }: FlashcardDeckProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
+  const { state, toggleDictionaryItem, updateSRS, addXP } = useUser();
   const [shuffledCards] = useState<Flashcard[]>(() => 
-    [...cards].sort(() => Math.random() - 0.5)
+    isSRSMode ? cards : [...cards].sort(() => Math.random() - 0.5)
   );
 
   const handleNext = () => {
@@ -19,6 +22,7 @@ export const FlashcardDeck = ({ cards, onComplete }: FlashcardDeckProps) => {
       setIsFlipped(false);
       setTimeout(() => setCurrentIndex(prev => prev + 1), 150);
     } else {
+      if (!isSRSMode) addXP(cards.length * 2); // XP reward for finishing a deck
       onComplete();
     }
   };
@@ -30,9 +34,39 @@ export const FlashcardDeck = ({ cards, onComplete }: FlashcardDeckProps) => {
     }
   };
 
-  if (shuffledCards.length === 0) return <div>Yükleniyor...</div>;
+  const handleSRSFeedback = (correct: boolean) => {
+    const card = shuffledCards[currentIndex];
+    updateSRS(card.id, correct);
+    if (correct) addXP(2);
+    handleNext();
+  };
+
+  if (shuffledCards.length === 0) return <div>Yükleniyor... Veya tekrar edilecek kart kalmadı! 🎉</div>;
 
   const currentCard = shuffledCards[currentIndex];
+  
+  const isStarred = state.myDictionary.some(item => item.id === currentCard.id);
+
+  const handleToggleStar = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const item: DictionaryItem = {
+      id: currentCard.id,
+      korean: currentCard.korean,
+      turkish: currentCard.turkish,
+      type: currentCard.type
+    };
+    toggleDictionaryItem(item);
+  };
+
+  const playAudio = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if ('speechSynthesis' in window) {
+      const utterance = new SpeechSynthesisUtterance(currentCard.korean);
+      utterance.lang = 'ko-KR';
+      utterance.rate = 0.8;
+      window.speechSynthesis.speak(utterance);
+    }
+  };
 
   return (
     <div className="flashcard-deck">
@@ -51,8 +85,32 @@ export const FlashcardDeck = ({ cards, onComplete }: FlashcardDeckProps) => {
           className={`card-container ${isFlipped ? 'is-flipped' : ''}`}
           onClick={() => setIsFlipped(!isFlipped)}
         >
+          {/* Star Button */}
+          <div 
+            onClick={handleToggleStar}
+            style={{ 
+              position: 'absolute', top: '1rem', right: '1rem', zIndex: 10,
+              color: isStarred ? '#ffd43b' : 'var(--text-muted)',
+              cursor: 'pointer', transition: 'transform 0.2s' 
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.2)'}
+            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          >
+            <Star fill={isStarred ? '#ffd43b' : 'none'} size={28} />
+          </div>
+
           <div className="card-face card-front">
-            <h2 className="korean-text">{currentCard.korean}</h2>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', justifyContent: 'center' }}>
+              <h2 className="korean-text">{currentCard.korean}</h2>
+              <button 
+                onClick={playAudio} 
+                className="btn" 
+                style={{ padding: '0.5rem', borderRadius: '50%', background: 'rgba(0,0,0,0.05)' }}
+                title="Sesli Dinle"
+              >
+                <Volume2 size={24} style={{ color: 'var(--primary)' }} />
+              </button>
+            </div>
             <p className="card-hint">Çevirmek için dokun</p>
           </div>
           <div className="card-face card-back">
@@ -66,25 +124,46 @@ export const FlashcardDeck = ({ cards, onComplete }: FlashcardDeckProps) => {
       </div>
 
       <div className="deck-controls">
-        <button 
-          className="btn control-btn" 
-          onClick={handlePrev} 
-          disabled={currentIndex === 0}
-        >
-          <ChevronLeft size={24} />
-        </button>
-        <button 
-          className="btn control-btn" 
-          onClick={() => setIsFlipped(!isFlipped)}
-        >
-          <RotateCcw size={24} />
-        </button>
-        <button 
-          className="btn primary-btn control-btn" 
-          onClick={handleNext}
-        >
-          {currentIndex === shuffledCards.length - 1 ? 'Bitir' : <ChevronRight size={24} />}
-        </button>
+        {isSRSMode && isFlipped ? (
+          <div style={{ display: 'flex', width: '100%', gap: '1rem' }}>
+            <button 
+              className="btn" 
+              onClick={() => handleSRSFeedback(false)}
+              style={{ flex: 1, background: '#fff0f0', color: '#e74c3c', border: '1px solid #ffcccc' }}
+            >
+              Bilemedim (Tekrar)
+            </button>
+            <button 
+              className="btn primary-btn" 
+              onClick={() => handleSRSFeedback(true)}
+              style={{ flex: 1, background: '#e8f8f5', color: '#2ecc71', border: '1px solid #ccf1e3' }}
+            >
+              Bildim (İleri At)
+            </button>
+          </div>
+        ) : (
+          <>
+            <button 
+              className="btn control-btn" 
+              onClick={handlePrev} 
+              disabled={currentIndex === 0 || isSRSMode}
+            >
+              <ChevronLeft size={24} />
+            </button>
+            <button 
+              className="btn control-btn" 
+              onClick={() => setIsFlipped(!isFlipped)}
+            >
+              <RotateCcw size={24} />
+            </button>
+            <button 
+              className="btn primary-btn control-btn" 
+              onClick={isSRSMode ? () => setIsFlipped(true) : handleNext}
+            >
+              {currentIndex === shuffledCards.length - 1 && !isSRSMode ? 'Bitir' : (isSRSMode && !isFlipped ? 'Cevabı Gör' : <ChevronRight size={24} />)}
+            </button>
+          </>
+        )}
       </div>
 
       <style>{`
