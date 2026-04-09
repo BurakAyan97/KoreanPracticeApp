@@ -208,7 +208,7 @@ const FlashcardsMenu = () => {
             Arama Sonuçları
           </h2>
 
-          <div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))' }}>
+          <div className="deck-grid grid-auto-fit" style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
             {/* Local Results */}
             {localFiltered.map(card => (
               <div 
@@ -248,7 +248,7 @@ const FlashcardsMenu = () => {
 
       {/* Original Decks Grid */}
       {!searchQuery && activeTab === 'all' && (
-        <div className="deck-grid" style={{ display: 'grid', gap: '1.5rem', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
+        <div className="deck-grid grid-auto-fit" style={{ display: 'grid', gap: '1.5rem', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
           {decks.map((deck) => (
             <div 
               key={deck.id}

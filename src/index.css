@@ -277,4 +277,81 @@ h1 { font-size: 2.25rem; font-weight: 700; margin-bottom: 1.5rem; }
   .hero-title {
     font-size: 2.25rem;
   }
+
+  .main-content {
+    padding: 1rem;
+  }
+  
+  .page-container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Universal grid responsive fixes */
+  .grid-auto-fit {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)) !important;
+  }
+  
+  .exam-options-grid {
+    grid-template-columns: 1fr !important;
+    margin-left: 0 !important;
+  }
+
+  .exam-header-bar {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .voice-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .voice-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .flashcard-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Component specific mobile fixes */
+  .feature-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .korean-text.large {
+    font-size: 2rem !important;
+  }
+
+  /* Shrink huge icons/paddings */
+  .result-banner {
+    padding: 1.5rem 1rem !important;
+  }
+}
+
+/* Base utility classes */
+.grid-auto-fit { /* Default behavior fallback, overridden inline mostly */ }
+.exam-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-left: 3.5rem;
+}
+.exam-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.voice-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.flashcard-tabs {
+  display: flex;
+  gap: 1rem;
 }

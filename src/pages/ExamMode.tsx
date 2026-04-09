@@ -46,6 +46,7 @@ const ExamMode = () => {
       }, 1000);
     }
     return () => clearInterval(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, timeLeft]);
 
   const startExam = () => {
@@ -150,7 +151,7 @@ const ExamMode = () => {
 
     return (
       <div className="page-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', background: 'var(--bg-surface)', padding: '3rem 2rem', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)', marginBottom: '3rem' }}>
+        <div className="result-banner" style={{ textAlign: 'center', background: 'var(--bg-surface)', padding: '3rem 2rem', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)', marginBottom: '3rem' }}>
           <Trophy size={64} style={{ color: percentage >= 80 ? '#f1c40f' : 'var(--primary)', margin: '0 auto 1.5rem' }} />
           <h1 style={{ color: 'var(--primary-dark)' }}>{message}</h1>
           <div style={{ fontSize: '4rem', fontWeight: 800, color: 'var(--text-main)', margin: '1rem 0' }}>
@@ -207,7 +208,7 @@ const ExamMode = () => {
 
   return (
     <div className="page-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem', padding: '1rem', background: 'var(--primary-dark)', color: 'white', borderRadius: 'var(--radius-md)', position: 'sticky', top: '1rem', zIndex: 100 }}>
+      <div className="exam-header-bar" style={{ marginBottom: '2rem', padding: '1rem', background: 'var(--primary-dark)', color: 'white', borderRadius: 'var(--radius-md)', position: 'sticky', top: '1rem', zIndex: 100 }}>
         <div style={{ fontSize: '1.2rem', fontWeight: 600 }}>Cevaplanan: {Object.keys(answers).length} / {questions.length}</div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '1.5rem', fontWeight: 'bold', color: timeLeft < 60 ? '#ff6b6b' : 'white' }}>
           <Clock /> {formatTime(timeLeft)}
@@ -247,7 +248,7 @@ const ExamMode = () => {
               </div>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginLeft: '3.5rem' }}>
+            <div className="exam-options-grid">
               {q.options.map(opt => {
                 const isSelected = answers[q.id] === opt.id;
                 return (

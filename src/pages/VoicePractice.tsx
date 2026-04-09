@@ -3,9 +3,12 @@ import { Mic, Volume2, ArrowRight, RefreshCw, Check, X, Speech } from 'lucide-re
 import type { GrammarV2 } from '../utils/types';
 
 // Declare standard Window Speech API types
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare global {
   interface Window {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     SpeechRecognition: any;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     webkitSpeechRecognition: any;
   }
 }
@@ -26,6 +29,7 @@ const VoicePractice = () => {
   // Listening State
   const [userInput, setUserInput] = useState('');
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const recognitionRef = useRef<any>(null);
 
   useEffect(() => {
@@ -34,15 +38,6 @@ const VoicePractice = () => {
       pickRandomSentence(res.default as GrammarV2);
     }).catch(err => console.error(err));
 
-    // Warm up speech synthesis voices
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.onvoiceschanged = () => {
-        window.speechSynthesis.getVoices();
-      };
-      window.speechSynthesis.getVoices();
-    }
-
-    // Initialize Speech Recognition
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (SpeechRecognition) {
       const recognition = new SpeechRecognition();
@@ -50,13 +45,14 @@ const VoicePractice = () => {
       recognition.continuous = false;
       recognition.interimResults = false;
 
-      recognition.onresult = (event: any) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      recognition.onresult = (event: Event & { results: any }) => {
         const text = event.results[0][0].transcript;
         setTranscript(text);
         checkPronunciation(text);
       };
 
-      recognition.onerror = (event: any) => {
+      recognition.onerror = (event: ErrorEvent) => {
         console.error("Speech recognition error", event.error);
         setIsListening(false);
       };
@@ -73,10 +69,11 @@ const VoicePractice = () => {
         recognitionRef.current.abort();
       }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getSimilarity = (s1: string, s2: string): number => {
-    const normalize = (s: string) => s.replace(/[\s\.\,\?\!]/g, '').toLowerCase();
+    const normalize = (s: string) => s.replace(/[\s.,?!]/g, '').toLowerCase();
     const a = normalize(s1);
     const b = normalize(s2);
     if (a.length === 0) return b.length === 0 ? 100 : 0;
@@ -106,7 +103,10 @@ const VoicePractice = () => {
   const pickRandomSentence = (data: GrammarV2) => {
     if (!data) return;
     const allExamples = data.lessons.flatMap(l => l.examples);
-    const randomEx = allExamples[Math.floor(Math.random() * allExamples.length)];
+    // Sadece cümle olanları filtrele (Hangul heceleri gibi çok kısa olanları dahil etme)
+    const validExamples = allExamples.filter(ex => ex.koText && ex.koText.length > 5 && ex.koText.includes(' '));
+    const pool = validExamples.length > 0 ? validExamples : allExamples;
+    const randomEx = pool[Math.floor(Math.random() * pool.length)];
     if (!randomEx) return;
     
     // Build full korean text from pairs
@@ -167,20 +167,9 @@ const VoicePractice = () => {
   const playAudio = () => {
     if (!currentSentence) return;
     if ('speechSynthesis' in window) {
-      // Chrome sometimes loses voices if getVoices is not called frequently
-      let voices = window.speechSynthesis.getVoices();
-      
       const utterance = new SpeechSynthesisUtterance(currentSentence.ko);
       utterance.lang = 'ko-KR';
-      utterance.rate = 0.8; // slightly slower for dictation
-      
-      // Try to force a Korean voice if available
-      const krVoice = voices.find(v => v.lang.includes('ko') || v.lang.includes('KO'));
-      if (krVoice) {
-        utterance.voice = krVoice;
-      }
-      
-      window.speechSynthesis.cancel(); // Stop any pending speech
+      utterance.rate = 0.8;
       window.speechSynthesis.speak(utterance);
     }
   };
@@ -206,7 +195,7 @@ const VoicePractice = () => {
         <p style={{ color: 'var(--text-muted)' }}>Telaffuzunu geliştir veya dinlediğini anlama pratiği yap.</p>
       </div>
 
-      <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', justifyContent: 'center' }}>
+      <div className="voice-actions" style={{ marginBottom: '2rem' }}>
         <button 
           className={`btn ${mode === 'speaking' ? 'primary-btn' : ''}`}
           onClick={() => { setMode('speaking'); setFeedback(null); }}
@@ -234,7 +223,7 @@ const VoicePractice = () => {
               <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
                 Aşağıdaki Cümleyi Oku
               </div>
-              <h2 className="korean-text" style={{ fontSize: '2.2rem', color: 'var(--primary-dark)', marginBottom: '1rem', lineHeight: 1.4 }}>
+              <h2 className="korean-text large" style={{ fontSize: '2.2rem', color: 'var(--primary-dark)', marginBottom: '1rem', lineHeight: 1.4 }}>
                 {currentSentence.ko}
               </h2>
               <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', marginBottom: '3rem' }}>

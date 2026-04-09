@@ -63,12 +63,6 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state));
   }, [state]);
 
-  // Check login streak once on mount
-  useEffect(() => {
-    checkStreak();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   const checkStreak = () => {
     const today = new Date().toISOString().split('T')[0];
     setState(prev => {
@@ -91,6 +85,12 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return { ...prev, lastLoginDate: today };
     });
   };
+
+  // Check login streak once on mount
+  useEffect(() => {
+    checkStreak();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const addXP = (amount: number) => {
     setState(prev => ({ ...prev, xp: prev.xp + amount }));
@@ -157,6 +157,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useUser = () => {
   const context = useContext(UserContext);
   if (context === undefined) {

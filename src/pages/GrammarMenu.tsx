@@ -128,7 +128,7 @@ const GrammarMenu = () => {
         </div>
       </div>
 
-      <div className="deck-grid" style={{ display: 'grid', gap: '1.5rem', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
+      <div className="deck-grid grid-auto-fit" style={{ display: 'grid', gap: '1.5rem', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
         {lessons.map((lesson) => {
           const isCompleted = state.completedLessons.includes(lesson.id);
           return (
