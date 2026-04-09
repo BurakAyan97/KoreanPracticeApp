@@ -21,6 +21,7 @@ const VoicePractice = () => {
   const [isListening, setIsListening] = useState(false);
   const [transcript, setTranscript] = useState('');
   const [feedback, setFeedback] = useState<'success' | 'error' | null>(null);
+  const [similarityScore, setSimilarityScore] = useState<number | null>(null);
   
   // Listening State
   const [userInput, setUserInput] = useState('');
@@ -32,6 +33,14 @@ const VoicePractice = () => {
       setA1Data(res.default as GrammarV2);
       pickRandomSentence(res.default as GrammarV2);
     }).catch(err => console.error(err));
+
+    // Warm up speech synthesis voices
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = () => {
+        window.speechSynthesis.getVoices();
+      };
+      window.speechSynthesis.getVoices();
+    }
 
     // Initialize Speech Recognition
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -58,7 +67,41 @@ const VoicePractice = () => {
 
       recognitionRef.current = recognition;
     }
+
+    return () => {
+      if (recognitionRef.current) {
+        recognitionRef.current.abort();
+      }
+    };
   }, []);
+
+  const getSimilarity = (s1: string, s2: string): number => {
+    const normalize = (s: string) => s.replace(/[\s\.\,\?\!]/g, '').toLowerCase();
+    const a = normalize(s1);
+    const b = normalize(s2);
+    if (a.length === 0) return b.length === 0 ? 100 : 0;
+    if (b.length === 0) return 0;
+    
+    const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
+
+    for (let i = 0; i <= a.length; i += 1) matrix[0][i] = i;
+    for (let j = 0; j <= b.length; j += 1) matrix[j][0] = j;
+
+    for (let j = 1; j <= b.length; j += 1) {
+      for (let i = 1; i <= a.length; i += 1) {
+        const indicator = a[i - 1] === b[j - 1] ? 0 : 1;
+        matrix[j][i] = Math.min(
+          matrix[j][i - 1] + 1, // insertion
+          matrix[j - 1][i] + 1, // deletion
+          matrix[j - 1][i - 1] + indicator // substitution
+        );
+      }
+    }
+    
+    const distance = matrix[b.length][a.length];
+    const maxLen = Math.max(a.length, b.length);
+    return Math.round((1 - distance / maxLen) * 100);
+  };
 
   const pickRandomSentence = (data: GrammarV2) => {
     if (!data) return;
@@ -74,6 +117,7 @@ const VoicePractice = () => {
     });
     
     setFeedback(null);
+    setSimilarityScore(null);
     setTranscript('');
     setUserInput('');
     setIsListening(false);
@@ -94,37 +138,28 @@ const VoicePractice = () => {
       recognitionRef.current.stop();
     } else {
       setFeedback(null);
+      setSimilarityScore(null);
       setTranscript('');
-      recognitionRef.current.start();
-      setIsListening(true);
+      try {
+        recognitionRef.current.start();
+        setIsListening(true);
+      } catch (err) {
+        console.error("Microphone start error:", err);
+        alert("Mikrofon başlatılamadı. Sayfayı yenileyip tekrar deneyin.");
+      }
     }
   };
 
   const checkPronunciation = (spokenText: string) => {
     if (!currentSentence) return;
     
-    // Normalize string (remove punctuation, spaces)
-    const normalize = (s: string) => s.replace(/[\s\.\,\?!]/g, '').toLowerCase();
+    const sim = getSimilarity(currentSentence.ko, spokenText);
+    setSimilarityScore(sim);
     
-    const target = normalize(currentSentence.ko);
-    const spoken = normalize(spokenText);
-
-    // If completely identical or largely similar
-    if (target === spoken || spoken.includes(target) || target.includes(spoken)) {
-      setFeedback('success');
+    if (sim >= 75) {
+      setFeedback('success'); 
     } else {
-      // Calculate basic similarity
-      let matches = 0;
-      const minLen = Math.min(target.length, spoken.length);
-      for (let i = 0; i < minLen; i++) {
-        if (target[i] === spoken[i]) matches++;
-      }
-      
-      if (minLen > 0 && matches / target.length > 0.6) {
-         setFeedback('success'); // Close enough for A1 level!
-      } else {
-         setFeedback('error');
-      }
+      setFeedback('error');
     }
   };
 
@@ -132,18 +167,31 @@ const VoicePractice = () => {
   const playAudio = () => {
     if (!currentSentence) return;
     if ('speechSynthesis' in window) {
+      // Chrome sometimes loses voices if getVoices is not called frequently
+      let voices = window.speechSynthesis.getVoices();
+      
       const utterance = new SpeechSynthesisUtterance(currentSentence.ko);
       utterance.lang = 'ko-KR';
-      utterance.rate = 0.8;
+      utterance.rate = 0.8; // slightly slower for dictation
+      
+      // Try to force a Korean voice if available
+      const krVoice = voices.find(v => v.lang.includes('ko') || v.lang.includes('KO'));
+      if (krVoice) {
+        utterance.voice = krVoice;
+      }
+      
+      window.speechSynthesis.cancel(); // Stop any pending speech
       window.speechSynthesis.speak(utterance);
     }
   };
 
   const checkListening = () => {
     if (!currentSentence) return;
-    const normalize = (s: string) => s.replace(/[\s\.\,\?!]/g, '').toLowerCase();
     
-    if (normalize(userInput) === normalize(currentSentence.ko)) {
+    const sim = getSimilarity(currentSentence.ko, userInput);
+    setSimilarityScore(sim);
+    
+    if (sim >= 85) { // Stricter checking for dictation
       setFeedback('success');
     } else {
       setFeedback('error');
@@ -269,11 +317,26 @@ const VoicePractice = () => {
               marginTop: '1.5rem', padding: '1rem', borderRadius: 'var(--radius-sm)',
               background: feedback === 'success' ? '#e8f8f5' : '#fff0f0',
               color: feedback === 'success' ? '#27ae60' : '#e74c3c',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
-              fontWeight: 600
+              display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
             }}>
-              {feedback === 'success' ? <Check size={20} /> : <X size={20} />}
-              {feedback === 'success' ? 'Harika! Doğru bildin.' : 'Maalesef yanlış. Doğrusu: ' + currentSentence.ko}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, fontSize: '1.1rem' }}>
+                {feedback === 'success' ? <Check size={20} /> : <X size={20} />}
+                {feedback === 'success' ? 'Harika! Doğru bildin.' : 'Maalesef yanlış.'}
+                {similarityScore !== null && (
+                  <span style={{ 
+                    background: feedback === 'success' ? '#2ecc71' : '#e74c3c', 
+                    color: 'white', padding: '0.2rem 0.6rem', borderRadius: '12px', fontSize: '0.8rem', marginLeft: '0.5rem'
+                  }}>
+                    %{similarityScore} Eşleşme
+                  </span>
+                )}
+              </div>
+              {feedback === 'error' && (
+                <div style={{ marginTop: '0.5rem', textAlign: 'center' }}>
+                  <div style={{ fontSize: '0.85rem', color: '#e74c3c', opacity: 0.8 }}>Doğrusu:</div>
+                  <div className="korean-text" style={{ fontSize: '1.2rem', fontWeight: 600 }}>{currentSentence.ko}</div>
+                </div>
+              )}
             </div>
           )}
 
