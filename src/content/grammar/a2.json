@@ -214,6 +214,72 @@
     {
       "id": "a2-l02",
       "order": 2,
+      "title": "L1.5: Zarflar (-게) ve Kıyaslama Dereceleri (더, 제일/가장)",
+      "description": "Sıfatları zarfa çevirme ve eylemleri/nesneleri birbiriyle kıyaslama yapıları.",
+      "teacherExplanation": "Korecede sıfatlar eylemleri direkt niteleyemez. Nitelemeleri için '-게' alıp zarf olurlar (hızlı koştu). Miktar ve derece belirtirken de '더' (daha) ve '제일' (en) kelimeleri fiil/sıfatın önünde yer alır.",
+      "rules": [
+        {
+          "name": "Zarf Türetme: -게",
+          "pattern": "sıfat kökü + 게",
+          "explanation": "Sıfatı zarfa dönüştürür. 예쁘다 (güzel) -> 예쁘게 (güzelce). 크게 말하세요 (yüksek sesle konuşun)."
+        },
+        {
+          "name": "Daha: 더",
+          "pattern": "더 + sıfat/fiil",
+          "explanation": "Daha büyük, daha çok vb. Örn: 더 크다 (Daha büyük)."
+        },
+        {
+          "name": "En: 제일 / 가장",
+          "pattern": "제일/가장 + sıfat/fiil",
+          "explanation": "Herhangi bir şeyin 'en' üst noktası olduğunu belirtir. 제일 좋다 (En iyisi)."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "더 예쁘게 쓰세요.",
+          "trText": "Daha güzelce (düzgün) yazınız.",
+          "pairs": [
+            {
+              "ko": "더",
+              "tr": "daha",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "예쁘",
+              "tr": "güzel",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "게",
+              "tr": "-ce",
+              "key": "sf1",
+              "type": "suffix"
+            },
+            {
+              "ko": "쓰",
+              "tr": "yaz",
+              "key": "w3",
+              "type": "word"
+            },
+            {
+              "ko": "세요",
+              "tr": "-ınız (emir)",
+              "key": "sf2",
+              "type": "suffix"
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "Sıfatlara 게 ekleyip zarf oluşturabiliyorum.",
+        "더 ve 제일 ile karşılaştırma yapabiliyorum."
+      ]
+    },
+    {
+      "id": "a2-l03",
+      "order": 3,
       "title": "L2: Ulaşım ve Yön - 으로/로, 에서, 까지",
       "description": "Bu derste bir yerden bir yere nasıl gidildiğini, hangi araçla gidildiğini ve ne kadar sürdüğünü anlatıyoruz.",
       "teacherExplanation": "Ulaşım araçlarını, gidilen yönü ve rotayı anlatmak için belirli ekler kullanırız. Türkçedeki 'arabay-la' veya 'otobüs-le' derken kullandığımız 'ile/vasıtasıyla' eki Korecede '-로 / -으로' dur. Ayrıca 'İstanbul'dan Ankara'ya kadar' kalıbındaki '-dan/-e kadar' yapısı için yer bilgisinde '에서' ve '까지' kullanırız. Bu ekler birleştiğinde konum veya seyahat cümleleri kurmak çocuk oyuncağına dönüşür.",
@@ -453,8 +519,8 @@
       ]
     },
     {
-      "id": "a2-l03",
-      "order": 3,
+      "id": "a2-l04",
+      "order": 4,
       "title": "L3: Bağlama ve Karşılaştırma - 고, 보다",
       "description": "Bu derste iki bilgiyi tek cümlede birleştirmeyi ve karşılaştırma yapmayı öğreniyoruz.",
       "teacherExplanation": "Türkçede iki cümleyi birleştirmek için 've' deriz. Korecede cümleleri (fiilleri) birleştirmek için ilk cümlenin fiil köküne sadece '-고' ekleriz. Örneğin; 'Yemek yerim VE uyurum'. Karşılaştırma yaparken ise ('Elma armut-tan daha iyidir'), doğrudan '-den daha' anlamındaki '보다' ekini ismi takip edecek şekilde kullanırız. Her iki yapı da son derece yaygındır ve seni daha uzun, karmaşık cümleler kurmaya iter.",
@@ -695,8 +761,102 @@
       ]
     },
     {
-      "id": "a2-l04",
-      "order": 4,
+      "id": "a2-l05",
+      "order": 5,
+      "title": "L3.5: Özel Ekler (밖에, 쯤, 처럼/같이, 마다, (이)나)",
+      "description": "Günlük hayatta çok kullanılan bazı özel edatları ve ekleri öğreniyoruz.",
+      "teacherExplanation": "Korecede Türkçedeki 'gibi, kadar, her, dışında' anlamlarına gelen ve doğrudan kelimeye bitişen ekler vardır. Bunlar cümleyi zenginleştirir. Örneğin: 커피만 (sadece kahve) ile 커피밖에 없다 (kahveden başka yok) benzer anlamlara gelebilir fakat 밖에 her zaman olumsuz fiille kullanılır.",
+      "rules": [
+        {
+          "name": "Haricinde, -den başka: 밖에",
+          "pattern": "isim + 밖에 + olumsuz fiil",
+          "explanation": "Her zaman olumsuz bir fiille kullanılır. 'Sadece o var' veya 'Ondan başka yok' anlamı verir."
+        },
+        {
+          "name": "Civarında, Yaklaşık: 쯤",
+          "pattern": "zaman/miktar + 쯤",
+          "explanation": "'Saat 2 civarında', '10 kişi kadar' derken kullanılır."
+        },
+        {
+          "name": "Gibi, Kadar: 처럼 / 같이",
+          "pattern": "isim + 처럼 veya 같이",
+          "explanation": "'Kuş gibi uçuyor', 'Benim gibi' derken kullanılır."
+        },
+        {
+          "name": "Her: 마다",
+          "pattern": "isim + 마다",
+          "explanation": "'Her gün', 'Her ev' derken kullanılır."
+        },
+        {
+          "name": "Miktar Abartısı / Seçenek: (이)나",
+          "pattern": "isim + (이)나",
+          "explanation": "1) '...kadar çok' (beklentiden fazla miktar), 2) '...veya' (seçenek) anlamlarında kullanılır."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "돈이 천 원밖에 없어요.",
+          "trText": "Bin wondan başka param yok (Sadece bin wonum var).",
+          "pairs": [
+            {
+              "ko": "돈이",
+              "tr": "para",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "천 원",
+              "tr": "1000 won",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "밖에",
+              "tr": "-den başka",
+              "key": "suffix",
+              "type": "suffix"
+            },
+            {
+              "ko": "없어요",
+              "tr": "yok",
+              "key": "w3",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "천사처럼 예뻐요.",
+          "trText": "Melek gibi güzeldir.",
+          "pairs": [
+            {
+              "ko": "천사",
+              "tr": "melek",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "처럼",
+              "tr": "gibi",
+              "key": "suffix",
+              "type": "suffix"
+            },
+            {
+              "ko": "예뻐요",
+              "tr": "güzeldir",
+              "key": "w2",
+              "type": "word"
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "밖에 ekinin olumsuz fiille kullanıldığını öğrendim.",
+        "처럼 ve 마다 eklerini ayırabiliyorum."
+      ]
+    },
+    {
+      "id": "a2-l06",
+      "order": 6,
       "title": "L4: Sebep ve Karşıtlık - 아/어서, 지만",
       "description": "Bu derste 'çünkü' ve 'ama/fakat' mantığını Korece'de kurmayı öğreniyoruz.",
       "teacherExplanation": "Bir dili günlük hayatta kullanmak için sadece 'ne oldu' demek yetmez; 'neden oldu' ve 'ama şöyle' demen gerekir. 아/어서 yapısı sebep ya da doğal bağlantı verir. 지만 ise iki zıt bilgiyi aynı cümlede taşır. Bu ders A2'nin merkezidir.",
@@ -925,8 +1085,8 @@
       ]
     },
     {
-      "id": "a2-l05",
-      "order": 5,
+      "id": "a2-l07",
+      "order": 7,
       "title": "L5: Honorific Başlangıcı - 으시, 께서",
       "description": "Bu derste birine saygı göstermek için fiili ve özneyi nasıl değiştirdiğimizi öğreniyoruz.",
       "teacherExplanation": "Korece'de yaşça büyük, saygı duyulan veya toplumsal konumu yüksek biri hakkında konuşurken sıradan fiil her zaman yeterli olmaz. Bu yüzden honorific kullanılır. Başlangıçta her yapıyı ezberleme; önce 'kim hakkında konuşuyorum?' sorusunu öğren. Özne saygı gerektiriyorsa fiil de değişebilir.",
@@ -1083,8 +1243,8 @@
       ]
     },
     {
-      "id": "a2-l06",
-      "order": 6,
+      "id": "a2-l08",
+      "order": 8,
       "title": "L6: Amaç Bildirme - 으러 가다 / 오다",
       "description": "Bu derste bir yere hangi amaçla gittiğimizi veya geldiğimizi söylemeyi öğreniyoruz.",
       "teacherExplanation": "A2'de sadece 'gidiyorum' yetmez; 'satın almaya gidiyorum', 'arkadaşımı görmeye gidiyorum' demen gerekir. Bunun için 으러 / 러 yapısı çok kullanılır. Bu yapı özellikle 가다 ve 오다 ile doğal durur.",
@@ -1326,8 +1486,8 @@
       ]
     },
     {
-      "id": "a2-l07",
-      "order": 7,
+      "id": "a2-l09",
+      "order": 9,
       "title": "L7: Nominalization ve Hobi - 는 것",
       "description": "Bu derste fiili isim gibi kullanmayı öğreniyoruz. Böylece 'benim hobim fotoğraf çekmektir' gibi cümleler kurabiliriz.",
       "teacherExplanation": "Bazı durumlarda eylemi isimleştirmek gerekir. Türkçedeki '-mek/-mak' gibi düşünebilirsin ama birebir aynı değildir. Korece'de 는 것 çok sık kullanılır. Hobiler, tercihler, sevdiğin şeyler ve açıklamalar için çok işe yarar.",
@@ -1545,8 +1705,8 @@
       ]
     },
     {
-      "id": "a2-l08",
-      "order": 8,
+      "id": "a2-l10",
+      "order": 10,
       "title": "L8: Sıralı Eylemler - 은 후에 ve 고 있다",
       "description": "Bu derste bir eylemden sonra başka bir eylem yapmayı ve şu anda devam eden eylemi anlatmayı öğreniyoruz.",
       "teacherExplanation": "A2'de olayları zaman sırasına koymak çok önemlidir. 'Ödevi yaptıktan sonra müzik dinledim' ya da 'şu anda bekliyorum' gibi yapılar günlük dilin içindedir. Bu ders, anlatımına akış kazandırır.",
@@ -1745,8 +1905,68 @@
       ]
     },
     {
-      "id": "a2-l09",
-      "order": 9,
+      "id": "a2-l11",
+      "order": 11,
+      "title": "L8.5: Anında Bildirim ve Süreç (자마자, 는 중, 어/아 있다)",
+      "description": "Bir şey olur olmaz, tam yaparken veya bir durumda kalma hallerini öğreneceğiz.",
+      "teacherExplanation": "Zamanla ilgili nüanslı bağlaçlar: Bir eylem biter bitmez diğeri başlarsa 자마자; eylem o an devam ediyorsa 는 중; eylem bitmiş ama durumu hala devam ediyorsa 아/어 있다 (Örn: kapının açık 'durması', oturuyor 'olmak') kullanılır.",
+      "rules": [
+        {
+          "name": "Yapar Yapmaz: -자마자",
+          "pattern": "fiil kökü + 자마자",
+          "explanation": "Eylem gerçekleşir gerçekleşmez. 'Eve varır varmaz uyudum.'"
+        },
+        {
+          "name": "Tam o an (Süreç): -는 중",
+          "pattern": "fiil kökü + 는 중이다",
+          "explanation": "고 있다 gibi şimdiki zaman/süreç belirtir fakat daha çok tam o olayın ortasında olunduğunu vurgular."
+        },
+        {
+          "name": "Durumun Devamlılığı: -아/어 있다",
+          "pattern": "fiil kökü + 아/어 있다",
+          "explanation": "Dikkat! 고 있다 eylemin kendisinin devamlılığıdır (giyiniyorum). 아/어 있다 ise eylem bitmiş, durumu devam ediyordur (giyinmişim/üstümde duruyor, sandalyede oturmuş vaziyetteyim)."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "집에 도착하자마자 잤어요.",
+          "trText": "Eve varır varmaz uyudum.",
+          "pairs": [
+            {
+              "ko": "집에",
+              "tr": "eve",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "도착하",
+              "tr": "var",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "자마자",
+              "tr": "-ır -ırmaz",
+              "key": "suffix",
+              "type": "suffix"
+            },
+            {
+              "ko": "잤어요",
+              "tr": "uyudum",
+              "key": "w3",
+              "type": "word"
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "자마자 ile anında gerçekleşen eylemleri anlatabiliyorum.",
+        "고 있다 ile 아/어 있다 farkını ayırt edebiliyorum."
+      ]
+    },
+    {
+      "id": "a2-l12",
+      "order": 12,
       "title": "L9: İzin, Yasak ve Gereklilik - 아/어도 되다, 으면 안 되다, 어야 하다",
       "description": "Bu derste bir şeyin serbest, yasak veya gerekli olduğunu anlatıyoruz.",
       "teacherExplanation": "Günlük hayatta en çok gereken kalıplardan biri budur: 'Burada oturabilir misin?', 'Burada sigara içilmez', 'İlaç içmelisin' gibi. Bu yapı hem okulda hem toplu taşımada hem hastanede hem işte sürekli karşına çıkar.",
@@ -1914,8 +2134,8 @@
       ]
     },
     {
-      "id": "a2-l10",
-      "order": 10,
+      "id": "a2-l13",
+      "order": 13,
       "title": "L10: Öneri, Rica ve Birlikte Yapma - 읍시다, 어 주세요",
       "description": "Bu derste birine öneri sunmayı, nazik rica etmeyi ve birlikte bir şey yapmayı öneriyoruz.",
       "teacherExplanation": "A2 seviyesinde etkileşim artık tek yönlü olmamalı. Sadece kendini anlatmak değil, birini çağırmak, bir şey istemek, öneride bulunmak gerekir. Bu ders günlük iletişimi gerçek hale getirir.",
@@ -2077,8 +2297,8 @@
       ]
     },
     {
-      "id": "a2-l11",
-      "order": 11,
+      "id": "a2-l14",
+      "order": 14,
       "title": "L11: Yeterlilik, Şart ve Plan - 을 수 있다, 으면, 으려고 하다",
       "description": "Bu derste 'yapabilirim', 'eğer olursa', 'yapmayı planlıyorum' gibi daha ileri ama çok gerekli yapıları öğreniyoruz.",
       "teacherExplanation": "A2 sonunda artık sadece geçmiş ve gelecek değil, yetenek, şart ve niyet de anlatabilmelisin. 을 수 있다 beceri veya imkân söyler. 으면 şart kurar. 으려고 하다 ise plan veya niyet bildirir. Bu üçlü seni B1'e hazırlayan temel omurgadır.",
@@ -2294,8 +2514,8 @@
       ]
     },
     {
-      "id": "a2-l12",
-      "order": 12,
+      "id": "a2-l15",
+      "order": 15,
       "title": "L12: Telefon Dili, Yumuşatma ve Banmal Başlangıcı",
       "description": "Bu derste telefonda kullanılan doğal ifadeleri, cümleyi yumuşatmayı ve banmalın temel mantığını öğreniyoruz.",
       "teacherExplanation": "A2 sonunda artık iki önemli şeyi fark etmen gerekir: Birincisi, Korece her zaman düz ve sert söylenmez; bazen cümle yumuşatılır. İkincisi, herkesle aynı tonda konuşulmaz. Arkadaşla banmal, yabancıyla kibar dil kullanılır. Banmalı ezber değil bağlam olarak öğrenmelisin.",
@@ -2470,8 +2690,8 @@
       ]
     },
     {
-      "id": "a2-l13",
-      "order": 13,
+      "id": "a2-l16",
+      "order": 16,
       "title": "L13: İsteme ve Arzu - 고 싶다, 었으면 좋겠다",
       "description": "Bu derste bir şeyi istediğimizi veya bir şeyin olmasını dilediğimizi anlatmayı öğreniyoruz.",
       "teacherExplanation": "고 싶다 yapısı Korece'de en çok kullanılan dilbilgisi kalıplarından biridir. 'Bir şey yapmak istiyorum' demenin en doğal yoludur. 었으면 좋겠다 ise daha yumuşak bir dilek ifadesidir: 'keşke olsa' gibi düşünebilirsin.",
@@ -2634,8 +2854,8 @@
       ]
     },
     {
-      "id": "a2-l14",
-      "order": 14,
+      "id": "a2-l17",
+      "order": 17,
       "title": "L14: Deneyim ve Tecrübe - 아/어 보다, 은 적이 있다",
       "description": "Bu derste bir şeyi denemiş olmayı veya daha önceki deneyimleri anlatmayı öğreniyoruz.",
       "teacherExplanation": "아/어 보다 'denemek, bir kere yapmak' anlamı verir; yeni bir deneyim önerilirken çok kullanılır. 은 적이 있다/없다 ise geçmişte hiç yapıp yapmadığını söylemek içindir. Bu ikisi A2 sonunda olması gereken temel yapılardır.",
@@ -2786,8 +3006,72 @@
       ]
     },
     {
-      "id": "a2-l15",
-      "order": 15,
+      "id": "a2-l18",
+      "order": 18,
+      "title": "L16.5: Dolaylı Anlatım (Reported Speech - 다고/자고/라고/냐고 하다)",
+      "description": "Başkasının söylediği cümleleri aktarma kuralları (Dedi ki, sordu, yapalım dedi vb.)",
+      "teacherExplanation": "Başkasının ağzından laf aktarırken cümlenin türüne göre ek değişir. Düz cümle ise 다고, soru ise 냐고, emir ise 라고, teklif ise 자고 eki ile 하다 (söylemek) birleştirilir.",
+      "rules": [
+        {
+          "name": "Düz Cümle: 다고 하다",
+          "pattern": "fiil+ㄴ/는 다고 하다 / sıfat+다고 하다",
+          "explanation": "'Yağmur yağıyor' dedi. (비가 온다고 했어요)."
+        },
+        {
+          "name": "Soru Cümlesi: 냐고 하다/묻다",
+          "pattern": "fiil/sıfat + 냐고 하다",
+          "explanation": "'Nereye gidiyorsun?' diye sordu. (어디 가냐고 물었어요)."
+        },
+        {
+          "name": "Emir Cümlesi: (으)라고 하다",
+          "pattern": "fiil + (으)라고 하다",
+          "explanation": "'Buraya gel' dedi. (오라고 했어요)."
+        },
+        {
+          "name": "Teklif Cümlesi: 자고 하다",
+          "pattern": "fiil + 자고 하다",
+          "explanation": "'Birlikte yiyelim' dedi. (같이 먹자고 했어요)."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "내일 비가 온다고 했어요.",
+          "trText": "Yarın yağmur yağacağını söyledi.",
+          "pairs": [
+            {
+              "ko": "내일",
+              "tr": "yarın",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "비가",
+              "tr": "yağmur",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "온",
+              "tr": "yağacağı",
+              "key": "w3",
+              "type": "word"
+            },
+            {
+              "ko": "다고 했어요",
+              "tr": "söyledi",
+              "key": "sf1",
+              "type": "suffix"
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "Düz cümle ile soruyu farklı şekilde aktarabiliyorum."
+      ]
+    },
+    {
+      "id": "a2-l19",
+      "order": 19,
       "title": "L15: Sebep ve Sonuç V2 - (으)니까",
       "description": "Sebep belirtme yapısının ikinci çok önemli versiyonu olan (으)니까 kuralını öğrenin.",
       "teacherExplanation": "Daha önce sebep-sonuç bağlamak için '-아/어서' (için/yüzünden) yapısını gördük. Peki '-니까' nın farkı nedir? En temel kural: '-아/어서' yapısıyla 'Hadi yapalım' (Öneri) veya 'Lütfen yapın' (Emir) cümleleri KULLANILAMAZ. Eğer birine, 'Hava soğuk olduğu için, kalın giyin!' demek istiyorsan mecburen '-(으)니까' kullanmalısın. Ayrıca '-니까' kişisel bir mazeret veya öznel bir sebep sunarken de daha uygundur.",
@@ -2894,8 +3178,80 @@
       ]
     },
     {
-      "id": "a2-l16",
-      "order": 16,
+      "id": "a2-l20",
+      "order": 20,
+      "title": "L17.8: Edilgen (피동) ve Ettirgen (사동) Fiiller",
+      "description": "Yapılmak/Görülmek (Passive) ile Yaptırmak/Göstermek (Causative) fiil çatıları.",
+      "teacherExplanation": "Türkçedeki gibi kelime köküne gelen bir ekle (이, 히, 리, 기) fiiller edilgen hale gelir (보다: Görmek -> 보이다: Görünmek). Ettirgen fiiller (Yaptırmak, Yedirmek) için ise 이, 히, 리, 기, 우, 구, 추 eklerinden biri veya '-게 하다' kullanılır (먹다: Yemek -> 먹이다: Yedirmek).",
+      "rules": [
+        {
+          "name": "Edilgen Çatı (Passive): 이/히/리/기",
+          "pattern": "fiil + 이/히/리/기",
+          "explanation": "Fiilin kendiliğinden yapıldığını belirtir. 듣다 (Duymak) -> 들리다 (Duyulmak)."
+        },
+        {
+          "name": "Ettirgen Çatı (Causative): 이/히/리/기/우/구/추",
+          "pattern": "fiil + 이/히/리/기/우/구/추 veya 게 하다",
+          "explanation": "Eylemin başkasına yaptırıldığını anlatır. 알다 (Bilmek) -> 알리다 (Bildirmek)."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "산이 보여요.",
+          "trText": "Dağ görünüyor.",
+          "pairs": [
+            {
+              "ko": "산이",
+              "tr": "dağ",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "보여요",
+              "tr": "görünüyor (보+이+어요)",
+              "key": "w2",
+              "type": "word"
+            }
+          ]
+        },
+        {
+          "koText": "아이에게 밥을 먹여요.",
+          "trText": "Çocuğa yemek yediriyor.",
+          "pairs": [
+            {
+              "ko": "아이",
+              "tr": "çocuk",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "에게",
+              "tr": "-a/e",
+              "key": "sf1",
+              "type": "suffix"
+            },
+            {
+              "ko": "밥을",
+              "tr": "yemek",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "먹여요",
+              "tr": "yediriyor (먹+이+어요)",
+              "key": "w3",
+              "type": "word"
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "Edilgen ve Ettirgen yapı eklerinin ne anlama geldiğini biliyorum."
+      ]
+    },
+    {
+      "id": "a2-l21",
+      "order": 21,
       "title": "L16: Zaman Bildirme - (으)ㄹ 때, 기 전에",
       "description": "Eylemlerin gerçekleştiği zamanı (-dığında, -den önce) ifade etmeyi öğrenin.",
       "teacherExplanation": "Bir şeyler yaparkenki zaman dilimini belirtmek günlük dilde sürekli başvurduğumuz bir ihtiyaçtır. Türkçedeki '-dığım(ız) zaman' (örn. Öğrenci olduğum zaman / Yemek yediğim zaman) Korecede '-(으)ㄹ 때' yapısıdır. Ayrıca bir şeyi yapma-dan önce derken, eylemin köküne mutlaka detaylıca göreceğimiz '-기' isimleştirme ekini koyup, ardından '전에 (önce)' demeliyiz: '-기 전에'.",
@@ -3021,8 +3377,8 @@
       ]
     },
     {
-      "id": "a2-l17",
-      "order": 17,
+      "id": "a2-l22",
+      "order": 22,
       "title": "L17: Eşzamanlılık ve Değişim - (으)면서, 게 되다",
       "description": "Fiillerin eşzamanlı olarak yapılmasını (-arken) ve durum değişimlerini ifade edin.",
       "teacherExplanation": "Aynı eylemi yapan bir kişi, iki işi AYNI ANDA yapıyorsa (Müzik dinliyor + Ders çalışıyor), fiillerin ortasına '-(으)면서' koyarız (Müzik dinle-y-erek ders çalışıyor). İkinci kuralımız ise '-게 되다'. Türkçede 'artık yapıyorum', 'öğrenmiş oldum', 'öyle denk geldi' gibi cümlelerin karşılığıdır. İşlerin zamanla nasıl değiştiğini veya elinde olmayan sebeplerle bir duruma 'dönüştüğünü' anlatırken bu yapıyı mutlaka kullanmalısın.",
@@ -3131,8 +3487,86 @@
       ]
     },
     {
-      "id": "a2-l18",
-      "order": 18,
+      "id": "a2-l23",
+      "order": 23,
+      "title": "L17.5: Duygu Aktarımı, Tepkiler ve Varsayım (네/군요, 아/어하다, 것 같다)",
+      "description": "Korecede günlük konuşmada duyduğun/gördüğün şeylere şaşırma veya o an fark etme ifadeleri ve başkalarının duygularını aktarma.",
+      "teacherExplanation": "Korece iletişimde karşındakine tepki vermek çok önemlidir. -군요 (öyleymiş!) ve -네요 (öyle ya!) bu görevi üstlenir. İkincisi, 3. bir kişinin duygularından (o üzgün, o kızgın) bahsederken sıfatları '아/어하다' fiiline çevirmeliyiz. Üçüncüsü, tahminde bulunurken kullanılan -(으)ㄴ/는/(으)ㄹ 것 같다 (gibi görünüyor) yapısıdır.",
+      "rules": [
+        {
+          "name": "Şaşırma / Yeni Fakındalık: -네요 ve -군요",
+          "pattern": "fiil/sıfat + 네요 / 군요",
+          "explanation": "네요 genellikle o an duyusal olarak fark edilen (Aa yağmur yağıyor!) eylemlerde; 군요 (isimler için 이군요) ise yeni öğrenilen bir bilgi üzerine tepkidir."
+        },
+        {
+          "name": "3. Tekil Duygusu: -아/어하다",
+          "pattern": "duygu sıfatı kökü + 아/어하다",
+          "explanation": "Korecede 1. ve 2. tekil şahıslar için kullanılan duygu sıfatları (korkmak, sevinmek), 3. kişi için doğrudan kullanılamaz. Sonuna 아/어하다 eklenerek fiilleştirilir."
+        },
+        {
+          "name": "Tahmin / Görünüş: -(으)ㄴ/는/(으)ㄹ 것 같다",
+          "pattern": "fiil/sıfat + 것 같다",
+          "explanation": "Türkçedeki 'gibi görünüyor' veya 'sanırım...' anlamını taşır. Zamanlara göre 은(geçmiş), 는(şimdiki), 을(gelecek) kullanılır."
+        }
+      ],
+      "examples": [
+        {
+          "koText": "비가 오네요!",
+          "trText": "Aa, yağmur yağıyor ya!",
+          "pairs": [
+            {
+              "ko": "비가",
+              "tr": "yağmur",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "오",
+              "tr": "geliyor",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "네요",
+              "tr": "(ünlem)",
+              "key": "suffix",
+              "type": "suffix"
+            }
+          ]
+        },
+        {
+          "koText": "비가 올 것 같아요.",
+          "trText": "Yağmur yağacak gibi görünüyor.",
+          "pairs": [
+            {
+              "ko": "비가",
+              "tr": "yağmur",
+              "key": "w1",
+              "type": "word"
+            },
+            {
+              "ko": "올",
+              "tr": "yağacak",
+              "key": "w2",
+              "type": "word"
+            },
+            {
+              "ko": "것 같아요",
+              "tr": "gibi görünüyor / sanırım",
+              "key": "suffix",
+              "type": "suffix"
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        "네요 ve 군요 ile doğal tepki verebiliyorum.",
+        "Başkalarının duygularından bahsederken 아/어하다 kullanmam gerektiğini biliyorum."
+      ]
+    },
+    {
+      "id": "a2-l24",
+      "order": 24,
       "title": "L18: Fiilleri Sıfatlaştırma (Relative Clauses)",
       "description": "Fiilleri sıfata çevirerek isimleri nitelemeyi (Örn: 'Sevdiğim kitap') öğrenin.",
       "teacherExplanation": "İşte A2'nin en heyecanlı konularından biri! Türkçedeki sıfat-fiiller (Örn: 'yap-tığım' ev, 'oku-yacağın' kitap, 'git-tiği' okul). Korecede isimleri her zaman önünden niteleriz. Eğer güzel araba demek için '좋은 차' (Sıfat + İsim) diyorsak, 'Bindiğim araba' demek için de fiili sıfat formuna sokup önüne koymalıyiz '내가 타는 차'. Bu yapının şimdiki (현재), geçmiş (과거) ve gelecek (미래) versiyonları vardır ve bol okuma pratiğiyle aklınıza tamamen kazınır.",

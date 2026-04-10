@@ -23,7 +23,7 @@ const VoicePractice = () => {
   // Speaking State
   const [isListening, setIsListening] = useState(false);
   const [transcript, setTranscript] = useState('');
-  const [feedback, setFeedback] = useState<'success' | 'error' | null>(null);
+  const [feedback, setFeedback] = useState<'success' | 'partial' | 'error' | null>(null);
   const [similarityScore, setSimilarityScore] = useState<number | null>(null);
   
   // Listening State
@@ -62,6 +62,14 @@ const VoicePractice = () => {
       };
 
       recognitionRef.current = recognition;
+    }
+
+    if ('speechSynthesis' in window) {
+      // Tarayıcıların ses paketlerini önden yüklemesini sağlamak için
+      window.speechSynthesis.getVoices();
+      window.speechSynthesis.onvoiceschanged = () => {
+        window.speechSynthesis.getVoices();
+      };
     }
 
     return () => {
@@ -156,8 +164,10 @@ const VoicePractice = () => {
     const sim = getSimilarity(currentSentence.ko, spokenText);
     setSimilarityScore(sim);
     
-    if (sim >= 75) {
+    if (sim >= 85) {
       setFeedback('success'); 
+    } else if (sim >= 40) {
+      setFeedback('partial');
     } else {
       setFeedback('error');
     }
@@ -167,10 +177,27 @@ const VoicePractice = () => {
   const playAudio = () => {
     if (!currentSentence) return;
     if ('speechSynthesis' in window) {
+      // Bazen API takılı kalabilir, önceki okumaları iptal et.
+      window.speechSynthesis.cancel();
+
       const utterance = new SpeechSynthesisUtterance(currentSentence.ko);
       utterance.lang = 'ko-KR';
       utterance.rate = 0.8;
+      
+      // Özellikle Korece ses paketini arayıp atayalım
+      const voices = window.speechSynthesis.getVoices();
+      const koVoice = voices.find(v => v.lang === 'ko-KR' || v.lang === 'ko_KR' || v.lang.includes('ko'));
+      if (koVoice) {
+        utterance.voice = koVoice;
+      }
+      
+      utterance.onerror = (e) => {
+        console.error("Speech Synthesis Error:", e);
+      };
+
       window.speechSynthesis.speak(utterance);
+    } else {
+      alert("Tarayıcınız ses oynatma özelliğini desteklemiyor.");
     }
   };
 
@@ -180,8 +207,10 @@ const VoicePractice = () => {
     const sim = getSimilarity(currentSentence.ko, userInput);
     setSimilarityScore(sim);
     
-    if (sim >= 85) { // Stricter checking for dictation
+    if (sim >= 90) { 
       setFeedback('success');
+    } else if (sim >= 50) {
+      setFeedback('partial');
     } else {
       setFeedback('error');
     }
@@ -304,25 +333,25 @@ const VoicePractice = () => {
           {feedback && (
             <div style={{ 
               marginTop: '1.5rem', padding: '1rem', borderRadius: 'var(--radius-sm)',
-              background: feedback === 'success' ? '#e8f8f5' : '#fff0f0',
-              color: feedback === 'success' ? '#27ae60' : '#e74c3c',
+              background: feedback === 'success' ? '#e8f8f5' : feedback === 'partial' ? '#fdf2e9' : '#fff0f0',
+              color: feedback === 'success' ? '#27ae60' : feedback === 'partial' ? '#e67e22' : '#e74c3c',
               display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, fontSize: '1.1rem' }}>
-                {feedback === 'success' ? <Check size={20} /> : <X size={20} />}
-                {feedback === 'success' ? 'Harika! Doğru bildin.' : 'Maalesef yanlış.'}
+                {feedback === 'success' ? <Check size={20} /> : feedback === 'partial' ? <RefreshCw size={20} /> : <X size={20} />}
+                {feedback === 'success' ? 'Harika! Doğru bildin.' : feedback === 'partial' ? 'Yaklaştın! Tekrar dene.' : 'Maalesef yanlış.'}
                 {similarityScore !== null && (
                   <span style={{ 
-                    background: feedback === 'success' ? '#2ecc71' : '#e74c3c', 
+                    background: feedback === 'success' ? '#2ecc71' : feedback === 'partial' ? '#e67e22' : '#e74c3c', 
                     color: 'white', padding: '0.2rem 0.6rem', borderRadius: '12px', fontSize: '0.8rem', marginLeft: '0.5rem'
                   }}>
                     %{similarityScore} Eşleşme
                   </span>
                 )}
               </div>
-              {feedback === 'error' && (
+              {(feedback === 'error' || feedback === 'partial') && (
                 <div style={{ marginTop: '0.5rem', textAlign: 'center' }}>
-                  <div style={{ fontSize: '0.85rem', color: '#e74c3c', opacity: 0.8 }}>Doğrusu:</div>
+                  <div style={{ fontSize: '0.85rem', color: feedback === 'partial' ? '#e67e22' : '#e74c3c', opacity: 0.8 }}>Beklenen:</div>
                   <div className="korean-text" style={{ fontSize: '1.2rem', fontWeight: 600 }}>{currentSentence.ko}</div>
                 </div>
               )}
