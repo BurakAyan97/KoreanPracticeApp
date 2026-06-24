@@ -98,5 +98,20 @@
   { "id": "v-97", "korean": "필요하다", "turkish": "Gerekli olmak", "pronunciation": "piryohada", "type": "verb" },
   { "id": "v-98", "korean": "잊다", "turkish": "Unutmak", "pronunciation": "itda", "type": "verb" },
   { "id": "v-99", "korean": "그리다", "turkish": "Çizmek", "pronunciation": "geurida", "type": "verb" },
-  { "id": "v-100", "korean": "축하하다", "turkish": "Tebrik etmek", "pronunciation": "chukahada", "type": "verb" }
+  { "id": "v-100", "korean": "축하하다", "turkish": "Tebrik etmek", "pronunciation": "chukahada", "type": "verb" },
+  { "id": "v-101", "korean": "가져오다", "turkish": "Getirmek", "pronunciation": "gajeooda", "type": "verb" },
+  { "id": "v-102", "korean": "가져가다", "turkish": "Götürmek", "pronunciation": "gajeogada", "type": "verb" },
+  { "id": "v-103", "korean": "도착하다", "turkish": "Varmak", "pronunciation": "dochakada", "type": "verb" },
+  { "id": "v-104", "korean": "출발하다", "turkish": "Yola çıkmak", "pronunciation": "chulbalhada", "type": "verb" },
+  { "id": "v-105", "korean": "포기하다", "turkish": "Vazgeçmek", "pronunciation": "pogihada", "type": "verb" },
+  { "id": "v-106", "korean": "이해하다", "turkish": "Anlamak", "pronunciation": "ihaehada", "type": "verb" },
+  { "id": "v-107", "korean": "설명하다", "turkish": "Açıklamak", "pronunciation": "seolmyenghada", "type": "verb" },
+  { "id": "v-108", "korean": "기대하다", "turkish": "Beklemek / Ummak", "pronunciation": "gidaehada", "type": "verb" },
+  { "id": "v-109", "korean": "부탁하다", "turkish": "Rica etmek", "pronunciation": "butakada", "type": "verb" },
+  { "id": "v-110", "korean": "약속하다", "turkish": "Söz vermek", "pronunciation": "yaksokada", "type": "verb" },
+  { "id": "v-111", "korean": "결정하다", "turkish": "Karar vermek", "pronunciation": "gyeoljeonghada", "type": "verb" },
+  { "id": "v-112", "korean": "빌리다", "turkish": "Ödünç almak", "pronunciation": "billida", "type": "verb" },
+  { "id": "v-113", "korean": "빌려주다", "turkish": "Ödünç vermek", "pronunciation": "billyeojuda", "type": "verb" },
+  { "id": "v-114", "korean": "예약하다", "turkish": "Rezervasyon yapmak", "pronunciation": "yeyakada", "type": "verb" },
+  { "id": "v-115", "korean": "주차하다", "turkish": "Park etmek", "pronunciation": "juchahada", "type": "verb" }
 ]

@@ -1,0 +1,17 @@
+[
+  { "id": "es-1", "korean": "행복하다", "turkish": "Mutlu olmak", "pronunciation": "haengbokada", "type": "adjective" },
+  { "id": "es-2", "korean": "슬프다", "turkish": "Üzgün olmak", "pronunciation": "seulpeuda", "type": "adjective" },
+  { "id": "es-3", "korean": "화나다", "turkish": "Kızmak / Öfkelenmek", "pronunciation": "hwanada", "type": "verb" },
+  { "id": "es-4", "korean": "피곤하다", "turkish": "Yorgun olmak", "pronunciation": "pigonada", "type": "adjective" },
+  { "id": "es-5", "korean": "기쁘다", "turkish": "Sevinmek / Mutlu olmak", "pronunciation": "gippeuda", "type": "adjective" },
+  { "id": "es-6", "korean": "아프다", "turkish": "Hasta olmak / Ağrımak", "pronunciation": "apeuda", "type": "adjective" },
+  { "id": "es-7", "korean": "심심하다", "turkish": "Sıkılmak (yapacak bir şey olmaması)", "pronunciation": "simsimada", "type": "adjective" },
+  { "id": "es-8", "korean": "놀라다", "turkish": "Şaşırmak / Korkmak", "pronunciation": "nollada", "type": "verb" },
+  { "id": "es-9", "korean": "걱정하다", "turkish": "Endişelenmek", "pronunciation": "geokjeonghada", "type": "verb" },
+  { "id": "es-10", "korean": "건강하다", "turkish": "Sağlıklı olmak", "pronunciation": "geonganghada", "type": "adjective" },
+  { "id": "es-11", "korean": "바쁘다", "turkish": "Meşgul olmak", "pronunciation": "bappeuda", "type": "adjective" },
+  { "id": "es-12", "korean": "편안하다", "turkish": "Rahat / Huzurlu olmak", "pronunciation": "pyeonanhada", "type": "adjective" },
+  { "id": "es-13", "korean": "외롭다", "turkish": "Yalnız hissetmek", "pronunciation": "oeropda", "type": "adjective" },
+  { "id": "es-14", "korean": "무섭다", "turkish": "Korkunç olmak / Korkmak", "pronunciation": "museopda", "type": "adjective" },
+  { "id": "es-15", "korean": "신나다", "turkish": "Heyecanlanmak / Keyiflenmek", "pronunciation": "sinnada", "type": "verb" }
+]

@@ -27,7 +27,8 @@ const FlashcardsMenu = () => {
       try {
         const [
           numbers, family, verbs, adjectives,
-          greetings, timeDays, colors, house, food, jobs, shopping, transport, weather, health, hobbies
+          greetings, timeDays, colors, house, food, jobs, shopping, transport, weather, health, hobbies,
+          dailyRoutines, restaurantOrdering, emotionsStates
         ] = await Promise.all([
           import('../content/flashcards/numbers.json'),
           import('../content/flashcards/family.json'),
@@ -43,7 +44,10 @@ const FlashcardsMenu = () => {
           import('../content/flashcards/transportation.json'),
           import('../content/flashcards/weather_seasons.json'),
           import('../content/flashcards/health_body.json'),
-          import('../content/flashcards/hobbies_leisure.json')
+          import('../content/flashcards/hobbies_leisure.json'),
+          import('../content/flashcards/daily_routines.json'),
+          import('../content/flashcards/restaurant_ordering.json'),
+          import('../content/flashcards/emotions_states.json')
         ]);
 
         setDecks([
@@ -51,8 +55,8 @@ const FlashcardsMenu = () => {
           { id: 'family', title: 'Aile Üyeleri', description: 'Aile ilişkilerini anlatan kelimeler.', cards: family.default },
           { id: 'numbers', title: 'Sayılar', description: 'Sino-Korean ve Native Korean sayıları.', cards: numbers.default },
           { id: 'time', title: 'Zaman & Günler', description: 'Bugün, dün, haftanın günleri ve saatler.', cards: timeDays.default },
-          { id: 'verbs', title: 'Temel Fiiller', description: 'Günlük hayatta en sık kullanılan 100 fiil.', cards: verbs.default },
-          { id: 'adjectives', title: 'Önemli Sıfatlar', description: 'Sık kullanılan 20 temel sıfat.', cards: adjectives.default },
+          { id: 'verbs', title: 'Temel Fiiller', description: 'Günlük hayatta en sık kullanılan 100+ fiil.', cards: verbs.default },
+          { id: 'adjectives', title: 'Önemli Sıfatlar', description: 'Sık kullanılan 35 temel sıfat.', cards: adjectives.default },
           { id: 'colors', title: 'Renkler', description: 'Korece renk isimleri.', cards: colors.default },
           { id: 'house', title: 'Ev & Eşyalar', description: 'Evin bölümleri ve temel eşyalar.', cards: house.default },
           { id: 'food', title: 'Mutfak & Yemek', description: 'Temel yiyecekler, içecekler ve meyveler.', cards: food.default },
@@ -61,7 +65,10 @@ const FlashcardsMenu = () => {
           { id: 'transport', title: 'Ulaşım & Yönler', description: 'Taşıtlar, istasyonlar ve yön tarifleri.', cards: transport.default },
           { id: 'weather', title: 'Hava & Mevsimler', description: 'Hava durumu ve mevsim terimleri.', cards: weather.default },
           { id: 'health', title: 'Vücut & Sağlık', description: 'Vücudun bölümleri ve temel hastalıklar.', cards: health.default },
-          { id: 'hobbies', title: 'Hobi & Boş Zaman', description: 'Popüler hobiler ve sporlar.', cards: hobbies.default }
+          { id: 'hobbies', title: 'Hobi & Boş Zaman', description: 'Popüler hobiler ve sporlar.', cards: hobbies.default },
+          { id: 'daily_routines', title: 'Günlük Rutinler', description: 'Uyanmak, çalışmak, uyumak gibi günlük rutin eylemler.', cards: dailyRoutines.default },
+          { id: 'restaurant_ordering', title: 'Restoran & Sipariş', description: 'Restoran menüsü, sipariş ve yemek lezzetleri.', cards: restaurantOrdering.default },
+          { id: 'emotions_states', title: 'Duygular & Durumlar', description: 'Mutlu, üzgün, yorgun ve hasta gibi duygu durumları.', cards: emotionsStates.default }
         ]);
       } catch (err) {
         console.error("Could not load flashcards", err);

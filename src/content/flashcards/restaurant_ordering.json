@@ -1,0 +1,17 @@
+[
+  { "id": "ro-1", "korean": "식당", "turkish": "Restoran / Lokanta", "pronunciation": "sikdang", "type": "noun" },
+  { "id": "ro-2", "korean": "메뉴", "turkish": "Menü", "pronunciation": "menyu", "type": "noun" },
+  { "id": "ro-3", "korean": "물", "turkish": "Su", "pronunciation": "mul", "type": "noun" },
+  { "id": "ro-4", "korean": "음식", "turkish": "Yemek / Gıda", "pronunciation": "eumsik", "type": "noun" },
+  { "id": "ro-5", "korean": "주문하다", "turkish": "Sipariş vermek", "pronunciation": "jumunhada", "type": "verb" },
+  { "id": "ro-6", "korean": "맛있다", "turkish": "Lezzetli olmak", "pronunciation": "masitta", "type": "adjective" },
+  { "id": "ro-7", "korean": "맛없다", "turkish": "Tatsız / Lezzetsiz olmak", "pronunciation": "madeopda", "type": "adjective" },
+  { "id": "ro-8", "korean": "맵다", "turkish": "Acı olmak (baharatlı)", "pronunciation": "maepda", "type": "adjective" },
+  { "id": "ro-9", "korean": "달다", "turkish": "Tatlı olmak", "pronunciation": "dalda", "type": "adjective" },
+  { "id": "ro-10", "korean": "짜다", "turkish": "Tuzlu olmak", "pronunciation": "jjada", "type": "adjective" },
+  { "id": "ro-11", "korean": "계산서", "turkish": "Hesap / Fatura", "pronunciation": "gyesanseo", "type": "noun" },
+  { "id": "ro-12", "korean": "가져오다", "turkish": "Getirmek", "pronunciation": "gajeooda", "type": "verb" },
+  { "id": "ro-13", "korean": "숟가락", "turkish": "Kaşık", "pronunciation": "sutgarak", "type": "noun" },
+  { "id": "ro-14", "korean": "젓가락", "turkish": "Yemek çubukları (chopsticks)", "pronunciation": "jeotgarak", "type": "noun" },
+  { "id": "ro-15", "korean": "추가하다", "turkish": "Eklemek / İlave etmek", "pronunciation": "chugahada", "type": "verb" }
+]

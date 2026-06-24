@@ -1,0 +1,17 @@
+[
+  { "id": "dr-1", "korean": "일어나다", "turkish": "Uyanmak / Ayağa kalkmak", "pronunciation": "ireonada", "type": "verb" },
+  { "id": "dr-2", "korean": "세수하다", "turkish": "Elini yüzünü yıkamak", "pronunciation": "seseuhada", "type": "verb" },
+  { "id": "dr-3", "korean": "이를 닦da", "korean_full": "이를 닦다", "korean": "이를 닦다", "turkish": "Diş fırçalamak", "pronunciation": "ireul dakda", "type": "verb" },
+  { "id": "dr-4", "korean": "샤워하다", "turkish": "Duş almak", "pronunciation": "syawohada", "type": "verb" },
+  { "id": "dr-5", "korean": "옷을 입다", "turkish": "Kıyafet giymek", "pronunciation": "oseul ipda", "type": "verb" },
+  { "id": "dr-6", "korean": "아침을 먹다", "turkish": "Kahvaltı yapmak", "pronunciation": "achimeul meokda", "type": "verb" },
+  { "id": "dr-7", "korean": "학교에 가다", "turkish": "Okula gitmek", "pronunciation": "hakgyoe gada", "type": "verb" },
+  { "id": "dr-8", "korean": "회사에 가다", "turkish": "İşe gitmek", "pronunciation": "hoesae gada", "type": "verb" },
+  { "id": "dr-9", "korean": "일하다", "turkish": "Çalışmak", "pronunciation": "ilhada", "type": "verb" },
+  { "id": "dr-10", "korean": "공부하다", "turkish": "Ders çalışmak", "pronunciation": "gongbuhada", "type": "verb" },
+  { "id": "dr-11", "korean": "운동하다", "turkish": "Spor yapmak", "pronunciation": "undonghada", "type": "verb" },
+  { "id": "dr-12", "korean": "집에 오다", "turkish": "Eve gelmek", "pronunciation": "jibe oda", "type": "verb" },
+  { "id": "dr-13", "korean": "저녁을 먹다", "turkish": "Akşam yemeği yemek", "pronunciation": "jeonyeogeul meokda", "type": "verb" },
+  { "id": "dr-14", "korean": "쉬다", "turkish": "Dinlenmek", "pronunciation": "swida", "type": "verb" },
+  { "id": "dr-15", "korean": "자다", "turkish": "Uyumak", "pronunciation": "jada", "type": "verb" }
+]
